@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>Seguimiento Jardin</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estructura.css">
   </head>
   <body class="d-flex flex-column min-vh-100">
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-primary position-relative z-3" data-bs-theme="dark">
+        <header>
+        <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
             <div class="container-fluid position-relative">
 
                 <!-- IZQUIERDA: Logo -->
@@ -24,7 +25,7 @@
                 <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
                     <ul class="navbar-nav flex-row gap-2">
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle btn btn-info" data-bs-toggle="dropdown" href="#" role="button"
+                            <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="true" aria-expanded="false">Alumnos</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Añadir</a>
@@ -38,7 +39,7 @@
                         
 
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle btn btn-info" data-bs-toggle="dropdown" href="#" role="button"
+                            <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="true" aria-expanded="false">Responsables</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Añadir</a>
@@ -51,7 +52,7 @@
 
                         
                         <li class="nav-item dropdown">
-                            <a class="dropdown-toggle btn btn-info" data-bs-toggle="dropdown" href="#" role="button"
+                            <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
                                 aria-haspopup="true" aria-expanded="false">Registro</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Añadir</a>
@@ -82,8 +83,8 @@
 
           <!-- Card: Alumnos -->
           <div class="col-md-4 d-flex">
-            <div class="card text-white bg-info w-100 h-100">
-              <div class="card-header bg-primary">
+            <div class="card text-white bg-cardcolor w-100 h-100">
+              <div class="card-header bg-color">
                 <h5 class="mb-0">Alumnos</h5>
               </div>
               <div class="card-body d-flex flex-column">
@@ -114,8 +115,8 @@
 
           <!-- Card: Responsables -->
           <div class="col-md-4 d-flex">
-            <div class="card text-white bg-info w-100 h-100">
-              <div class="card-header bg-primary">
+            <div class="card text-white bg-cardcolor w-100 h-100">
+              <div class="card-header bg-color">
                 <h5 class="mb-0">Responsables</h5>
               </div>
               <div class="card-body d-flex flex-column">
@@ -146,8 +147,8 @@
 
           <!-- Card: Registro -->
           <div class="col-md-4 d-flex">
-            <div class="card text-white bg-info w-100 h-100">
-              <div class="card-header bg-primary">
+            <div class="card text-white bg-cardcolor w-100 h-100">
+              <div class="card-header bg-color">
                 <h5 class="mb-0">Registro</h5>
               </div>
               <div class="card-body d-flex flex-column">
@@ -183,7 +184,7 @@
 
 
 
-    <footer class="bg-primary text-light pt-5 pb-3 mt-auto">
+    <footer class="bg-color text-light pt-5 pb-3 mt-auto">
   <div class="container">
     <div class="row">
 
@@ -191,7 +192,7 @@
       <div class="col-md-3 mb-4">
         <h5>Creditos</h5>
         <ul class="list-unstyled">
-          <li class="text-light">Ivan Bertolotti</li>
+          <li class="text-light">Iván Bertolotti</li>
           <li class="text-light">Alejo Godoy</li>
           <li class="text-light">Maximo Segundo</li>
           <li class="text-light">Bruno Biscardi</li>
@@ -225,7 +226,7 @@
             <label for="footer-email" class="form-label">Correo electrónico</label>
             <input type="email" class="form-control" id="footer-email" placeholder="email@ejemplo.com">
           </div>
-          <button type="submit" class="btn btn-light">Enviar</button>
+          <button type="submit" class="btn btn-dark">Enviar</button>
         </form>
       </div>
 
@@ -234,7 +235,7 @@
     <hr class="bg-light">
 
     <div class="d-flex flex-column flex-md-row justify-content-between text-center">
-      <p class="mb-2 mb-md-0">&copy; 2025 Alarma Inc. Todos los derechos reservados.</p>
+      <p class="mb-2 mb-md-0">&copy; 2025 Escuela Técnica N°1 Gral. San Martín Inc. Todos los derechos reservados.</p>
       <ul class="list-inline mb-0">
         <li class="list-inline-item"><a href="/privacy" class="text-light">Privacidad</a></li>
         <li class="list-inline-item"><a href="/terms" class="text-light">Términos</a></li>
