@@ -9,140 +9,181 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estructura.css">
 </head>
-<body>
-    
-        <header>
-        <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
-            <div class="container-fluid position-relative">
+  <body>     
 
-                <!-- IZQUIERDA: Logo -->
-                <a class="navbar-brand m-0" href="#">Seguimiento</a>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
+        <div class="container-fluid position-relative">
 
-                <!-- BOTÓN TOGGLER -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
+          <!-- IZQUIERDA: Logo -->
+          <a class="navbar-brand m-0" href="#">Seguimiento</a>
 
-                <!-- CENTRO: Dropdowns (centrados en pantallas grandes) -->
-                <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
-                    <ul class="navbar-nav flex-row gap-2">
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
-                                aria-haspopup="true" aria-expanded="false">Alumnos</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Añadir</a>
-                                <a class="dropdown-item" href="#">Modificar</a>
-                                <a class="dropdown-item" href="#">Eliminar</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Ver Listas</a>
-                            </div>
-                        </li>
+          <!-- BOTÓN TOGGLER -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                        
-
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
-                                aria-haspopup="true" aria-expanded="false">Responsables</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Añadir</a>
-                                <a class="dropdown-item" href="#">Modificar</a>
-                                <a class="dropdown-item" href="#">Eliminar</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Ver Listas</a>
-                            </div>
-                        </li>
-
-                        
-                        <li class="nav-item dropdown">
-                            <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
-                                aria-haspopup="true" aria-expanded="false">Registro</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Añadir</a>
-                                <a class="dropdown-item" href="#">Modificar</a>
-                                <a class="dropdown-item" href="#">Eliminar</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Ver Listas</a>
-                            </div>
-                        </li>
-
-                    </ul>
+          <!-- CENTRO: Dropdowns (solo en pantallas grandes) -->
+          <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
+            <ul class="navbar-nav flex-row gap-2">
+              <!-- Alumnos -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Alumnos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Añadir</a>
+                  <a class="dropdown-item" href="#">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Ver Listas</a>
                 </div>
+              </li>
 
-                <!-- DERECHA: Formulario -->
-                <div class="collapse navbar-collapse" id="navbarContent">
+              <!-- Tutor -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Tutor</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Añadir</a>
+                  <a class="dropdown-item" href="#">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Ver Listas</a>
                 </div>
+              </li>
 
-            </div>
-        </nav>
+              <!-- Responsables -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Responsables</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Añadir</a>
+                  <a class="dropdown-item" href="#">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Registro -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Registro</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Añadir</a>
+                  <a class="dropdown-item" href="#">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Ver Listas</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- MENÚ RESPONSIVE: con los mismos botones oscuros -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav d-lg-none gap-2 mt-3">
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Alumnos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Añadir</a>
+                  <a class="dropdown-item" href="#">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Tutor</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Añadir</a>
+                  <a class="dropdown-item" href="#">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Responsables</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Añadir</a>
+                  <a class="dropdown-item" href="#">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Registro</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Añadir</a>
+                  <a class="dropdown-item" href="#">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Ver Listas</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
     </header>
 
-        <main class="min-vh-100 py-5"> <!-- CONTENIDO DEL FORMULARIO -->
-            
-        </main>
+      <main class="min-vh-100 py-5"> <!-- CONTENIDO DEL FORMULARIO -->
+              
+      </main>
 
 
-    <footer class="bg-color text-light pt-5 pb-3 mt-auto">
-  <div class="container">
-    <div class="row">
+      <footer class="bg-color text-light pt-5 pb-3 mt-auto">
+    <div class="container">
+      <div class="row">
 
-      <!-- Enlaces -->
-      <div class="col-md-3 mb-4">
-        <h5>Creditos</h5>
-        <ul class="list-unstyled">
-          <li class="text-light">Iván Bertolotti</li>
-          <li class="text-light">Alejo Godoy</li>
-          <li class="text-light">Maximo Segundo</li>
-          <li class="text-light">Bruno Biscardi</li>
-          <li class="text-light">Matias Casela</li>
-          <li class="text-light">Morena Herrera</li>
+        <!-- Enlaces -->
+        <div class="col-md mb-4">
+          <h5>Creditos</h5>
+          <ul class="list-unstyled">
+            <li class="text-light">Iván Bertolotti</li>
+            <li class="text-light">Alejo Godoy</li>
+            <li class="text-light">Maximo Segundo</li>
+            <li class="text-light">Bruno Biscardi</li>
+            <li class="text-light">Matias Casela</li>
+            <li class="text-light">Morena Herrera</li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="col-md mb-4">
+          <h5>Contacto</h5>
+          <address class="text-light">
+            Soporte: segundomaximo55@gmail.com<br>
+            Tel: +54 9 11 7361-3030
+          </address>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="col-md mb-4">
+          <h5>Síguenos</h5>
+          <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="#" class="text-light"><i class="fab fa-github fa-lg"></i></a>
+        </div>
+
+      
+
+      <hr class="bg-light">
+
+      <div class="d-flex flex-column flex-md-row justify-content-between text-center">
+        <p class="mb-2 mb-md-0">&copy; 2025 Escuela Técnica N°1 Gral. San Martín Inc. Todos los derechos reservados.</p>
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item"><a href="/privacy" class="text-light">Privacidad</a></li>
+          <li class="list-inline-item"><a href="/terms" class="text-light">Términos</a></li>
         </ul>
       </div>
-
-      <!-- Contacto -->
-      <div class="col-md-3 mb-4">
-        <h5>Contacto</h5>
-        <address class="text-light">
-          Soporte: segundomaximo55@gmail.com<br>
-          Tel: +54 9 11 7361-3030
-        </address>
-      </div>
-
-      <!-- Redes Sociales -->
-      <div class="col-md-3 mb-4">
-        <h5>Síguenos</h5>
-        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
-        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
-        <a href="#" class="text-light"><i class="fab fa-github fa-lg"></i></a>
-      </div>
-
-      <!-- Suscripción -->
-      <div class="col-md-3 mb-4">
-        <h5>Suscríbete</h5>
-        <form>
-          <div class="mb-3">
-            <label for="footer-email" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="footer-email" placeholder="email@ejemplo.com">
-          </div>
-          <button type="submit" class="btn btn-dark">Enviar</button>
-        </form>
-      </div>
-
     </div>
-
-    <hr class="bg-light">
-
-    <div class="d-flex flex-column flex-md-row justify-content-between text-center">
-      <p class="mb-2 mb-md-0">&copy; 2025 Escuela Técnica N°1 Gral. San Martín Inc. Todos los derechos reservados.</p>
-      <ul class="list-inline mb-0">
-        <li class="list-inline-item"><a href="/privacy" class="text-light">Privacidad</a></li>
-        <li class="list-inline-item"><a href="/terms" class="text-light">Términos</a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+      <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
