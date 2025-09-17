@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-08-2025 a las 22:57:08
+-- Tiempo de generación: 18-09-2025 a las 01:32:11
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -33,34 +33,35 @@ CREATE TABLE `alumno` (
   `apellido` varchar(25) NOT NULL,
   `dni` int(11) NOT NULL,
   `direccion` varchar(25) NOT NULL,
-  `fecha_nacimiento` date DEFAULT NULL
+  `fecha_nacimiento` date DEFAULT NULL,
+  `idLocalidad` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `alumno`
 --
 
-INSERT INTO `alumno` (`id`, `nombre`, `apellido`, `dni`, `direccion`, `fecha_nacimiento`) VALUES
-(2, '', '', 1, 'mi casa', '0000-00-00'),
-(3, 'a', 's', 2, 'micasa', '2025-08-12'),
-(4, 'a', 's', 2, 'micasa', '2025-08-12'),
-(5, 'a', 's', 2, 'micasa', '2025-08-12'),
-(6, 'a', 's', 2, 'micasa', '2025-08-12'),
-(7, 'a', 's', 2, 'micasa', '2025-08-12'),
-(8, 'a', 's', 2, 'micasa', '2025-08-12'),
-(9, 'alejo', 'cangrejo', 48863144, 'bolivia 223', '2058-03-22'),
-(10, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00'),
-(11, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00'),
-(12, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00'),
-(13, 'geronim', 'corleta', 90, 'cerrito', '2025-08-16'),
-(14, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00'),
-(15, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00'),
-(16, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00'),
-(17, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20'),
-(18, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20'),
-(19, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20'),
-(20, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20'),
-(21, 'Jose', 'Golpe', 48926736, 'El callao 9288', '2006-08-17');
+INSERT INTO `alumno` (`id`, `nombre`, `apellido`, `dni`, `direccion`, `fecha_nacimiento`, `idLocalidad`) VALUES
+(2, '', '', 1, 'mi casa', '0000-00-00', NULL),
+(3, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
+(4, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
+(5, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
+(6, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
+(7, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
+(8, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
+(9, 'alejo', 'cangrejo', 48863144, 'bolivia 223', '2058-03-22', NULL),
+(10, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
+(11, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
+(12, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
+(13, 'geronim', 'corleta', 90, 'cerrito', '2025-08-16', NULL),
+(14, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
+(15, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
+(16, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
+(17, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20', NULL),
+(18, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20', NULL),
+(19, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20', NULL),
+(20, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20', NULL),
+(21, 'Jose', 'Golpe', 48926736, 'El callao 9288', '2006-08-17', NULL);
 
 -- --------------------------------------------------------
 
