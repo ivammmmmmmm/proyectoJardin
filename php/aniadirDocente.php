@@ -8,16 +8,12 @@
 <body>
     <?php
         include("conexion.php");
-        
+
         $nombre=$_POST['nombre'];
         $apellido=$_POST['apellido'];
-        $dni=$_POST['dni'];
-        $direccion=$_POST['direccion'];
-        $nacimiento=$_POST['nacimiento'];
-        $localidad=$_POST['localidad'];
+        $estado=1;
 
-        mysqli_query($conexion,"insert into table alumno (nombre,apellido,dni,direccion,fecha_nacimiento,idLocalidad) values ('$nombre','$apellido',$dni,'$direccion','$nacimiento',$localidad);");
-
+        mysqli_query($conexion,"insert into docente (nombre,apellido,estado) values ('$nombre','$apellido',$estado);");
         mysqli_close($conexion);
     ?>
 </body>

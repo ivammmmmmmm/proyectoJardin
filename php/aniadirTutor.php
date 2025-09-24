@@ -9,12 +9,12 @@
     <?php
         include('conexion.php');
 
-        $nombre=$_POST('nombre');
-        $apellido=$_POST('apellido');
-        $telefono=$_POST('telefono');
-        $direccion=$_POST('direccion');
-        $localidad=$_POST('localidad');
-        $mail=$_POST('mail');
+        $nombre=$_POST['nombre'];
+        $apellido=$_POST['apellido'];
+        $telefono=$_POST['telefono'];
+        $direccion=$_POST['direccion'];
+        $localidad=$_POST['localidad'];
+        $mail=$_POST['mail'];
 
         mysqli_query("insert into padretutor (nombre,apellido,telefono,direccion,idLocalidad,mail) values ('$nombre','$apellido',$telefono,$direccion,'$mail');");
 
