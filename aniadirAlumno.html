@@ -131,8 +131,8 @@
       </nav>
     </header>
 
-      <main class="min-vh-100 py-5 d-flex justify-content-center align-items-center"> <!-- CONTENIDO DEL FORMULARIO -->
-
+      <main class="min-vh-100 py-5 d-flex justify-content-center align-items-center"> 
+        <!-- CONTENIDO DEL FORMULARIO -->
         <div class="col-md-4 d-flex">
             <div class="card text-white bg-cardcolor w-100 h-100">
               <div class="card-header bg-color text-center">
@@ -153,20 +153,32 @@
                       <label class="form-label mt-4">DNI</label>
                       <input class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off" name="dni">
                     </div>
-                    <div>
-                      <label for="exampleSelect1" class="form-label mt-4">Localidad</label>
-                      <select class="form-select" id="exampleSelect1" name="localidad">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </select>
-                    </div>
-                    <div>
+                    <div class="mt-4">
+                    <label for="provincia" class="form-label">Provincia</label>
+                    <select class="form-select" id="provincia" name="provincia">
+                      <option value="">Seleccione una provincia</option>
+                    </select>
+                  </div>
+
+                  <div class="mt-4">
+                    <label for="partido" class="form-label">Partido</label>
+                    <select class="form-select" id="partido" name="partido" disabled>
+                      <option value="">Primero seleccione una provincia</option>
+                    </select>
+                  </div>
+
+                  <div class="mt-4">
+                    <label for="localidad" class="form-label">Localidad</label>
+                    <select class="form-select" id="localidad" name="localidad" disabled>
+                      <option value="">Primero seleccione un partido</option>
+                    </select>
+                  </div>
+                  <div>
                       <label class="form-label mt-4">Dirección y Altura</label>
-                      <input class="form-control" id="exampleInputPassword1" placeholder="Ingresa calle y altura" autocomplete="off" name="direccion">
-                    </div>
+                      <input class="form-control" id="direccion" aria-describedby="emailHelp" placeholder="Ingrese dirección" name="direccion">
+                  </div>
+
+
                     <div>
                         <label class="form-label mt-4">Fecha de Nacimiento</label>
                         <input type="date" name="nacimiento">
@@ -202,7 +214,7 @@
             <div class="col-md mb-4 text-center">
               <h5>Contacto</h5>
               <address class="text-light">
-                Soporte: segundomaximo55@gmail.com<br>
+                Soporte: aaaaa@gmail.com<br>
                 Tel: +54 9 11 7361-3030
               </address>
             </div>
@@ -229,7 +241,7 @@
         </div>
       </footer>
 
-
-      <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/direcciones.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
