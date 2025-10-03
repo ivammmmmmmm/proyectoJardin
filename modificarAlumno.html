@@ -135,20 +135,27 @@
       
       <main class="d-flex min-vh-100">
   <!-- Menú lateral -->
-  <aside class="bg-dark d-flex flex-column align-items-center py-3" style="width: 250px;">
+  <aside class="bg-dark d-flex flex-column align-items-center py-3" style="width: 15%; padding: 1%;">
     <input class="form-control mb-3" placeholder="Enter email" name="nombre">
-    <button class="btn btn-link text-info mb-3 m">
-      <i class="bi bi-grid fs-4"></i>
-    </button>
-    <button class="btn btn-link text-info mb-3">
-      <i class="bi bi-people fs-4"></i>
-    </button>
+    <select style="width: 100%;"> <!--SALAS-->
+
+      <?php
+        include(php/conexion.php);
+        $salas=mysqli_query($conexion,"select id,nombre from sala;") or die("problemas en el select: ".mysqli_error($conexion));
+        while($sal=mysqli_fetch_array($salas)){
+          echo "<option value=".$sal['id'].">".$sal['nombre']."</option>";
+        }
+        mysqli_close($conexion);
+      ?>
+
+    </select>
+    <select style="width: 100%"> <!--TURNOS-->
+    </select>
   </aside>
 
   <!-- Contenido principal -->
   <section class="flex-grow-1 p-3">
     <div class="list-group" id="usuariosLista">
-
       <!-- Usuario 1 -->
       <div class="list-group-item bg-dark text-light">
         <div class="d-flex justify-content-between align-items-center">
@@ -270,6 +277,6 @@
       </footer>
 
 
-      <script src="js/bootstrap.bundle.min.js"></script>
+      <s src="js/bootstrap.bundle.min.js"></s>
   </body>
 </html>
