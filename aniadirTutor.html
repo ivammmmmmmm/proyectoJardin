@@ -132,39 +132,55 @@
     </header>
 
       <main class="min-vh-100 py-5 d-flex justify-content-center align-items-center"> <!-- CONTENIDO DEL FORMULARIO -->
-        <form action="php/aniadirTutor.php" method="post">
-  <fieldset>
-    <legend>Formulario de Ingreso de Padres/Tutores</legend>
-    <div>
-      <label class="form-label mt-4">Nombre</label>
-      <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    </div>
-    <div>
-      <label class="form-label mt-4">Apellido</label>
-      <input class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
-    </div>
-    <div>
-      <label class="form-label mt-4">Teléfono</label>
-      <input class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off">
-    </div>
-    <div>
-      <label class="form-label mt-4">Dirección y Altura</label>
-      <input class="form-control" id="exampleInputPassword1" placeholder="Ingresa calle y altura" autocomplete="off">
-    </div>
-    <div>
-      <label for="exampleSelect1" class="form-label mt-4">Localidad</label>
-      <select class="form-select" id="exampleSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-    <br>
-    <button type="submit" class="btn btn-primary">Guardar</button>
-  </fieldset>
-</form>
+        <div class="col-md-4 d-flex">
+            <div class="card text-white bg-cardcolor w-100 h-100">
+              <div class="card-header bg-color text-center">
+                <h5 class="mb-0">Formulario de Ingreso de Padres/Tutores</h5>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <form action="php/aniadirTutor.php" method="post">
+                  <fieldset>
+                    <div>
+                      <label class="form-label mt-4">Nombre</label>
+                      <input class="form-control" name="nombre" placeholder="Ingrese nombre">
+                    </div>
+                    <div>
+                      <label class="form-label mt-4">Apellido</label>
+                      <input class="form-control" name="apellido" placeholder="Ingrese apellido" autocomplete="off">
+                    </div>
+                    <div>
+                      <label class="form-label mt-4">Teléfono</label>
+                      <input class="form-control" name="telefono" placeholder="Ingrese teléfono" autocomplete="off">
+                    </div>
+                    <div>
+                      <label class="form-label mt-4">Dirección y Altura</label>
+                      <input class="form-control" name="direccion" placeholder="Ingrese dirección">
+                    </div>
+                    <div class="mt-4">
+                      <label for="provincia" class="form-label">Provincia</label>
+                      <select class="form-select" id="provincia" name="provincia">
+                        <option value="">Seleccione una provincia</option>
+                      </select>
+                    </div>
+                    <div class="mt-4">
+                      <label for="partido" class="form-label">Partido</label>
+                      <select class="form-select" id="partido" name="partido" disabled>
+                        <option value="">Primero seleccione una provincia</option>
+                      </select>
+                    </div>
+                    <div class="mt-4">
+                      <label for="localidad" class="form-label">Localidad</label>
+                      <select class="form-select" id="localidad" name="localidad" disabled>
+                        <option value="">Primero seleccione un partido</option>
+                      </select>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
 
       </main>
 
@@ -190,7 +206,7 @@
             <div class="col-md mb-4 text-center">
               <h5>Contacto</h5>
               <address class="text-light">
-                Soporte: segundomaximo55@gmail.com<br>
+                Soporte: aaaaa@gmail.com<br>
                 Tel: +54 9 11 7361-3030
               </address>
             </div>
@@ -218,6 +234,7 @@
       </footer>
 
 
-      <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/direcciones.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
