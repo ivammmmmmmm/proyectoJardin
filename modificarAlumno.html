@@ -136,7 +136,7 @@
       <main class="d-flex min-vh-100">
   <!-- Menú lateral -->
   <aside class="bg-dark d-flex flex-column align-items-center py-3" style="width: 15%; padding: 1%;">
-    <input class="form-control mb-3" placeholder="Enter email" name="nombre">
+    <h5 class="text-light">Filtros de Busqueda</h5>
     <select style="width: 100%;"> <!--SALAS-->
 
       <?php
@@ -156,14 +156,25 @@
   <!-- Contenido principal -->
   <section class="flex-grow-1 p-3">
     <div class="list-group" id="usuariosLista">
+
+      <div class="list-group-item bg-dark text-light">
+  <div class="d-flex justify-content-between align-items-center w-100">
+    <div class="d-flex align-items-center w-100">
+      <i class="bi bi-search fs-3 me-3 text-light"></i>
+      <div class="flex-grow-1">
+        <input class="form-control w-100" placeholder="Enter email" name="nombre">
+      </div>
+    </div>
+  </div>
+</div>
+
       <!-- Usuario 1 -->
       <div class="list-group-item bg-dark text-light">
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center">
             <i class="bi bi-person fs-3 me-3 text-light"></i>
             <div>
-              <h6 class="mb-0 text-light">Nombre de Usuario</h6>
-              <small class="text-light">Rol del Usuario</small>
+              <h5 class="mb-0 text-light">Nombre de Usuario</h5>
             </div>
           </div>
           <div class="d-flex gap-2">
@@ -181,10 +192,12 @@
 
         <!-- Info oculta -->
         <div class="collapse mt-3" id="infoUser1" data-bs-parent="#usuariosLista">
-          <div class="p-3 bg-secondary rounded">
-            <p><strong>Email:</strong> usuario1@ejemplo.com</p>
-            <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
-            <p><strong>Fecha de registro:</strong> 01/01/2025</p>
+          <div class="p-3 bg-info rounded">
+            <p><strong>ID:</strong> 3255</p>
+            <p><strong>DNI:</strong> 50654321</p>
+            <p><strong>Edad:</strong> 6 años</p>
+            <p><strong>Fecha de Nacimiento:</strong> 23/4/2019</p>
+            <p><strong>Dirección:</strong> Calle 1278</p>
           </div>
         </div>
       </div>
@@ -195,8 +208,7 @@
           <div class="d-flex align-items-center">
             <i class="bi bi-person fs-3 me-3 text-light"></i>
             <div>
-              <h6 class="mb-0 text-light">Nombre de Usuario</h6>
-              <small class="text-light">Rol del Usuario</small>
+              <h5 class="mb-0 text-light">Nombre de Usuario</h5>
             </div>
           </div>
           <div class="d-flex gap-2">
@@ -214,7 +226,7 @@
 
         <!-- Info oculta -->
         <div class="collapse mt-3" id="infoUser2" data-bs-parent="#usuariosLista">
-          <div class="p-3 bg-secondary rounded">
+          <div class="p-3 bg-info rounded">
             <p><strong>Email:</strong> usuario2@ejemplo.com</p>
             <p><strong>Teléfono:</strong> +54 11 8765-4321</p>
             <p><strong>Fecha de registro:</strong> 15/01/2025</p>
@@ -277,6 +289,6 @@
       </footer>
 
 
-      <s src="js/bootstrap.bundle.min.js"></s>
+      <script src="js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
