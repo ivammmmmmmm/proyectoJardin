@@ -18,24 +18,31 @@ $fecha_nacimiento = trim($_POST['fecha_nacimiento'] ?? '');
 // Validaciones básicas
 // -------------------
 $errors = [];
-if ($nombre === '') $errors[] = 'Nombre obligatorio.';
-if ($apellido === '') $errors[] = 'Apellido obligatorio.';
-if ($dni === '' || !ctype_digit($dni)) $errors[] = 'DNI obligatorio y numérico.';
-if ($direccion === '') $errors[] = 'Dirección obligatoria.';
-if ($fecha_nacimiento === '') $errors[] = 'Fecha de nacimiento obligatoria.';
+if ($nombre === '')
+    $errors[] = 'Nombre obligatorio.';
+if ($apellido === '')
+    $errors[] = 'Apellido obligatorio.';
+if ($dni === '' || !ctype_digit($dni))
+    $errors[] = 'DNI obligatorio y numérico.';
+if ($direccion === '')
+    $errors[] = 'Dirección obligatoria.';
+if ($fecha_nacimiento === '')
+    $errors[] = 'Fecha de nacimiento obligatoria.';
 
 if (!empty($errors)) {
-    foreach ($errors as $err) echo $err . "<br>";
+    foreach ($errors as $err)
+        echo $err . "<br>";
     exit;
 }
 
 // Convertir DNI a entero
-$dni_int = (int)$dni;
+$dni_int = (int) $dni;
 
 // -------------------
 // Insertar alumno
 // -------------------
-$stmt = mysqli_prepare($conexion,
+$stmt = mysqli_prepare(
+    $conexion,
     "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento)
      VALUES (?, ?, ?, ?, ?)"
 );
@@ -54,7 +61,7 @@ mysqli_stmt_close($stmt);
 // -------------------
 // Datos de tutores
 // -------------------
-$tutor_nombres   = $_POST['tutor_nombre'] ?? [];
+$tutor_nombres = $_POST['tutor_nombre'] ?? [];
 $tutor_apellidos = $_POST['tutor_apellido'] ?? [];
 $tutor_telefonos = $_POST['tutor_telefono'] ?? [];
 $tutor_direccion = $_POST['tutor_direccion'] ?? [];
@@ -81,7 +88,8 @@ for ($i = 0; $i < count($tutor_nombres); $i++) {
     }
 
     // Insertar tutor en padreTutor
-    $stmt = mysqli_prepare($conexion,
+    $stmt = mysqli_prepare(
+        $conexion,
         "INSERT INTO padreTutor (nombre, apellido, telefono, direccion) VALUES (?, ?, ?, ?)"
     );
     mysqli_stmt_bind_param($stmt, "ssss", $t_nombre, $t_apellido, $t_telefono, $t_direccion);
@@ -90,7 +98,8 @@ for ($i = 0; $i < count($tutor_nombres); $i++) {
     mysqli_stmt_close($stmt);
 
     // Vincular alumno y tutor
-    $stmt = mysqli_prepare($conexion,
+    $stmt = mysqli_prepare(
+        $conexion,
         "INSERT INTO alumnotutor (idAlumno, idPadreTutor) VALUES (?, ?)"
     );
     mysqli_stmt_bind_param($stmt, "ii", $id_alumno, $id_padre);
