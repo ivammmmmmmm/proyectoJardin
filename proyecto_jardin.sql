@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-09-2025 a las 01:32:11
+-- Tiempo de generación: 09-10-2025 a las 08:47:55
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -34,34 +34,35 @@ CREATE TABLE `alumno` (
   `dni` int(11) NOT NULL,
   `direccion` varchar(25) NOT NULL,
   `fecha_nacimiento` date DEFAULT NULL,
-  `idLocalidad` int(11) DEFAULT NULL
+  `idLocalidad` int(11) DEFAULT NULL,
+  `idEstado` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `alumno`
 --
 
-INSERT INTO `alumno` (`id`, `nombre`, `apellido`, `dni`, `direccion`, `fecha_nacimiento`, `idLocalidad`) VALUES
-(2, '', '', 1, 'mi casa', '0000-00-00', NULL),
-(3, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
-(4, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
-(5, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
-(6, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
-(7, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
-(8, 'a', 's', 2, 'micasa', '2025-08-12', NULL),
-(9, 'alejo', 'cangrejo', 48863144, 'bolivia 223', '2058-03-22', NULL),
-(10, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
-(11, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
-(12, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
-(13, 'geronim', 'corleta', 90, 'cerrito', '2025-08-16', NULL),
-(14, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
-(15, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
-(16, 'geronimo', 'corleta', 90, 'cerrito', '0000-00-00', NULL),
-(17, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20', NULL),
-(18, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20', NULL),
-(19, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20', NULL),
-(20, 'juan', 'ponce', 48853140, 'cerrito2', '2000-03-20', NULL),
-(21, 'Jose', 'Golpe', 48926736, 'El callao 9288', '2006-08-17', NULL);
+INSERT INTO `alumno` (`id`, `nombre`, `apellido`, `dni`, `direccion`, `fecha_nacimiento`, `idLocalidad`, `idEstado`) VALUES
+(22, 'Lucía', 'Fernández', 42875639, 'Av. San Martín 1234', '2004-05-17', NULL, 1),
+(23, 'Martín', 'Gómez', 41234987, 'Calle Mitre 876', '2003-09-02', NULL, 1),
+(24, 'Valentina', 'Rodríguez', 43721598, 'Av. Rivadavia 5620', '2005-02-23', NULL, 1),
+(25, 'Julián', 'Pérez', 39872145, 'Calle Belgrano 233', '2002-12-14', NULL, 1),
+(26, 'Camila', 'López', 45321098, 'Av. Libertador 985', '2006-04-28', NULL, 1),
+(27, 'Nicolás', 'Díaz', 41789234, 'Calle Moreno 1456', '2003-08-19', NULL, 1),
+(28, 'Sofía', 'Martínez', 42657892, 'Pasaje Las Rosas 342', '2004-11-10', NULL, 1),
+(29, 'Tomás', 'Suárez', 44521984, 'Calle Sarmiento 999', '2005-06-05', NULL, 1),
+(30, 'Agustina', 'Romero', 43982165, 'Av. Corrientes 2101', '2004-02-11', NULL, 1),
+(31, 'Mateo', 'Ruiz', 40127893, 'Calle Lavalle 532', '2002-10-09', NULL, 1),
+(32, 'Micaela', 'Torres', 42987124, 'Av. Belgrano 1210', '2004-07-18', NULL, 1),
+(33, 'Franco', 'Molina', 44876215, 'Calle Tucumán 874', '2005-01-25', NULL, 1),
+(34, 'Julieta', 'Sosa', 43751983, 'Calle Independencia 221', '2003-05-30', NULL, 1),
+(35, 'Lucas', 'Ramírez', 42236109, 'Av. Entre Ríos 1705', '2003-09-12', NULL, 1),
+(36, 'Catalina', 'Vega', 45687923, 'Calle Pueyrredón 1500', '2006-03-07', NULL, 1),
+(37, 'Lautaro', 'Acosta', 41598276, 'Calle Alberdi 932', '2003-01-03', NULL, 1),
+(38, 'Milagros', 'Benítez', 44789122, 'Calle San Juan 324', '2005-10-21', NULL, 1),
+(39, 'Ezequiel', 'Moreno', 42891357, 'Calle España 874', '2004-06-16', NULL, 1),
+(40, 'Brenda', 'Castro', 44018765, 'Av. Luro 1902', '2004-09-29', NULL, 1),
+(41, 'Facundo', 'Silva', 41984257, 'Calle Jujuy 456', '2003-02-08', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -136,6 +137,14 @@ CREATE TABLE `estado` (
   `id` int(11) NOT NULL,
   `nombre` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `estado`
+--
+
+INSERT INTO `estado` (`id`, `nombre`) VALUES
+(1, 'activo'),
+(2, 'retirado');
 
 -- --------------------------------------------------------
 
@@ -275,7 +284,7 @@ ALTER TABLE `turno`
 -- AUTO_INCREMENT de la tabla `alumno`
 --
 ALTER TABLE `alumno`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `alumnotutor`
@@ -299,7 +308,7 @@ ALTER TABLE `docente`
 -- AUTO_INCREMENT de la tabla `estado`
 --
 ALTER TABLE `estado`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `localidad`
