@@ -1,11 +1,13 @@
 <?php
-//no se pq no andan los acordeones en php con ajax, pero bueno
-//ya m voy a dormir pq son casi las 4 y mañana hay taller
+// me voy a matar y grabarlo
 //FIXME
 
 include("conexion.php");
 $resultado = mysqli_query($conexion, "SELECT * from alumno WHERE idEstado=1");
+$data = array();
+if($resultado->num_rows>0){
 while ($consulta = mysqli_fetch_array($resultado)) {
+    $data[] = $consulta;
     ?>
 
     <div class="list-group-item bg-dark text-light">
@@ -41,5 +43,10 @@ while ($consulta = mysqli_fetch_array($resultado)) {
 
 
     <?php
+    }
 }
+header('Content-Type: application/json');
+echo json_encode($data);
+
+mysqli_close($conexion);
 ?>
