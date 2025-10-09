@@ -40,10 +40,12 @@ $alumno = $result->fetch_assoc();
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Modificar Alumno</title>
 </head>
+
 <body>
     <h2>Modificar Alumno</h2>
     <form method="post">
@@ -51,8 +53,10 @@ $alumno = $result->fetch_assoc();
         Apellido: <input type="text" name="apellido" value="<?= $alumno['apellido'] ?>" required><br><br>
         DNI: <input type="text" name="dni" value="<?= $alumno['dni'] ?>" required><br><br>
         Dirección: <input type="text" name="direccion" value="<?= $alumno['direccion'] ?>" required><br><br>
-        Fecha Nacimiento: <input type="date" name="fecha_nacimiento" value="<?= $alumno['fecha_nacimiento'] ?>" required><br><br>
+        Fecha Nacimiento: <input type="date" name="fecha_nacimiento" value="<?= $alumno['fecha_nacimiento'] ?>"
+            required><br><br>
         <input type="submit" value="Guardar Cambios">
     </form>
 </body>
+
 </html>

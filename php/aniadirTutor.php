@@ -16,7 +16,7 @@
         $localidad=$_POST['localidad'];
         $mail=$_POST['mail'];
 
-        mysqli_query("insert into padretutor (nombre,apellido,telefono,direccion,idLocalidad,mail) values ('$nombre','$apellido',$telefono,$direccion,'$mail');");
+        mysqli_query($conexion,"insert into padretutor (nombre,apellido,telefono,direccion,idLocalidad,mail) values ('$nombre','$apellido',$telefono,$direccion,'$mail');");
 
         mysqli_close($conexion);
     ?>
