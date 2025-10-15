@@ -1,17 +1,26 @@
-$(document).ready(function (){
-    $.ajax({
-        url: '../php/modificarAlumno.php',
-        type: 'POST',
-        dataType:'json',
-        
-        success: function(respuesta){
-            $('#alumnosLista').html(respuesta);
-        },
+getData();
 
-        error: function(xhr, status, error){
-                // La función se ejecuta si hay un error
-                console.error("Error al obtener los datos: " + error);
-                $('#contenedor-registros').html('<p>Ocurrió un error al cargar los datos.</p>');
-        }
+document.getElementById("campo").addEventListener("keyup", getData)
+
+function getData() {
+  var input = document.getElementById("campo").value
+  var content = document.getElementById("alumnosLista")
+  var url = "../php/modificarAlumno.php"
+  var formData = new FormData()
+  formData.append("campo", input)
+
+  fetch(url, {
+    method: "POST",
+    body: formData,
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+}
+
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      content.innerHTML = data
     })
-});
+    .catch((err) => console.log(err))
+}
