@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/estructura.css">
   <link rel="stylesheet" href="bootstrap-icons-1.13.1/bootstrap-icons.css">
   <link rel="stylesheet" href="js/jquery-3.4.1.min.js">
-  <script src="js/script.js"></script>
+  
 </head>
 
 <body>
@@ -137,20 +137,24 @@
 
 
 
-  <main class="d-flex min-vh-100">
+    <main class="d-flex flex-column flex-lg-row min-vh-100">
     <!-- Menú lateral -->
-    <aside class="bg-dark d-flex flex-column align-items-center py-3 p-3" style="width: 15%;">
-      <h5 class="text-light">Filtros de Busqueda para Alumnos</h5>
-      <p class="align-items-start w-100 pt-3 text-light">Salas:</p>
-      <select class="w-100 rounded"> <!--SALAS-->
-        <option>Ninguno</option>
-        <option>Verde</option>
-      </select>
-      <p class="align-items-start w-100 pt-2 text-light">Turnos:</p>
-      <select class="w-100 rounded"> <!--TURNOS-->
-        <option>Ninguno</option>
-        <option>Mañana</option>
-      </select>
+    <aside class="bg-dark py-3 px-3 d-flex flex-column align-items-center" id="sidebarFilter" style="min-width: 250px;">
+      <div class="d-flex justify-content-between align-items-center w-100 mb-3">
+        <h5 class="text-light mb-0">Filtros de Búsqueda</h5>
+      </div>
+      <div class="w-100">
+        <p class="text-light mb-2">Salas:</p>
+        <select class="form-select mb-3"> <!--SALAS-->
+          <option>Ninguno</option>
+          <option>Verde</option>
+        </select>
+        <p class="text-light mb-2">Turnos:</p>
+        <select class="form-select mb-3"> <!--TURNOS-->
+          <option>Ninguno</option>
+          <option>Mañana</option>
+        </select>
+      </div>
     </aside>
 
     <!-- Contenido principal -->
@@ -171,38 +175,90 @@
           </div>
         </form>
 
-        <!-- Usuario 1 -->
-         <div id="alumnosLista"></div>
         
-        <!-- Usuario 2 -->
+        <!-- Usuario 1 -->
         <div class="list-group-item bg-dark text-light">
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">
             <div class="d-flex align-items-center">
               <i class="bi bi-person fs-3 me-3 text-light"></i>
               <div>
-                <h5 class="mb-0 text-light">Nombre Apellido</h5>
+                <h5 class="mb-0 text-light text-break">Juan Pérez</h5>
               </div>
             </div>
-            <div class="d-flex gap-2">
+            <div class="d-flex flex-wrap gap-2 w-100 w-sm-auto justify-content-end">
               <button class="btn btn-danger btn-sm">Eliminar</button>
               <button class="btn btn-secondary btn-sm">Modificar</button>
-              <button class="btn btn-info btn-sm text-white" data-bs-toggle="collapse" data-bs-target="#infoUser2"
-                aria-expanded="false" aria-controls="infoUser2">
+              <button class="btn btn-info btn-sm text-white toggle-info">
                 Ver Info.
               </button>
             </div>
           </div>
 
           <!-- Info oculta -->
-          <div class="collapse mt-3" id="infoUser2" data-bs-parent="#usuariosLista">
+          <div class="info-content collapse mt-3">
             <div class="p-3 bg-info rounded">
-              <p><strong>Email:</strong> usuario2@ejemplo.com</p>
+              <p><strong>Email:</strong> juan.perez@ejemplo.com</p>
+              <p><strong>Teléfono:</strong> +54 11 1234-5678</p>
+              <p><strong>Fecha de registro:</strong> 10/01/2025</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Usuario 2 -->
+        <div class="list-group-item bg-dark text-light">
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-person fs-3 me-3 text-light"></i>
+              <div>
+                <h5 class="mb-0 text-light text-break">María García</h5>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-2 w-100 w-sm-auto justify-content-end">
+              <button class="btn btn-danger btn-sm">Eliminar</button>
+              <button class="btn btn-secondary btn-sm">Modificar</button>
+              <button class="btn btn-info btn-sm text-white toggle-info">
+                Ver Info.
+              </button>
+            </div>
+          </div>
+
+          <!-- Info oculta -->
+          <div class="info-content collapse mt-3">
+            <div class="p-3 bg-info rounded">
+              <p><strong>Email:</strong> maria.garcia@ejemplo.com</p>
               <p><strong>Teléfono:</strong> +54 11 8765-4321</p>
               <p><strong>Fecha de registro:</strong> 15/01/2025</p>
             </div>
           </div>
         </div>
 
+        <!-- Usuario 3 -->
+        <div class="list-group-item bg-dark text-light">
+          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">
+            <div class="d-flex align-items-center">
+              <i class="bi bi-person fs-3 me-3 text-light"></i>
+              <div>
+                <h5 class="mb-0 text-light text-break">María García</h5>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap gap-2 w-100 w-sm-auto justify-content-end">
+              <button class="btn btn-danger btn-sm">Eliminar</button>
+              <button class="btn btn-secondary btn-sm">Modificar</button>
+              <button class="btn btn-info btn-sm text-white toggle-info">
+                Ver Info.
+              </button>
+            </div>
+          </div>
+
+          <!-- Info oculta -->
+          <div class="info-content collapse mt-3">
+            <div class="p-3 bg-info rounded">
+              <p><strong>Email:</strong> maria.garcia@ejemplo.com</p>
+              <p><strong>Teléfono:</strong> +54 11 8765-4321</p>
+              <p><strong>Fecha de registro:</strong> 15/01/2025</p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -261,6 +317,7 @@
       </div>
   </footer>
 
+  <script src="js/script.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
