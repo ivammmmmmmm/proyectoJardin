@@ -24,4 +24,3 @@ if ($conexion->connect_errno) {
 	    </div>';
 	exit();
 }
-?>
