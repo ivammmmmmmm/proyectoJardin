@@ -1,5 +1,5 @@
 <?php
-// me voy a matar y grabarlo
+//
 //FIXME
 require "conexion.php";
 
@@ -31,20 +31,28 @@ if ($num_rows > 0) {
     while ($row = $resultado->fetch_assoc()) {
         $edad = date_diff(date_create($row['fecha_nacimiento']), date_create('today'))->y;
 
-        $html .='<div class="list-group-item bg-dark text-light"> <div class="d-flex justify-content-between align-items-center"> <div class="d-flex align-items-center"> <i class="bi bi-person fs-3 me-3 text-light"></i> <div>';
-        $html .='<h5 class="mb-0 text-light">'.$row['nombre'].' '.$row['apellido'].'</h5>';
-        $html .='</div> </div> <div class="d-flex gap-2">';
-        $html .='<button class="btn btn-danger btn-sm">Eliminar</button>';
-        $html .='<button class="btn btn-secondary btn-sm">Modificar</button>';
-        $html .='<button class="btn btn-info btn-sm text-white" data-bs-toggle="collapse" data-bs-target="#infoUser1" aria-expanded="false" aria-controls="infoUser1">Ver Info.</button>';
-        $html .='</button></div></div></div>';
-        $html .='<div class="collapse mt-3" id="infoUser1" data-bs-parent="#usuariosLista"><div class="p-3 bg-info rounded">';
-        $html .='<p><strong>ID:</strong>'.$row['id'].'</p>';
-        $html .='<p><strong>DNI:</strong>'.$row['dni'].'</p>';
-        $html .='<p><strong>Edad:</strong>'.$edad.'</p>';
-        $html .='<p><strong>Fecha de Nacimiento:</strong>'.$row['fecha_nacimiento'].'</p>';
-        $html .='<p><strong>Dirección:</strong>'.$row['direccion'].'</p>';
-        $html .='</div></div>';
+        $html .= '<div class="list-group-item bg-dark text-light">';
+        $html .= '  <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">';
+        $html .= '    <div class="d-flex align-items-center">';
+        $html .= '      <i class="bi bi-person fs-3 me-3 text-light"></i>';
+        $html .= '      <div><h5 class="mb-0 text-light text-break">'.$row['nombre'].' '.$row['apellido'].'</h5></div>';
+        $html .= '    </div>';
+        $html .= '    <div class="d-flex flex-wrap gap-2 w-100 w-sm-auto justify-content-end">';
+        $html .= '      <button class="btn btn-danger btn-sm">Eliminar</button>';
+        $html .= '      <button class="btn btn-secondary btn-sm">Modificar</button>';
+        $html .= '      <button class="btn btn-info btn-sm text-white toggle-info">Ver Info.</button>';
+        $html .= '    </div>';
+        $html .= '  </div>';
+        $html .= '  <div class="info-content collapse mt-3">';
+        $html .= '    <div class="p-3 bg-info rounded">';
+        $html .= '      <p><strong>ID:</strong>'.$row['id'].'</p>';
+        $html .= '      <p><strong>DNI:</strong>'.$row['dni'].'</p>';
+        $html .= '      <p><strong>Edad:</strong>'.$edad.'</p>';
+        $html .= '      <p><strong>Fecha de Nacimiento:</strong>'.$row['fecha_nacimiento'].'</p>';
+        $html .= '      <p><strong>Dirección:</strong>'.$row['direccion'].'</p>';
+        $html .= '    </div>';
+        $html .= '  </div>';
+        $html .= '</div>';
     }
 } else{
     $html .= '<strong>No se encontraron alumnos</strong>';
