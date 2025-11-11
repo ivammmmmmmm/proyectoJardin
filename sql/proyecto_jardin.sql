@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-11-2025 a las 23:42:42
+-- Tiempo de generación: 12-11-2025 a las 00:16:36
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -96,8 +96,8 @@ CREATE TABLE `comunicado` (
   `idSala` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `medioUtilizado` varchar(25) NOT NULL,
-  `causa` varchar(25) NOT NULL,
-  `desarrollo` varchar(25) NOT NULL
+  `causa` varchar(255) NOT NULL,
+  `desarrollo` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -165,27 +165,7 @@ CREATE TABLE `falta` (
 --
 
 INSERT INTO `falta` (`id`, `idAlumno`, `idSala`, `idRazon`, `fecha`) VALUES
-(3, 18, 2, 4, '2025-10-17'),
-(4, 19, 2, 3, '2025-10-18'),
-(5, 20, 3, 1, '2025-10-19'),
-(6, 21, 3, 5, '2025-10-20'),
-(7, 24, 2, 2, '2025-10-21'),
-(8, 16, 2, 3, '2025-10-22'),
-(9, 19, 2, 3, '2025-10-22'),
-(10, 20, 2, 3, '2025-10-22'),
-(11, 7, 2, 3, '2025-10-22'),
-(12, 23, 1, 3, '2025-10-22'),
-(13, 24, 1, 3, '2025-10-22'),
-(14, 21, 1, 3, '2025-10-22'),
-(15, 17, 1, 3, '2025-10-22'),
-(16, 6, 1, 3, '2025-10-22'),
-(17, 22, 1, 3, '2025-10-22'),
-(18, 9, 3, 1, '2025-10-23'),
-(19, 23, 1, 4, '2025-10-27'),
-(20, 23, 1, 1, '2025-10-28'),
-(21, 23, 1, 2, '2025-10-28'),
-(22, 24, 1, 3, '2025-10-28'),
-(23, 22, 1, 4, '2025-10-28');
+(52, 16, 2, 1, '2025-11-11');
 
 -- --------------------------------------------------------
 
@@ -220,7 +200,7 @@ CREATE TABLE `padretutor` (
 --
 
 INSERT INTO `padretutor` (`id`, `nombre`, `apellido`, `telefono`, `direccion`, `idLocalidad`, `mail`, `dni`) VALUES
-(3, 'a', 's', 11, '', 0, NULL, NULL),
+(3, 'a', 's', 11, 'sad', 0, NULL, NULL),
 (4, 'a', 's', 11, NULL, 0, NULL, NULL),
 (5, 'a', 's', 11, NULL, 0, NULL, NULL),
 (6, 'a', 's', 11, NULL, 0, NULL, NULL),
@@ -233,6 +213,34 @@ INSERT INTO `padretutor` (`id`, `nombre`, `apellido`, `telefono`, `direccion`, `
 (14, 'Marcelo', 'Rivera', 1198372377, 'serrioto', 0, NULL, NULL),
 (15, 'Alejo', 'Pintos', 1134584953, 'manuel alberti 893', 0, NULL, NULL),
 (16, 'prueba', 'nose', 122, '19', 42077010, 'masda12@gmail.com', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `presente`
+--
+
+CREATE TABLE `presente` (
+  `id` int(11) NOT NULL,
+  `idAlumno` int(11) NOT NULL,
+  `idSala` int(11) NOT NULL,
+  `fecha` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `presente`
+--
+
+INSERT INTO `presente` (`id`, `idAlumno`, `idSala`, `fecha`) VALUES
+(252, 19, 2, '2025-11-11'),
+(253, 20, 2, '2025-11-11'),
+(254, 7, 2, '2025-11-11'),
+(255, 16, 2, '2025-11-11'),
+(257, 24, 1, '2025-11-11'),
+(258, 21, 1, '2025-11-11'),
+(259, 17, 1, '2025-11-11'),
+(260, 6, 1, '2025-11-11'),
+(261, 22, 1, '2025-11-11');
 
 -- --------------------------------------------------------
 
@@ -350,6 +358,12 @@ ALTER TABLE `padretutor`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `presente`
+--
+ALTER TABLE `presente`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `razon`
 --
 ALTER TABLE `razon`
@@ -405,7 +419,7 @@ ALTER TABLE `estado`
 -- AUTO_INCREMENT de la tabla `falta`
 --
 ALTER TABLE `falta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT de la tabla `localidad`
@@ -418,6 +432,12 @@ ALTER TABLE `localidad`
 --
 ALTER TABLE `padretutor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT de la tabla `presente`
+--
+ALTER TABLE `presente`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=262;
 
 --
 -- AUTO_INCREMENT de la tabla `razon`
