@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Seguimiento Jardin</title>
+  <link rel="stylesheet" href="http://localhost/proyectoJardin-main/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://localhost/proyectoJardin-main/css/estructura.css">
+  <link rel="stylesheet" href="http://localhost/proyectoJardin-main/bootstrap-icons-1.13.1/bootstrap-icons.css">
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand m-0" href="http://localhost/proyectoJardin-main/html/index.html">Seguimiento</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
+            <ul class="navbar-nav flex-row gap-2">
+              <!-- Alumnos -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Alumnos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirAlumno.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarAlumno.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verAlumno.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Tutor -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Tutor</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirTutor.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarTutor.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verTutores.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Faltas -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Faltas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirFaltas.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarFaltas.html">Modificar</a>
+                </div>
+              </li>
+
+              <!-- Docentes -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Docentes</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirDocente.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarDocente.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verDocentes.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Registro -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Registro</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirRegistro.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarRegistros.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verRegistros.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Estadísticas -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Estadísticas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/estadisticasFaltas.html">Faltas</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/estadisticasSalas.html">Salas</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <main class="min-vh-100 py-5 d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row justify-content-center g-4">
+
+          <!-- Card: Alumnos -->
+          <div class="col-md-4 d-flex">
+            <div class="card text-white bg-cardcolor w-100 h-100">
+              <div class="card-header bg-color">
+                <h5 class="mb-0">Alumnos</h5>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="card-text">
+                  En la parte superior de la página encontrará una opción llamada <strong>Alumnos</strong> que desplegará una lista de opciones: <em>Añadir, Modificar, Eliminar y Ver Listas</em>.
+                </p>
+... (rest omitted)

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Faltas - Sistema Jardín</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-icons-1.13.1/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/estructura.css">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-dark text-light">
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
+            <div class="container-fluid position-relative">
+                <a class="navbar-brand m-0" href="./index.html">Seguimiento</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
+                    <ul class="navbar-nav flex-row gap-2">
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Faltas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./aniadirFaltas.html">Añadir</a>
+                                <a class="dropdown-item" href="./modificarFaltas.html">Modificar</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- MENÚ RESPONSIVE: con los mismos botones oscuros -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav d-lg-none gap-2 mt-3">
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Faltas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./aniadirFaltas.html">Añadir</a>
+                                <a class="dropdown-item" href="./modificarFaltas.html">Modificar</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4 flex-grow-1">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="mb-0"><i class="bi bi-calendar-check"></i> Gestionar Faltas</h2>
+            <a href="./index.html" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Volver
+            </a>
+        </div>
+        <!-- Buscador y Filtros -->
+        <div class="row mb-4">
+            <div class="col-md-5">
+                <div class="input-group">
+                    <span class="input-group-text bg-dark text-light">
+                        <i class="bi bi-search"></i>
+                    </span>
+                    <input type="text" id="buscador" class="form-control bg-dark text-light" 
+                           placeholder="Buscar por nombre de alumno...">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <select id="filtroAsistencia" class="form-select bg-dark text-light">
+                    <option value="todos">Todos</option>
+                    <option value="ausentes">Ausentes</option>
+                    <option value="presentes">Presentes</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex justify-content-end">
+                    <span id="contadorResultados" class="text-light"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lista de Faltas -->
+        <div class="list-group" id="faltasLista">
+            <!-- Las faltas se cargarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <!-- Modal para Modificar Falta -->
+    <div class="modal fade" id="modalModificarFalta" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modificar Asistencia</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formModificarFalta">
+                        <input type="hidden" id="faltaId">
+                        <input type="hidden" id="alumnoId">
+                        
+                        <!-- Alumno (solo lectura) -->
+                        <div class="mb-3">
+                            <label for="alumnoNombre" class="form-label">Alumno</label>
+                            <input type="text" class="form-control bg-dark text-light" id="alumnoNombre" readonly>
+                        </div>
+
+                        <!-- Fecha (solo lectura) -->
+                        <div class="mb-3">
+                            <label for="fechaFalta" class="form-label">Fecha</label>
+                            <input type="date" class="form-control bg-dark text-light" id="fechaFalta" readonly>
+                        </div>
+
+                        <!-- Estado -->
+                        <div class="mb-3">
+                            <label for="estadoSelect" class="form-label">Estado</label>
+                            <select class="form-select bg-dark text-light" id="estadoSelect" required>
+                                <option value="presente">Presente</option>
+                                <option value="ausente">Ausente</option>
+                            </select>
+                        </div>
+
+                        <!-- Razón (se muestra/oculta según el estado) -->
+                        <div class="mb-3" id="razonContainer" style="display: none;">
+                            <label for="razonSelect" class="form-label">Razón de Ausencia</label>
+                            <select class="form-select bg-dark text-light" id="razonSelect">
+                                <option value="">Seleccione una razón</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor, seleccione una razón para la ausencia.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarModificacion()">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-color text-light pt-5 pb-3 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="mb-3">Información</h6>
+                    <p class="mb-2 small">
+                        <i class="bi bi-info-circle me-2"></i>
+                        Aplicación de Faltas v1.0
+                    </p>
+                    <p class="mb-0 small text-muted">Escuela Técnica N°1 General San Martín</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center small text-muted">
+                <p>&copy; 2025 Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/helpers.js"></script>
+    <script src="./js/modificarFaltas.js"></script>
+</body>
+</html>

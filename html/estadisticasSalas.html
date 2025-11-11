@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Estadísticas de Salas - Jardín</title>
+  <link rel="stylesheet" href="/proyectoJardin-main/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/proyectoJardin-main/css/estructura.css">
+  <link rel="stylesheet" href="/proyectoJardin-main/bootstrap-icons-1.13.1/bootstrap-icons.css">
+    <style>
+      /* Pequeños ajustes visuales */
+      .card-stats { min-height: 120px; }
+      .filters .form-control { max-width: 220px; }
+      canvas#chartComunicados { height: 320px !important; }
+    </style>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- SheetJS para exportación Excel -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  </head>
+  <body class="bg-light">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand m-0" href="./index.html">Seguimiento</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
+            <ul class="navbar-nav flex-row gap-2">
+              <!-- Alumnos -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Alumnos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirAlumno.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarAlumno.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verAlumno.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Tutor -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Tutor</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirTutor.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarTutor.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verTutores.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Faltas -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Faltas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirFaltas.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarFaltas.html">Modificar</a>
+                </div>
+              </li>
+
+              <!-- Docentes -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Docentes</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirDocente.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarDocente.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verDocentes.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Registro -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Registro</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirRegistro.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarRegistros.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verRegistros.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Estadísticas -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Estadísticas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./estadisticasFaltas.html">Faltas</a>
+                  <a class="dropdown-item" href="./estadisticasSalas.html">Salas</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- MENÚ RESPONSIVE: con los mismos botones oscuros -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav d-lg-none gap-2 mt-3">
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Alumnos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirAlumno.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarAlumno.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verAlumno.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Tutor</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirTutor.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarTutor.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verTutores.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Docentes</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirDocente.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarDocente.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verDocentes.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Registro</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirRegistro.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarRegistros.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verRegistros.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Estadísticas - Menú responsive -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Estadísticas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./estadisticasFaltas.html">Faltas</a>
+                  <a class="dropdown-item" href="./estadisticasSalas.html">Salas</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1 class="h3">Estadísticas de Salas</h1>
+        <div class="text-muted">Última actualización: <span id="lastUpdated">--/--/----</span></div>
+      </div>
+
+      <!-- Filtros -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <form id="filtersForm" class="row g-2 align-items-center filters">
+            <div class="col-auto">
+              <label class="visually-hidden" for="selectSala">Sala</label>
+              <select id="selectSala" name="sala" class="form-select">
+                <option value="">Todas las salas</option>
+                <!-- Las opciones se cargarán dinámicamente -->
+              </select>
+            </div>
+            <div class="col-auto">
+              <label class="visually-hidden" for="dateFrom">Desde</label>
+              <input type="date" id="dateFrom" name="from" class="form-control" />
+            </div>
+            <div class="col-auto">
+              <label class="visually-hidden" for="dateTo">Hasta</label>
+              <input type="date" id="dateTo" name="to" class="form-control" />
+            </div>
+            <div class="col-auto">
+              <button type="button" id="applyFilters" class="btn btn-primary">Aplicar</button>
+            </div>
+            <div class="col-auto ms-auto">
+              <button type="button" id="exportExcel" class="btn btn-success">
+                <i class="bi bi-file-earmark-excel"></i> Exportar Excel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Resumen eliminado: tarjetas no utilizadas -->
+
+      <!-- Gráfico -->
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Tendencia de Comunicados por Sala</h5>
+          <canvas id="chartComunicados"></canvas>
+        </div>
+      </div>
+
+      <!-- Tabla de detalle -->
+      <div class="card mb-5">
+        <div class="card-body">
+          <h5 class="card-title">Detalle por sala</h5>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover" id="tableSalas">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Sala</th>
+                  <th>Niños</th>
+                  <th>Capacidad</th>
+                  <th>Ocupación %</th>
+                  <th>Última actualización</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+            </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <footer class="text-center mb-5">
+        
+      </footer>
+    </main>
+    <script src="/proyectoJardin-main/js/bootstrap.bundle.min.js"></script>
+    <script src="/proyectoJardin-main/js/estadisticasSalas.js"></script>
+    <script src="/proyectoJardin-main/js/simularSalas.js"></script>
+  </body>
+</html>

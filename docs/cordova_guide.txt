@@ -1,0 +1,86 @@
+Guía para convertir la aplicación web a APK con Apache Cordova (Windows)
+
+Resumen rápido
+- Cordova empaqueta una app web (HTML/CSS/JS) en una app nativa (APK) que se instala en Android.
+- Solo el frontend se ejecuta dentro del APK: cualquier código PHP/servidor debe quedar alojado en un servidor accesible (ej. tu XAMPP en una IP pública o servidor remoto).
+
+Requisitos (Windows)
+- Node.js (>= 14 LTS) y npm
+- Java JDK (preferible JDK 11 o compatible)
+- Android SDK (instalado como parte de Android Studio)
+- Variables de entorno configuradas: JAVA_HOME, ANDROID_SDK_ROOT (o ANDROID_HOME)
+- Cordova CLI: npm install -g cordova
+
+Notas importantes sobre backend PHP
+- Cordova no ejecuta PHP dentro del APK. Las llamadas a endpoints como /php/*.php deben apuntar a un servidor HTTP accesible.
+- Opciones:
+  - Mantener el backend en tu máquina y exponerlo (ngrok, red local con IP fija)
+  - Desplegar el backend en un hosting o VPS y cambiar las URLs del frontend para apuntar allí
+
+Pasos para crear el proyecto Cordova (desde PowerShell)
+1) Instalar Cordova (si no está):
+   npm install -g cordova
+
+2) Crear el proyecto Cordova (ejemplo):
+   cd C:\xampp\htdocs\proyectoJardin-main
+   cordova create cordova-app com.tuempresa.proyectojardin "ProyectoJardin"
+
+3) Preparar el contenido web: copiar las carpetas públicas (html/, css/, js/, img/, bootstrap/, etc.) al folder cordova-app/www
+   Puedes usar el script PowerShell incluido en `scripts/prepare_cordova.ps1` que hace esto automáticamente.
+
+4) Añadir la plataforma Android:
+   cd cordova-app
+   cordova platform add android@10.1.2
+   # Nota: El número de versión va acorde a la versión de Android SDK y a Cordova-android soportado.
+
+5) Añadir plugins útiles (opcional):
+   cordova plugin add cordova-plugin-whitelist
+   cordova plugin add cordova-plugin-inappbrowser
+   cordova plugin add cordova-plugin-geolocation
+
+6) Configurar `config.xml` (ya existe un ejemplo en cordova-app/config.xml). Revisa `content src` y `access origin` para que la app pueda hacer fetch a tu backend remoto.
+
+7) Construir la app (debug):
+   cordova build android --debug
+   # Produce un .apk en platforms/android/app/build/outputs/apk/debug/
+
+8) Probar en dispositivo (debug):
+   - Conecta el dispositivo Android por USB con depuración USB activada.
+   - Ejecuta: cordova run android --device
+
+9) Firmar y generar APK de release (pasos resumidos):
+   - Generar un keystore (si no tienes):
+     keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias myalias
+
+   - Construir release:
+     cordova build android --release
+
+   - Firmar y alinear (usando Android SDK tools):
+     jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.jks platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk myalias
+     "C:\path\to\android-sdk\build-tools\<version>\zipalign.exe" -v 4 platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk app-release-aligned.apk
+     "C:\path\to\android-sdk\build-tools\<version>\apksigner.bat" sign --ks my-release-key.jks --out app-release-signed.apk app-release-aligned.apk
+
+Consejos y problemas comunes
+- CSP / whitelist: añade <allow-navigation> y <access origin="*"> en config.xml si necesitas hacer peticiones a dominios externos (mejor restringir a tu dominio).
+- Rutas relativas: revisa que las rutas a recursos dentro de `www` estén correctas. Avoid absolute paths referencing localhost unless the backend is reachable from the device.
+- CORS: el backend debe permitir CORS para peticiones desde la app si usas fetch/XHR.
+- PHP/backend: si quieres ejecutar PHP local en el móvil, hay alternativas complejas (ej. soluciones embebidas) pero no es recomendable.
+
+Debugging
+- Usa Chrome Remote Debugging: chrome://inspect para inspeccionar la WebView del dispositivo.
+- Logs: usa `adb logcat` para ver errores nativos.
+
+Automatización (script de preparación)
+- Existe `scripts/prepare_cordova.ps1` en este repo que copia las carpetas web (html, css, js, img, bootstrap, etc.) al `cordova-app/www`.
+- Edita el script si tus carpetas son distintas.
+
+Recursos
+- Cordova docs: https://cordova.apache.org/docs/
+- Android SDK & build tools: https://developer.android.com/studio
+- SheetJS / Chart.js: ya documentados en docs/chartjs_sheetjs_guide.txt
+
+Resumen
+- Crea proyecto Cordova, copia los assets web en `www`, añade plataforma Android, build y prueba.
+- Asegúrate de que el backend PHP esté accesible desde la app (servidor remoto o IP accesible).
+
+Fin de la guía.

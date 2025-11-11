@@ -1,0 +1,14 @@
+{
+  "name": "proyectojardin",
+  "version": "1.0.0",
+  "description": "Electron wrapper for Proyecto Jardin webapp",
+  "main": "../js/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^38.2.0"
+  }
+}

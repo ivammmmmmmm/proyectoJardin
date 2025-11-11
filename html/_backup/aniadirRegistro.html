@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Registro</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estructura.css">
+    <link rel="stylesheet" href="../bootstrap-icons-1.13.1/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand m-0" href="http://localhost/proyectoJardin-main/html/index.html">Seguimiento</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
+            <ul class="navbar-nav flex-row gap-2">
+              <!-- Alumnos -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Alumnos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirAlumno.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarAlumno.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verAlumno.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Tutor -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Tutor</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirTutor.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarTutor.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verTutores.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Faltas -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Faltas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirFaltas.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarFaltas.html">Modificar</a>
+                </div>
+              </li>
+
+              <!-- Docentes -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Docentes</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirDocente.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarDocente.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verDocentes.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Registro -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Registro</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirRegistro.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarRegistros.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verRegistros.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Estadísticas -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Estadísticas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/estadisticasFaltas.html">Faltas</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/estadisticasSalas.html">Salas</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- MENÚ RESPONSIVE: con los mismos botones oscuros -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav d-lg-none gap-2 mt-3">
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Alumnos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirAlumno.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarAlumno.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verAlumno.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Tutor</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirTutor.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarTutor.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verTutores.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Docentes</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirDocente.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarDocente.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verDocentes.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Registro</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/aniadirRegistro.html">Añadir</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/modificarRegistros.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/verRegistros.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Estadísticas - Menú responsive -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Estadísticas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/estadisticasFaltas.html">Faltas</a>
+                  <a class="dropdown-item" href="http://localhost/proyectoJardin-main/html/estadisticasSalas.html">Salas</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="min-vh-100 py-5 d-flex justify-content-center align-items-center">
+        <!-- CONTENIDO DEL FORMULARIO -->
+        <div class="col-md-4 d-flex">
+            <div class="card text-white bg-cardcolor w-100 h-100">
+                <div class="card-header bg-color text-center">
+                    <h5 class="mb-0">Nuevo Registro de Comunicación</h5>
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <form id="formRegistro" action="../php/aniadirRegistro.php" method="post">
+                        <fieldset>
+                            <div class="mb-3">
+                                <label class="form-label">Alumno</label>
+                                <select class="form-select bg-dark text-light" name="idAlumno" id="selectAlumno" required>
+                                    <option value="">Seleccione un alumno</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor seleccione un alumno.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Tutor</label>
+                                <select class="form-select bg-dark text-light" name="idPadreTutor" id="selectTutor" required>
+                                    <option value="">Seleccione un tutor</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor seleccione un tutor.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Docente</label>
+                                <select class="form-select bg-dark text-light" name="idDocente" id="selectDocente" required>
+                                    <option value="">Seleccione un docente</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor seleccione un docente.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Sala</label>
+                                <select class="form-select bg-dark text-light" name="idSala" id="selectSala" required>
+                                    <option value="">Seleccione una sala</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor seleccione una sala.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Fecha</label>
+                                <input type="date" class="form-control bg-dark text-light" name="fecha" required>
+                                <div class="invalid-feedback">Por favor seleccione una fecha.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Medio Utilizado</label>
+                                <select class="form-select bg-dark text-light" name="medioUtilizado" id="selectMedio" required>
+                                    <option value="">Seleccione un medio</option>
+                                    <option value="Teléfono">Teléfono</option>
+                                    <option value="Email">Email</option>
+                                    <option value="WhatsApp">WhatsApp</option>
+                                    <option value="En Persona">En Persona</option>
+                                </select>
+                                <div class="invalid-feedback">Por favor seleccione el medio utilizado.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Causa</label>
+                                <textarea class="form-control bg-dark text-light" name="causa" rows="3" required
+                                    placeholder="Escriba la razón de la comunicación..." maxlength="25"></textarea>
+                                <div class="invalid-feedback">Por favor ingrese la causa de la comunicación.</div>
+                                <div class="form-text text-light">Máximo 25 caracteres</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Desarrollo</label>
+                                <textarea class="form-control bg-dark text-light" name="desarrollo" rows="3" required
+                                    placeholder="Escriba el desarrollo de la comunicación..." maxlength="25"></textarea>
+                                <div class="invalid-feedback">Por favor ingrese el desarrollo de la comunicación.</div>
+                                <div class="form-text text-light">Máximo 25 caracteres</div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">Guardar Registro</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-color text-light pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <!-- Enlaces -->
+                <div class="col-md mb-4 text-center">
+                    <h5>Creditos</h5>
+                    <ul class="list-unstyled">
+                        <li class="text-light">Iván Bertolotti</li>
+                        <li class="text-light">Alejo Godoy</li>
+                        <li class="text-light">Maximo Segundo</li>
+                        <li class="text-light">Bruno Biscardi</li>
+                        <li class="text-light">Matias Casela</li>
+                        <li class="text-light">Morena Herrera</li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div class="col-md mb-4 text-center">
+                    <h5>Contacto</h5>
+                    <address class="text-light">
+                        Soporte: segundomaximo55@gmail.com<br>
+                        Tel: +54 9 11 7361-3030
+                    </address>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="col-md mb-4 text-center">
+                    <h5>Síguenos</h5>
+                    <a href="https://www.facebook.com/tecnica1grandbourg/?locale=es_LA" class="text-light me-3"><i
+                            class="bi bi-facebook me-1"></i>Facebook</a><br>
+                    <a href="https://www.instagram.com/tecnica1malvinasarg/" class="text-light me-3"><i
+                            class="bi bi-instagram me-1"></i>Instagram</a><br>
+                    <a href="#" class="text-light"><i class="fab fa-github fa-lg"></i></a>
+                </div>
+            </div>
+
+            <hr class="bg-light">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between text-center">
+                <p class="mb-2 mb-md-0">&copy; 2025 Escuela Técnica N°1 Gral. San Martín Inc. Todos los derechos
+                    reservados.</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a href="/privacy" class="text-light">Privacidad</a></li>
+                    <li class="list-inline-item"><a href="/terms" class="text-light">Términos</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/aniadirRegistro.js"></script>
+</body>
+</html>

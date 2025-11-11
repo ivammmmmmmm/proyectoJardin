@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php
+    require_once __DIR__ . '/conexion.php';
+
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        header('Location: ../html/aniadirAlumno.html');
+        exit;
+    }
+
+    $nombre = trim($_POST['nombre'] ?? '');
+    $apellido = trim($_POST['apellido'] ?? '');
+    $dni = trim($_POST['dni'] ?? '');
+    $direccion = trim($_POST['direccion'] ?? '');
+    $nacimiento = trim($_POST['nacimiento'] ?? '');
+    $localidad = isset($_POST['localidad']) && $_POST['localidad'] !== '' ? intval($_POST['localidad']) : 0;
+
+    // Obtener tutores seleccionados (array de ids)
+    $tutoresSeleccionados = [];
+    if (isset($_POST['tutores']) && is_array($_POST['tutores'])) {
+        foreach ($_POST['tutores'] as $t) {
+            if (ctype_digit((string)$t)) $tutoresSeleccionados[] = (int)$t;
+        }
+    }
+
+    if ($nombre === '' || $apellido === '') {
+        header('Location: ../html/aniadirAlumno.html?error=missing');
+        exit;
+    }
+
+    try {
+        // Detectar si la columna idLocalidad existe en la tabla alumno
+        $hasLocalidad = false;
+        $stmtCheck = $pdo->query("SHOW COLUMNS FROM alumno LIKE 'idLocalidad'");
+        if ($stmtCheck && $stmtCheck->fetch()) {
+            $hasLocalidad = true;
+        }
+
+        // Iniciar transacción
+        $pdo->beginTransaction();
+
+        if ($hasLocalidad) {
+            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad) VALUES (?, ?, ?, ?, ?, ?)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $localidad]);
+        } else {
+            // Si no existe idLocalidad en la tabla, omitirla
+            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento) VALUES (?, ?, ?, ?, ?)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento]);
+        }
+
+        $alumnoId = $pdo->lastInsertId();
+
+        // Insertar relaciones en alumnotutor
+        if (!empty($tutoresSeleccionados)) {
+            $stmtIns = $pdo->prepare("INSERT INTO alumnotutor (idPadreTutor, idAlumno) VALUES (?, ?)");
+            foreach ($tutoresSeleccionados as $tid) {
+                if (!$stmtIns->execute([$tid, $alumnoId])) {
+                    throw new Exception('Error insert alumnotutor: ' . implode(' | ', $stmtIns->errorInfo()));
+                }
+            }
+        }
+
+        $pdo->commit();
+
+        header('Location: ../html/aniadirAlumno.html?ok=1');
+        exit;
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        $logDir = __DIR__ . '/logs';
+        if (!is_dir($logDir)) mkdir($logDir, 0755, true);
+        $msg = date('Y-m-d H:i:s') . " | aniadirAlumno.php | " . $e->getMessage() . "\n";
+        file_put_contents($logDir . '/db_errors.log', $msg, FILE_APPEND | LOCK_EX);
+
+        header('Location: ../html/aniadirAlumno.html?error=sql');
+        exit;
+    }
+    ?>

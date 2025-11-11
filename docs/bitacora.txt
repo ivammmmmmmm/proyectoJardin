@@ -1,0 +1,5 @@
+antes que me olvide que hice aca 
+13/10: creando ver estadísticas salas y ahora intentado que funcione después de 2 horas funciona el estadisticasSalas y ya se puede exportar el Excel también grafico:chart.js Excel:sheetJS
+se mejoro la opción para añadir los tutores en anidadirAlumno y también en modificar alumno 
+15/10: creando modificar registro y se ordeno para que los js y los HTML esten separados se reemplazo el uso de sqli por PDO 
+(PHP Data Objects) es una interfaz mas moderna y flexible para php para conectar con la base de datos(a discusión)

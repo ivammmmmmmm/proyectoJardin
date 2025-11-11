@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Test AJAX</title>
+  <link rel="stylesheet" href="/proyectoJardin-main/css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-light p-4">
+  <div class="container">
+    <h1>Prueba AJAX (GET / POST / DELETE)</h1>
+    <p>Esta página usa endpoints en <code>php/examples/</code> y guarda los datos en <code>data.json</code>.</p>
+
+    <div class="mb-3">
+      <button id="btnCargar" class="btn btn-primary">Cargar alumnos (GET)</button>
+      <button id="btnRefrescar" class="btn btn-secondary">Refrescar</button>
+    </div>
+
+    <div id="lista"></div>
+
+    <hr class="border-light">
+    <h3>Modificar alumno (POST)</h3>
+    <form id="formModificar" class="mb-3 w-50">
+      <input type="text" id="m_id" class="form-control mb-2" placeholder="id">
+      <input type="text" id="m_nombre" class="form-control mb-2" placeholder="nombre">
+      <input type="text" id="m_apellido" class="form-control mb-2" placeholder="apellido">
+      <input type="text" id="m_dni" class="form-control mb-2" placeholder="dni">
+      <button type="submit" class="btn btn-success">Enviar modificación</button>
+    </form>
+
+    <h3>Eliminar alumno (DELETE)</h3>
+    <div class="mb-3 w-50">
+      <input type="text" id="d_id" class="form-control mb-2" placeholder="id a eliminar">
+      <button id="btnEliminar" class="btn btn-danger">Eliminar</button>
+    </div>
+
+    <pre id="debug" class="bg-black text-light p-2"></pre>
+  </div>
+
+<script>
+  const listaEl = document.getElementById('lista');
+  const debug = document.getElementById('debug');
+
+  async function cargar() {
+    listaEl.innerHTML = 'Cargando...';
+    try {
+      const res = await fetch('/proyectoJardin-main/php/examples/verAlumnos_test.php');
+      const data = await res.json();
+      renderList(data);
+      debug.textContent = JSON.stringify(data, null, 2);
+    } catch (err) {
+      listaEl.innerHTML = '<div class="alert alert-danger">Error al cargar</div>';
+      debug.textContent = err;
+    }
+  }
+
+  function renderList(data) {
+    if (!Array.isArray(data) || data.length === 0) {
+      listaEl.innerHTML = '<div class="alert alert-info">No hay alumnos</div>';
+      return;
+    }
+    listaEl.innerHTML = '';
+    data.forEach(a => {
+      const div = document.createElement('div');
+      div.className = 'p-2 mb-2 bg-secondary rounded';
+      div.innerHTML = `<strong>${a.id} - ${a.nombre} ${a.apellido}</strong> <small>DNI: ${a.dni}</small>` +
+                      ` <button class="btn btn-sm btn-warning ms-2" onclick="fillForm('${a.id}','${a.nombre}','${a.apellido}','${a.dni}')">Editar</button>`;
+      listaEl.appendChild(div);
+    });
+  }
+
+  function fillForm(id,nombre,apellido,dni){
+    document.getElementById('m_id').value = id;
+    document.getElementById('m_nombre').value = nombre;
+    document.getElementById('m_apellido').value = apellido;
+    document.getElementById('m_dni').value = dni;
+  }
+
+  document.getElementById('btnCargar').addEventListener('click', cargar);
+  document.getElementById('btnRefrescar').addEventListener('click', cargar);
+
+  document.getElementById('formModificar').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fd = new FormData();
+    fd.append('id', document.getElementById('m_id').value);
+    fd.append('nombre', document.getElementById('m_nombre').value);
+    fd.append('apellido', document.getElementById('m_apellido').value);
+    fd.append('dni', document.getElementById('m_dni').value);
+    try {
+      const res = await fetch('/proyectoJardin-main/php/examples/modificarAlumno_test.php', { method: 'POST', body: fd });
+      const json = await res.json();
+      debug.textContent = JSON.stringify(json, null, 2);
+      if (json.success) cargar();
+    } catch (err) {
+      debug.textContent = err;
+    }
+  });
+
+  document.getElementById('btnEliminar').addEventListener('click', async () => {
+    const id = document.getElementById('d_id').value;
+    if (!id) return alert('Ingresá un id');
+    if (!confirm('Confirmar eliminar id=' + id)) return;
+    try {
+      const res = await fetch('/proyectoJardin-main/php/examples/eliminarAlumno_test.php?id=' + encodeURIComponent(id), { method: 'DELETE' });
+      const json = await res.json();
+      debug.textContent = JSON.stringify(json, null, 2);
+      if (json.success) cargar();
+    } catch (err) {
+      debug.textContent = err;
+    }
+  });
+
+  // carga inicial
+  cargar();
+</script>
+<script src="/proyectoJardin-main/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

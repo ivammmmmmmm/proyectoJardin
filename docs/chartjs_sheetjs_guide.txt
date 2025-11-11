@@ -1,0 +1,93 @@
+Guía rápida: Usar Chart.js + SheetJS (xlsx) en el frontend
+
+Propósito
+- Leer archivos Excel/CSV en el navegador con SheetJS (xlsx) y convertirlos a un array/JSON.
+- Usar Chart.js para visualizar los datos extraídos (gráficos de líneas, barras, tortas, etc.).
+
+Archivos necesarios
+- chart.min.js (Chart.js)
+- xlsx.full.min.js (SheetJS)
+
+Cómo incluir las librerías (CDN)
+- En tu HTML:
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+
+Flujo básico
+1) Usuario selecciona un archivo (.xlsx, .xls, .csv) con un input file.
+2) SheetJS lee el archivo y lo convierte a JSON/Array.
+3) Procesas los datos (encabezados, fechas, valores) para obtener arrays etiquetados para Chart.js.
+4) Creas un canvas y renderizas el gráfico con Chart.js.
+
+Ejemplo completo (concepto)
+1) HTML:
+  <input type="file" id="fileInput" />
+  <canvas id="chartCanvas"></canvas>
+
+2) JS (pasos):
+  const fileInput = document.getElementById('fileInput');
+  const ctx = document.getElementById('chartCanvas').getContext('2d');
+  let chart = null;
+
+  fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (evt) => {
+      const data = new Uint8Array(evt.target.result);
+      const workbook = XLSX.read(data, {type: 'array'});
+      const firstSheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[firstSheetName];
+      const json = XLSX.utils.sheet_to_json(worksheet, {header: 1});
+      // json es un array de arrays: [ [col1, col2, ...], [v1, v2, ...], ... ]
+
+      // Transformar a etiquetas y dataset para Chart.js
+      const headers = json[0];
+      const rows = json.slice(1).filter(r => r.length);
+      const labels = rows.map(r => r[0]);
+      const dataValues = rows.map(r => parseFloat(r[1]) || 0);
+
+      const chartData = {
+        labels: labels,
+        datasets: [{
+          label: headers[1] || 'Valores',
+          data: dataValues,
+          backgroundColor: 'rgba(54, 162, 235, 0.5)'
+        }]
+      };
+
+      if (chart) chart.destroy();
+      chart = new Chart(ctx, { type: 'bar', data: chartData });
+    };
+    reader.readAsArrayBuffer(file);
+  });
+
+Notas y consejos
+- Encabezados: sheet_to_json con header:1 devuelve filas como arrays; con header:0 devuelve objetos por fila.
+- Formato de fechas: SheetJS puede devolver fechas en formato Excel; usa XLSX.SSF para formatear o convierte el número a fecha.
+- CSV: SheetJS detecta csv si el archivo tiene extensión .csv o si usas read with type: 'binary' y options.
+- Rendimiento: para archivos muy grandes, procesa en worker threads o en el servidor.
+- Validación: valida que la columna esperada exista y que la cantidad de filas sea suficiente.
+- Chart.js: destruye el chart previo antes de crear uno nuevo para evitar duplicados.
+
+Exportar gráfico a imagen / Excel
+- chart.toBase64Image() para obtener imagen del gráfico.
+- Para exportar datos a xlsx: usar XLSX.utils.aoa_to_sheet() + XLSX.writeFile() para descargar.
+
+Ejemplo exportar datos:
+  const aoa = [headers, ...rows];
+  const ws = XLSX.utils.aoa_to_sheet(aoa);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, 'Datos');
+  XLSX.writeFile(wb, 'datos_exportados.xlsx');
+
+Resumen
+- SheetJS para leer/parsear archivos locales (xlsx/csv) en el navegador.
+- Chart.js para visualizar arrays/objets JSON resultantes.
+- Validar y normalizar datos, construir labels y datasets.
+- Manejar destrucción/creación de charts para actualizaciones.
+
+Referencias
+- Chart.js docs: https://www.chartjs.org/docs/latest/
+- SheetJS docs: https://sheetjs.com/
+
+Fin de guía.

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Faltas - Sistema Jardín</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-icons-1.13.1/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/estructura.css">
+</head>
+<style>
+.custom-checkbox {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Efecto hover */
+.custom-checkbox:hover {
+  border-color: #aaa;
+}
+
+/* Cuando está marcado → muestra una X */
+.custom-checkbox:checked::after {
+  content: "❌";
+  color: #ff4d4d;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Cuando no está marcado → muestra vacío */
+.custom-checkbox::after {
+  content: "";
+}
+
+/* Cambia color del borde cuando está marcado */
+.custom-checkbox:checked {
+  border-color: #ff4d4d;
+}
+
+</style>
+<body class="d-flex flex-column min-vh-100 bg-dark text-light">
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
+            <div class="container-fluid position-relative">
+                <a class="navbar-brand m-0" href="./index.html">Seguimiento</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
+                    <ul class="navbar-nav flex-row gap-2">
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Faltas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./aniadirFaltas.html">Añadir</a>
+                                <a class="dropdown-item" href="./modificarFaltas.html">Modificar</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- MENÚ RESPONSIVE: con los mismos botones oscuros -->
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav d-lg-none gap-2 mt-3">
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Faltas</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="./aniadirFaltas.html">Añadir</a>
+                                <a class="dropdown-item" href="./modificarFaltas.html">Modificar</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-4 flex-grow-1">
+        <h2 class="mb-4"><i class="bi bi-calendar-x"></i> Registrar Falta</h2>
+        
+        <form id="formAgregarFalta" class="needs-validation" novalidate>
+            <!-- Selección de Sala -->
+            <div class="mb-3">
+                <label for="salaSelect" class="form-label">Sala</label>
+                <select class="form-select" id="salaSelect" name="sala" required>
+                    <option value="">Seleccione una sala</option>
+                </select>
+                <div class="invalid-feedback">Por favor seleccione una sala.</div>
+            </div>
+
+            <!-- Lista de Alumnos (aparecerá después de seleccionar la sala) -->
+            <div id="alumnosContainer" class="mb-3 d-none">
+                <h5 class="mb-3">Registro de Asistencia</h5>
+                <div class="mb-2">
+                    <button type="button" class="btn btn-sm btn-outline-success me-2" onclick="marcarTodos(true)">
+                        <i class="bi bi-check-all"></i> Marcar Todos Presentes
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-danger" onclick="marcarTodos(false)">
+                        <i class="bi bi-x-lg"></i> Marcar Todos Ausentes
+                    </button>
+                </div>
+                
+                <!-- Aquí se cargarán los checkboxes de los alumnos -->
+                <div id="listaAlumnos" class="list-group">
+                </div>
+                
+                <!-- Razón de las Faltas (aparece solo cuando hay ausentes) -->
+                <div id="razonContainer" class="mt-3 d-none">
+                    <label for="razonSelect" class="form-label">Razón de las Faltas</label>
+                    <select class="form-select" id="razonSelect" name="razonSelect" required>
+                        <option value="">Seleccione una razón</option>
+                        <option value="1">Enfermedad</option>
+                        <option value="2">Viaje</option>
+                        <option value="3">Trámites</option>
+                        <option value="4">Otros</option>
+                    </select>
+                    <div class="invalid-feedback">Por favor seleccione una razón para las faltas.</div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-save"></i> Guardar Registro
+                </button>
+                <a href="index.html" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Volver
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-color text-light py-3 mt-auto">
+        <div class="container text-center">
+            <p class="mb-0 small">&copy; 2025 Sistema de Faltas - Escuela Técnica N°1</p>
+        </div>
+    </footer>
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-color text-light pt-5 pb-3 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h6 class="mb-3">Información</h6>
+                    <p class="mb-2 small">
+                        <i class="bi bi-info-circle me-2"></i>
+                        Aplicación de Faltas v1.0
+                    </p>
+                    <p class="mb-0 small text-muted">Escuela Técnica N°1 General San Martín</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center small text-muted">
+                <p>&copy; 2025 Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/config.js"></script>
+    <script src="./js/helpers.js"></script>
+    <script src="./js/aniadirFaltas.js"></script>
+</body>
+</html>
+

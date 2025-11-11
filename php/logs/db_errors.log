@@ -1,0 +1,1953 @@
+2025-10-28 21:55:46 | obtenerDatos.php | Iniciando obtenerDatos.php | mysqli_error: Iniciando obtenerDatos.php
+2025-10-28 21:55:46 | obtenerDatos.php | Iniciando obtenerDatos.php | mysqli_error: Iniciando obtenerDatos.php
+2025-10-28 21:55:46 | obtenerDatos.php | Conexión PDO establecida correctamente | mysqli_error: Conexión PDO establecida correctamente
+2025-10-28 21:55:46 | obtenerDatos.php | Obteniendo datos de tipo: alumnos | mysqli_error: Obteniendo datos de tipo: alumnos
+2025-10-28 21:55:47 | obtenerDatos.php | Conexión PDO establecida correctamente | mysqli_error: Conexión PDO establecida correctamente
+2025-10-28 21:55:47 | obtenerDatos.php | Obteniendo datos de tipo: docentes | mysqli_error: Obteniendo datos de tipo: docentes
+2025-10-28 21:55:47 | obtenerDatos.php | Iniciando obtenerDatos.php | mysqli_error: Iniciando obtenerDatos.php
+2025-10-28 21:55:47 | obtenerDatos.php | Conexión PDO establecida correctamente | mysqli_error: Conexión PDO establecida correctamente
+2025-10-28 21:55:47 | obtenerDatos.php | Obteniendo datos de tipo: salas | mysqli_error: Obteniendo datos de tipo: salas
+2025-10-29 00:07:00 | TEST | Iniciando procesamiento de falta
+2025-10-29 00:07:00 | aniadirFalta.php | No es una petición AJAX válida
+2025-10-29 00:07:00 | ERROR | No es una petición AJAX válida
+2025-10-29 00:07:00 | aniadirFalta.php | Iniciando registro de faltas - 2025-10-29 00:07:00
+2025-10-29 00:07:00 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-10-28
+    [faltas] => [{"idAlumno":"23","idRazon":"1"}]
+)
+
+2025-10-29 00:07:00 | aniadirFalta.php | Raw Input: 
+2025-10-29 00:07:00 | aniadirFalta.php | ID de sala recibido: 1
+2025-10-29 00:07:00 | aniadirFalta.php | Fecha recibida: 2025-10-28
+2025-10-29 00:07:00 | aniadirFalta.php | Faltas raw recibidas: [{"idAlumno":"23","idRazon":"1"}]
+2025-10-29 00:07:00 | aniadirFalta.php | Faltas decodificadas (array): Array
+(
+    [0] => Array
+        (
+            [idAlumno] => 23
+            [idRazon] => 1
+        )
+
+)
+
+2025-10-29 00:07:00 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-10-28, faltas=Array
+(
+    [0] => Array
+        (
+            [idAlumno] => 23
+            [idRazon] => 1
+        )
+
+)
+
+2025-10-29 00:07:00 | aniadirFalta.php | Conexión a la base de datos verificada correctamente
+2025-10-29 00:07:00 | aniadirFalta.php | Iniciando transacción SQL
+2025-10-29 00:07:00 | aniadirFalta.php | SQL preparado: INSERT INTO falta (idAlumno, idSala, idRazon, fecha) VALUES (?, ?, ?, ?)
+2025-10-29 00:07:00 | aniadirFalta.php | Procesando falta: Array
+(
+    [idAlumno] => 23
+    [idRazon] => 1
+)
+
+2025-10-29 00:07:00 | aniadirFalta.php | Datos inválidos para falta: alumno_id=0, razon_id=0
+2025-10-29 00:07:00 | aniadirFalta.php | Error: Datos de falta inválidos para el alumno ID: 0
+2025-10-29 00:07:00 | aniadirFalta.php | Datos de falta inválidos para el alumno ID: 0
+2025-10-29 00:11:30 | TEST | Iniciando procesamiento de falta
+2025-10-29 00:11:30 | aniadirFalta.php | No es una petición AJAX válida
+2025-10-29 00:11:30 | ERROR | No es una petición AJAX válida
+2025-10-29 00:11:30 | aniadirFalta.php | Iniciando registro de faltas - 2025-10-29 00:11:30
+2025-10-29 00:11:30 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 2
+    [faltas] => [{"idAlumno":16,"idRazon":1,"fecha":"2025-10-28"}]
+)
+
+2025-10-29 00:11:30 | aniadirFalta.php | Raw Input: 
+2025-10-29 00:11:30 | aniadirFalta.php | ID de sala recibido: 2
+2025-10-29 00:11:30 | aniadirFalta.php | Fecha recibida: 
+2025-10-29 00:11:30 | aniadirFalta.php | Faltas raw recibidas: [{"idAlumno":16,"idRazon":1,"fecha":"2025-10-28"}]
+2025-10-29 00:11:30 | aniadirFalta.php | Faltas decodificadas (array): Array
+(
+    [0] => Array
+        (
+            [idAlumno] => 16
+            [idRazon] => 1
+            [fecha] => 2025-10-28
+        )
+
+)
+
+2025-10-29 00:11:30 | aniadirFalta.php | Validando datos: sala=2, fecha=, faltas=Array
+(
+    [0] => Array
+        (
+            [idAlumno] => 16
+            [idRazon] => 1
+            [fecha] => 2025-10-28
+        )
+
+)
+
+2025-10-29 00:11:30 | aniadirFalta.php | Datos inválidos: sala=2, fecha=, es_array_faltas=1
+2025-10-29 00:13:32 | TEST | Iniciando procesamiento de falta
+2025-10-29 00:13:32 | aniadirFalta.php | No es una petición AJAX válida
+2025-10-29 00:13:32 | ERROR | No es una petición AJAX válida
+2025-10-29 00:13:32 | aniadirFalta.php | Iniciando registro de faltas - 2025-10-29 00:13:32
+2025-10-29 00:13:32 | aniadirFalta.php | POST Data: Array
+(
+    [datos] => {"faltas":[{"idAlumno":16,"idRazon":2,"fecha":"2025-10-28","idSala":2}],"sala":2,"fecha":"2025-10-28"}
+)
+
+2025-10-29 00:13:32 | aniadirFalta.php | Raw Input: 
+2025-10-29 00:13:32 | aniadirFalta.php | Datos raw recibidos: {"faltas":[{"idAlumno":16,"idRazon":2,"fecha":"2025-10-28","idSala":2}],"sala":2,"fecha":"2025-10-28"}
+2025-10-29 00:13:32 | aniadirFalta.php | ID de sala: 2
+2025-10-29 00:13:32 | aniadirFalta.php | Fecha: 2025-10-28
+2025-10-29 00:13:32 | aniadirFalta.php | Faltas: Array
+(
+    [0] => Array
+        (
+            [idAlumno] => 16
+            [idRazon] => 2
+            [fecha] => 2025-10-28
+            [idSala] => 2
+        )
+
+)
+
+2025-10-29 00:13:32 | aniadirFalta.php | Faltas no son string: NULL
+2025-10-29 00:13:32 | aniadirFalta.php | Validando datos: sala=2, fecha=2025-10-28, faltas=
+2025-10-29 00:13:32 | aniadirFalta.php | Datos inválidos: sala=2, fecha=2025-10-28, es_array_faltas=
+2025-10-29 00:15:01 | TEST | Iniciando procesamiento de falta
+2025-10-29 00:15:01 | aniadirFalta.php | No es una petición AJAX válida
+2025-10-29 00:15:01 | ERROR | No es una petición AJAX válida
+2025-10-29 00:15:01 | aniadirFalta.php | Iniciando registro de faltas - 2025-10-29 00:15:01
+2025-10-29 00:15:01 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 2
+    [fecha] => 2025-10-28
+    [faltas] => [{"alumno_id":20,"razon_id":1}]
+)
+
+2025-10-29 00:15:01 | aniadirFalta.php | Raw Input: 
+2025-10-29 00:15:01 | aniadirFalta.php | Datos raw recibidos: 
+2025-10-29 00:15:01 | aniadirFalta.php | Error decodificando JSON: Syntax error
+2025-10-29 00:16:54 | TEST | Iniciando procesamiento de falta
+2025-10-29 00:16:54 | aniadirFalta.php | No es una petición AJAX válida
+2025-10-29 00:16:54 | ERROR | No es una petición AJAX válida
+2025-10-29 00:16:54 | aniadirFalta.php | Iniciando registro de faltas - 2025-10-29 00:16:54
+2025-10-29 00:16:54 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-10-28
+    [faltas] => [{"alumno_id":23,"razon_id":1}]
+)
+
+2025-10-29 00:16:54 | aniadirFalta.php | Raw Input: 
+2025-10-29 00:16:54 | aniadirFalta.php | Datos recibidos:
+2025-10-29 00:16:54 | aniadirFalta.php | ID Sala: 1
+2025-10-29 00:16:54 | aniadirFalta.php | Fecha: 2025-10-28
+2025-10-29 00:16:54 | aniadirFalta.php | Faltas JSON: [{"alumno_id":23,"razon_id":1}]
+2025-10-29 00:16:54 | aniadirFalta.php | Faltas decodificadas: Array
+(
+    [0] => Array
+        (
+            [alumno_id] => 23
+            [razon_id] => 1
+        )
+
+)
+
+2025-10-29 00:16:54 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-10-28, faltas=Array
+(
+    [0] => Array
+        (
+            [alumno_id] => 23
+            [razon_id] => 1
+        )
+
+)
+
+2025-10-29 00:16:54 | aniadirFalta.php | Conexión a la base de datos verificada correctamente
+2025-10-29 00:16:54 | aniadirFalta.php | Iniciando transacción SQL
+2025-10-29 00:16:54 | aniadirFalta.php | SQL preparado: INSERT INTO falta (idAlumno, idSala, idRazon, fecha) VALUES (?, ?, ?, ?)
+2025-10-29 00:16:54 | aniadirFalta.php | Procesando falta: Array
+(
+    [alumno_id] => 23
+    [razon_id] => 1
+)
+
+2025-10-29 00:16:54 | aniadirFalta.php | Ejecutando SQL con: alumno_id=23, sala_id=1, razon_id=1, fecha=2025-10-28
+2025-10-29 00:16:54 | aniadirFalta.php | Falta registrada exitosamente para alumno ID: 23
+2025-10-29 00:16:54 | aniadirFalta.php | Faltas guardadas exitosamente. Total: 1
+2025-10-29 00:23:46 | TEST | Iniciando procesamiento de falta
+2025-10-29 00:23:46 | aniadirFalta.php | No es una petición AJAX válida
+2025-10-29 00:23:46 | ERROR | No es una petición AJAX válida
+2025-10-29 00:23:46 | aniadirFalta.php | Iniciando registro de faltas - 2025-10-29 00:23:46
+2025-10-29 00:23:46 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-10-28
+    [faltas] => [{"alumno_id":23,"razon_id":2},{"alumno_id":24,"razon_id":3},{"alumno_id":22,"razon_id":4}]
+)
+
+2025-10-29 00:23:46 | aniadirFalta.php | Raw Input: 
+2025-10-29 00:23:46 | aniadirFalta.php | Datos recibidos:
+2025-10-29 00:23:46 | aniadirFalta.php | ID Sala: 1
+2025-10-29 00:23:46 | aniadirFalta.php | Fecha: 2025-10-28
+2025-10-29 00:23:46 | aniadirFalta.php | Faltas JSON: [{"alumno_id":23,"razon_id":2},{"alumno_id":24,"razon_id":3},{"alumno_id":22,"razon_id":4}]
+2025-10-29 00:23:46 | aniadirFalta.php | Faltas decodificadas: Array
+(
+    [0] => Array
+        (
+            [alumno_id] => 23
+            [razon_id] => 2
+        )
+
+    [1] => Array
+        (
+            [alumno_id] => 24
+            [razon_id] => 3
+        )
+
+    [2] => Array
+        (
+            [alumno_id] => 22
+            [razon_id] => 4
+        )
+
+)
+
+2025-10-29 00:23:46 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-10-28, faltas=Array
+(
+    [0] => Array
+        (
+            [alumno_id] => 23
+            [razon_id] => 2
+        )
+
+    [1] => Array
+        (
+            [alumno_id] => 24
+            [razon_id] => 3
+        )
+
+    [2] => Array
+        (
+            [alumno_id] => 22
+            [razon_id] => 4
+        )
+
+)
+
+2025-10-29 00:23:46 | aniadirFalta.php | Conexión a la base de datos verificada correctamente
+2025-10-29 00:23:46 | aniadirFalta.php | Iniciando transacción SQL
+2025-10-29 00:23:46 | aniadirFalta.php | SQL preparado: INSERT INTO falta (idAlumno, idSala, idRazon, fecha) VALUES (?, ?, ?, ?)
+2025-10-29 00:23:46 | aniadirFalta.php | Procesando falta: Array
+(
+    [alumno_id] => 23
+    [razon_id] => 2
+)
+
+2025-10-29 00:23:46 | aniadirFalta.php | Ejecutando SQL con: alumno_id=23, sala_id=1, razon_id=2, fecha=2025-10-28
+2025-10-29 00:23:46 | aniadirFalta.php | Falta registrada exitosamente para alumno ID: 23
+2025-10-29 00:23:46 | aniadirFalta.php | Procesando falta: Array
+(
+    [alumno_id] => 24
+    [razon_id] => 3
+)
+
+2025-10-29 00:23:46 | aniadirFalta.php | Ejecutando SQL con: alumno_id=24, sala_id=1, razon_id=3, fecha=2025-10-28
+2025-10-29 00:23:46 | aniadirFalta.php | Falta registrada exitosamente para alumno ID: 24
+2025-10-29 00:23:46 | aniadirFalta.php | Procesando falta: Array
+(
+    [alumno_id] => 22
+    [razon_id] => 4
+)
+
+2025-10-29 00:23:46 | aniadirFalta.php | Ejecutando SQL con: alumno_id=22, sala_id=1, razon_id=4, fecha=2025-10-28
+2025-10-29 00:23:46 | aniadirFalta.php | Falta registrada exitosamente para alumno ID: 22
+2025-10-29 00:23:46 | aniadirFalta.php | Faltas guardadas exitosamente. Total: 3
+2025-10-29 22:38:17 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:38:17 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:38:17 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:38:17 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:38:17 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:38:17 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:38:17 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:38:17 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:38:17 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:38:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:38:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:38:26 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:38:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:38:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:38:26 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:38:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:38:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:38:26 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:44:42 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:44:42 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:44:42 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:44:42 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:44:42 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:44:42 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:44:42 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:44:42 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:44:42 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:49:50 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:49:50 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:49:50 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:49:50 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:49:50 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:49:50 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:49:50 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:49:50 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:49:50 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:53:44 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:53:44 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:53:44 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:53:44 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:53:44 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:53:44 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:53:44 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:53:44 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:53:44 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:53:45 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:53:45 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:53:45 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:53:45 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:53:45 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:53:45 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:53:45 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:53:45 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:53:45 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:54:04 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:54:04 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:54:04 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:54:04 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:54:04 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:54:04 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:54:04 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:54:04 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:54:04 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:54:05 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:54:05 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:54:05 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:54:05 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:54:05 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:54:05 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:54:05 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:54:05 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:54:05 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:54:42 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:54:42 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:54:42 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:54:42 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:54:42 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:54:42 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:54:42 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:54:42 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:54:42 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:57:19 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:57:19 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:57:19 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:57:19 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:57:19 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:57:19 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:57:19 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:57:19 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:57:19 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:57:20 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:57:20 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:57:20 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:57:20 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:57:20 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:57:20 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:57:20 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:57:20 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:57:20 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 22:58:03 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:58:03 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:58:03 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 22:58:03 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:58:03 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 22:58:03 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:58:03 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 22:58:03 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 22:58:03 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:05:00 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:00 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:00 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:05:00 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:00 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:00 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:05:00 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:00 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:00 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:05:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:02 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:05:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:02 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:05:02 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:05:09 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:09 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:09 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:09 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:05:09 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:09 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:05:09 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:09 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:09 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:05:22 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:22 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:22 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:05:22 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:22 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:22 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:22 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:05:22 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:22 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:22 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:05:22 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:22 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-10-29 23:05:29 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:29 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:29 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:29 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:05:29 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:29 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:05:29 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:29 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:29 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:05:40 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:40 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:40 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:40 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:05:40 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:40 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:05:40 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:05:40 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:05:40 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:18:01 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:18:01 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:18:01 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:18:01 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:18:01 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:18:01 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:18:01 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:18:01 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:18:01 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:18:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:18:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:18:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:18:02 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:18:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:18:02 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:18:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:18:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:18:02 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:18:07 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:18:07 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:18:07 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:18:07 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:18:07 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:18:07 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:18:07 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:18:07 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:18:07 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:19:51 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:19:51 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:19:51 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:19:51 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:19:51 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:19:51 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:19:51 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:19:51 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:19:51 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:21:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:34 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:21:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:35 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:21:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:35 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:21:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:35 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:21:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:35 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:21:35 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:21:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:35 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:21:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:35 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:21:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:35 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:21:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:35 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:21:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:39 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:21:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:39 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:21:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:21:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:21:39 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:24:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:24:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:24:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:24:25 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:24:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:24:25 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:24:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:24:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:24:25 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:31:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:02 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:31:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:02 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:31:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:02 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:31:08 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:08 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:08 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:31:08 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:08 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:08 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:08 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:31:08 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:08 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:31:09 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:09 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:09 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:31:09 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:09 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:09 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:09 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:31:09 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:09 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:31:09 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:09 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:09 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:31:09 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:09 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:09 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:09 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:31:09 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:09 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:31:10 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:10 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:10 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:31:10 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:10 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:10 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:31:10 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:31:10 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:31:10 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:37:59 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:37:59 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:37:59 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:37:59 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:37:59 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:37:59 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:37:59 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:37:59 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:37:59 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:41:03 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:41:03 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:41:03 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:41:03 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:41:03 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:41:03 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:41:03 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:41:03 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:41:03 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:43:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:43:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:43:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:43:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:43:25 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:43:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:43:25 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:43:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:43:25 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:43:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:43:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:43:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:43:35 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:43:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:43:35 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:43:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:43:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:43:35 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:43:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:43:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:43:54 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:43:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:43:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:43:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:43:54 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:43:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:43:54 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:45:52 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:45:52 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:45:52 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-10-29 23:45:52 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:45:52 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-10-29 23:45:52 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:45:52 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-10-29 23:45:52 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-10-29 23:45:52 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-10-29 23:45:52 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-10-29 23:45:52 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-10-29 23:45:52 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-06 00:01:38 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:01:38 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:01:38 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:01:38 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-06 00:01:38 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:01:38 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-06 00:01:38 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-06 00:01:38 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-06 00:01:38 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:01:38 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:01:38 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:01:38 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-06 00:01:38 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-06 00:01:38 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:01:38 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-06 00:01:38 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-06 00:13:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:13:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:13:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:13:26 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-06 00:13:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-06 00:13:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:13:26 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-06 00:13:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-06 00:13:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:13:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:13:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:13:26 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-06 00:13:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-06 00:13:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:13:26 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-06 00:13:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-06 00:14:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:14:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:14:25 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-06 00:14:25 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-06 00:14:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:14:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:14:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:14:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:14:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:14:25 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-06 00:14:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:14:25 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-06 00:14:25 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-06 00:14:25 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-06 00:14:25 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-06 00:14:25 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-06 00:14:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:14:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:14:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:14:39 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-06 00:14:39 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-06 00:14:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:14:39 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-06 00:14:39 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-06 00:14:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:14:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:14:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:14:39 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-06 00:14:39 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-06 00:14:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:14:39 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-06 00:14:39 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-06 00:15:01 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:15:01 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:15:01 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:15:01 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-06 00:15:01 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-06 00:15:01 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:15:01 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-06 00:15:01 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-06 00:15:01 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:15:01 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:15:01 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:15:01 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-06 00:15:01 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:15:01 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-06 00:15:01 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-06 00:15:01 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-06 00:32:08 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-06 00:32:08 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-06 00:32:08 | obtenerDatos.php | Obteniendo datos de tipo: falta
+2025-11-06 00:32:08 | obtenerDatos.php | Buscando falta con ID: 21
+2025-11-06 00:32:08 | obtenerDatos.php | Falta encontrada, procediendo con la consulta completa
+2025-11-06 00:32:08 | obtenerDatos.php | Datos encontrados para la falta: {"id":21,"fecha":"2025-10-28","razon_id":2,"razon":"Inasistencia injustificad","alumno_id":23,"alumno_nombre":"asd, asd","sala_id":1,"sala_nombre":"1"}
+2025-11-08 01:08:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 01:08:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 01:08:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 01:08:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 01:08:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 01:08:34 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-08 01:08:34 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-08 01:08:34 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-08 01:08:34 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-08 01:08:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 01:08:34 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-08 01:08:34 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-08 01:10:10 | TEST | Iniciando procesamiento de falta
+2025-11-08 01:10:10 | aniadirFalta.php | No es una petición AJAX válida
+2025-11-08 01:10:10 | ERROR | No es una petición AJAX válida
+2025-11-08 01:10:10 | aniadirFalta.php | Iniciando registro de faltas - 2025-11-08 01:10:10
+2025-11-08 01:10:10 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-11-08
+    [faltas] => [{"alumno_id":23,"razon_id":2}]
+)
+
+2025-11-08 01:10:10 | aniadirFalta.php | Raw Input: 
+2025-11-08 01:10:10 | aniadirFalta.php | Datos recibidos:
+2025-11-08 01:10:10 | aniadirFalta.php | ID Sala: 1
+2025-11-08 01:10:10 | aniadirFalta.php | Fecha: 2025-11-08
+2025-11-08 01:10:10 | aniadirFalta.php | Faltas JSON: [{"alumno_id":23,"razon_id":2}]
+2025-11-08 01:10:10 | aniadirFalta.php | Faltas decodificadas: Array
+(
+    [0] => Array
+        (
+            [alumno_id] => 23
+            [razon_id] => 2
+        )
+
+)
+
+2025-11-08 01:10:10 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-11-08, faltas=Array
+(
+    [0] => Array
+        (
+            [alumno_id] => 23
+            [razon_id] => 2
+        )
+
+)
+
+2025-11-08 01:10:10 | aniadirFalta.php | Conexión a la base de datos verificada correctamente
+2025-11-08 01:10:10 | aniadirFalta.php | Iniciando transacción SQL
+2025-11-08 01:10:10 | aniadirFalta.php | SQL preparado: INSERT INTO falta (idAlumno, idSala, idRazon, fecha) VALUES (?, ?, ?, ?)
+2025-11-08 01:10:10 | aniadirFalta.php | Procesando falta: Array
+(
+    [alumno_id] => 23
+    [razon_id] => 2
+)
+
+2025-11-08 01:10:10 | aniadirFalta.php | Ejecutando SQL con: alumno_id=23, sala_id=1, razon_id=2, fecha=2025-11-08
+2025-11-08 01:10:10 | aniadirFalta.php | Falta registrada exitosamente para alumno ID: 23
+2025-11-08 01:10:10 | aniadirFalta.php | Faltas guardadas exitosamente. Total: 1
+2025-11-08 02:03:33 | TEST | Iniciando procesamiento de falta
+2025-11-08 02:03:33 | aniadirFalta.php | No es una petición AJAX válida
+2025-11-08 02:03:33 | ERROR | No es una petición AJAX válida
+2025-11-08 02:03:33 | aniadirFalta.php | Iniciando registro de faltas - 2025-11-08 02:03:33
+2025-11-08 02:03:33 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-11-08
+    [faltas] => []
+    [presentes] => [{"alumno_id":23},{"alumno_id":24},{"alumno_id":21},{"alumno_id":17},{"alumno_id":6},{"alumno_id":22}]
+)
+
+2025-11-08 02:03:33 | aniadirFalta.php | Raw Input: 
+2025-11-08 02:03:33 | aniadirFalta.php | Datos recibidos:
+2025-11-08 02:03:33 | aniadirFalta.php | ID Sala: 1
+2025-11-08 02:03:33 | aniadirFalta.php | Fecha: 2025-11-08
+2025-11-08 02:03:33 | aniadirFalta.php | Faltas JSON: []
+2025-11-08 02:03:33 | aniadirFalta.php | Faltas decodificadas: Array
+(
+)
+
+2025-11-08 02:03:33 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-11-08, faltas=Array
+(
+)
+
+2025-11-08 02:03:33 | aniadirFalta.php | Conexión a la base de datos verificada correctamente
+2025-11-08 02:03:33 | aniadirFalta.php | Iniciando transacción SQL
+2025-11-08 02:03:33 | aniadirFalta.php | SQL preparado: INSERT INTO falta (idAlumno, idSala, idRazon, fecha) VALUES (?, ?, ?, ?)
+2025-11-08 02:03:33 | aniadirFalta.php | Faltas guardadas exitosamente. Total: 0
+2025-11-08 02:04:41 | TEST | Iniciando procesamiento de falta
+2025-11-08 02:04:41 | aniadirFalta.php | No es una petición AJAX válida
+2025-11-08 02:04:41 | ERROR | No es una petición AJAX válida
+2025-11-08 02:04:41 | aniadirFalta.php | Iniciando registro de faltas - 2025-11-08 02:04:41
+2025-11-08 02:04:41 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-11-08
+    [faltas] => []
+    [presentes] => [{"alumno_id":23},{"alumno_id":24},{"alumno_id":21},{"alumno_id":17},{"alumno_id":6},{"alumno_id":22}]
+)
+
+2025-11-08 02:04:41 | aniadirFalta.php | Raw Input: 
+2025-11-08 02:04:41 | aniadirFalta.php | Datos recibidos:
+2025-11-08 02:04:41 | aniadirFalta.php | ID Sala: 1
+2025-11-08 02:04:41 | aniadirFalta.php | Fecha: 2025-11-08
+2025-11-08 02:04:41 | aniadirFalta.php | Faltas JSON: []
+2025-11-08 02:04:41 | aniadirFalta.php | Faltas decodificadas: Array
+(
+)
+
+2025-11-08 02:04:41 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-11-08, faltas=Array
+(
+)
+
+2025-11-08 02:04:41 | aniadirFalta.php | Conexión a la base de datos verificada correctamente
+2025-11-08 02:04:41 | aniadirFalta.php | Iniciando transacción SQL
+2025-11-08 02:04:41 | aniadirFalta.php | SQL preparado: INSERT INTO falta (idAlumno, idSala, idRazon, fecha) VALUES (?, ?, ?, ?)
+2025-11-08 02:04:41 | aniadirFalta.php | Faltas guardadas exitosamente. Total: 0
+2025-11-08 02:05:43 | TEST | Iniciando procesamiento de falta
+2025-11-08 02:05:43 | aniadirFalta.php | No es una petición AJAX válida
+2025-11-08 02:05:43 | ERROR | No es una petición AJAX válida
+2025-11-08 02:05:43 | aniadirFalta.php | Iniciando registro de faltas - 2025-11-08 02:05:43
+2025-11-08 02:05:43 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-11-08
+    [faltas] => []
+    [presentes] => [{"alumno_id":23},{"alumno_id":24},{"alumno_id":21},{"alumno_id":17},{"alumno_id":6},{"alumno_id":22}]
+)
+
+2025-11-08 02:05:43 | aniadirFalta.php | Raw Input: 
+2025-11-08 02:05:43 | aniadirFalta.php | Datos recibidos:
+2025-11-08 02:05:43 | aniadirFalta.php | ID Sala: 1
+2025-11-08 02:05:43 | aniadirFalta.php | Fecha: 2025-11-08
+2025-11-08 02:05:43 | aniadirFalta.php | Faltas JSON: []
+2025-11-08 02:05:43 | aniadirFalta.php | Faltas decodificadas: Array
+(
+)
+
+2025-11-08 02:05:43 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-11-08, faltas=Array
+(
+)
+
+2025-11-08 02:05:43 | aniadirFalta.php | Conexión a la base de datos verificada correctamente
+2025-11-08 02:05:43 | aniadirFalta.php | Iniciando transacción SQL
+2025-11-08 02:05:43 | aniadirFalta.php | SQL preparado: INSERT INTO falta (idAlumno, idSala, idRazon, fecha) VALUES (?, ?, ?, ?)
+2025-11-08 02:05:43 | aniadirFalta.php | Faltas guardadas exitosamente. Total: 0
+2025-11-08 02:07:02 | TEST | Iniciando procesamiento de falta
+2025-11-08 02:07:02 | aniadirFalta.php | No es una petición AJAX válida
+2025-11-08 02:07:02 | ERROR | No es una petición AJAX válida
+2025-11-08 02:07:02 | aniadirFalta.php | Iniciando registro de faltas - 2025-11-08 02:07:02
+2025-11-08 02:07:02 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-11-08
+    [faltas] => []
+    [presentes] => [{"alumno_id":23},{"alumno_id":24},{"alumno_id":21},{"alumno_id":17},{"alumno_id":6},{"alumno_id":22}]
+)
+
+2025-11-08 02:07:02 | aniadirFalta.php | Raw Input: 
+2025-11-08 02:07:02 | aniadirFalta.php | Datos recibidos:
+2025-11-08 02:07:02 | aniadirFalta.php | ID Sala: 1
+2025-11-08 02:07:02 | aniadirFalta.php | Fecha: 2025-11-08
+2025-11-08 02:07:02 | aniadirFalta.php | Faltas JSON: []
+2025-11-08 02:07:02 | aniadirFalta.php | Faltas decodificadas: Array
+(
+)
+
+2025-11-08 02:07:02 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-11-08, faltas=Array
+(
+)
+
+2025-11-08 02:07:02 | aniadirFalta.php | Conexión a la base de datos verificada correctamente
+2025-11-08 02:07:02 | aniadirFalta.php | Iniciando transacción SQL
+2025-11-08 02:07:02 | aniadirFalta.php | SQL preparado: INSERT INTO falta (idAlumno, idSala, idRazon, fecha) VALUES (?, ?, ?, ?)
+2025-11-08 02:07:02 | aniadirFalta.php | Faltas guardadas exitosamente. Total: 0
+2025-11-08 02:09:14 | TEST | Iniciando procesamiento de falta
+2025-11-08 02:09:14 | aniadirFalta.php | No es una petición AJAX válida
+2025-11-08 02:09:14 | ERROR | No es una petición AJAX válida
+2025-11-08 02:09:14 | aniadirFalta.php | Iniciando registro de faltas - 2025-11-08 02:09:14
+2025-11-08 02:09:14 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-11-08
+    [faltas] => []
+    [presentes] => [{"alumno_id":23},{"alumno_id":24},{"alumno_id":21},{"alumno_id":17},{"alumno_id":6},{"alumno_id":22}]
+)
+
+2025-11-08 02:09:14 | aniadirFalta.php | Raw Input: 
+2025-11-08 02:09:14 | aniadirFalta.php | Datos recibidos:
+2025-11-08 02:09:14 | aniadirFalta.php | ID Sala: 1
+2025-11-08 02:09:14 | aniadirFalta.php | Fecha: 2025-11-08
+2025-11-08 02:09:14 | aniadirFalta.php | Faltas JSON: []
+2025-11-08 02:09:14 | aniadirFalta.php | Faltas decodificadas: Array
+(
+)
+
+2025-11-08 02:09:14 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-11-08, faltas=Array
+(
+)
+
+2025-11-08 02:09:14 | aniadirFalta.php | Conexión a la base de datos verificada correctamente
+2025-11-08 02:09:14 | aniadirFalta.php | Iniciando transacción SQL
+2025-11-08 02:09:14 | aniadirFalta.php | SQL preparado: INSERT INTO falta (idAlumno, idSala, idRazon, fecha) VALUES (?, ?, ?, ?)
+2025-11-08 02:09:14 | aniadirFalta.php | Faltas guardadas exitosamente. Total: 0
+2025-11-08 02:13:50 | TEST | Iniciando procesamiento de falta
+2025-11-08 02:13:50 | aniadirFalta.php | No es una petición AJAX válida
+2025-11-08 02:13:50 | ERROR | No es una petición AJAX válida
+2025-11-08 02:13:50 | aniadirFalta.php | Iniciando registro de faltas - 2025-11-08 02:13:50
+2025-11-08 02:13:50 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-11-08
+    [faltas] => []
+    [presentes] => [{"alumno_id":23},{"alumno_id":24},{"alumno_id":21},{"alumno_id":17},{"alumno_id":6},{"alumno_id":22}]
+)
+
+2025-11-08 02:13:50 | aniadirFalta.php | Raw Input: 
+2025-11-08 02:13:50 | aniadirFalta.php | Datos recibidos:
+2025-11-08 02:13:50 | aniadirFalta.php | ID Sala: 1
+2025-11-08 02:13:50 | aniadirFalta.php | Fecha: 2025-11-08
+2025-11-08 02:13:50 | aniadirFalta.php | Faltas JSON: []
+2025-11-08 02:13:50 | aniadirFalta.php | Faltas decodificadas: Array
+(
+)
+
+2025-11-08 02:13:50 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-11-08, faltas=Array
+(
+)
+
+2025-11-08 02:13:50 | aniadirFalta.php | Error: No hay conexión a la base de datos
+2025-11-08 02:13:50 | aniadirFalta.php | Error: Error de conexión a la base de datos
+2025-11-08 02:14:15 | TEST | Iniciando procesamiento de falta
+2025-11-08 02:14:15 | aniadirFalta.php | No es una petición AJAX válida
+2025-11-08 02:14:15 | ERROR | No es una petición AJAX válida
+2025-11-08 02:14:15 | aniadirFalta.php | Iniciando registro de faltas - 2025-11-08 02:14:15
+2025-11-08 02:14:15 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-11-08
+    [faltas] => []
+    [presentes] => [{"alumno_id":23},{"alumno_id":24},{"alumno_id":21},{"alumno_id":17},{"alumno_id":6},{"alumno_id":22}]
+)
+
+2025-11-08 02:14:15 | aniadirFalta.php | Raw Input: 
+2025-11-08 02:14:15 | aniadirFalta.php | Datos recibidos:
+2025-11-08 02:14:15 | aniadirFalta.php | ID Sala: 1
+2025-11-08 02:14:15 | aniadirFalta.php | Fecha: 2025-11-08
+2025-11-08 02:14:15 | aniadirFalta.php | Faltas JSON: []
+2025-11-08 02:14:15 | aniadirFalta.php | Faltas decodificadas: Array
+(
+)
+
+2025-11-08 02:14:15 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-11-08, faltas=Array
+(
+)
+
+2025-11-08 02:14:15 | aniadirFalta.php | Error: No hay conexión a la base de datos
+2025-11-08 02:14:15 | aniadirFalta.php | Error: Error de conexión a la base de datos
+2025-11-08 02:20:41 | TEST | Iniciando procesamiento de falta
+2025-11-08 02:20:41 | aniadirFalta.php | No es una petición AJAX válida
+2025-11-08 02:20:41 | ERROR | No es una petición AJAX válida
+2025-11-08 02:20:41 | aniadirFalta.php | Iniciando registro de faltas - 2025-11-08 02:20:41
+2025-11-08 02:20:41 | aniadirFalta.php | POST Data: Array
+(
+    [sala] => 1
+    [fecha] => 2025-11-08
+    [faltas] => []
+    [presentes] => [{"alumno_id":23},{"alumno_id":24},{"alumno_id":21},{"alumno_id":17},{"alumno_id":6},{"alumno_id":22}]
+)
+
+2025-11-08 02:20:41 | aniadirFalta.php | Raw Input: 
+2025-11-08 02:20:41 | aniadirFalta.php | Datos recibidos:
+2025-11-08 02:20:41 | aniadirFalta.php | ID Sala: 1
+2025-11-08 02:20:41 | aniadirFalta.php | Fecha: 2025-11-08
+2025-11-08 02:20:41 | aniadirFalta.php | Faltas JSON: []
+2025-11-08 02:20:41 | aniadirFalta.php | Faltas decodificadas: Array
+(
+)
+
+2025-11-08 02:20:41 | aniadirFalta.php | Validando datos: sala=1, fecha=2025-11-08, faltas=Array
+(
+)
+
+2025-11-08 02:20:41 | aniadirFalta.php | Error: No hay conexión a la base de datos
+2025-11-08 02:20:41 | aniadirFalta.php | Error: Error de conexión a la base de datos
+2025-11-08 02:32:17 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:32:17 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:32:17 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:32:17 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:32:20 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:32:20 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:32:20 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:32:20 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:33:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:33:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:33:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:33:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:33:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:33:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:33:35 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-08 02:33:35 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-08 02:33:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-08 02:33:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-08 02:33:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:33:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:33:35 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-08 02:33:35 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-08 02:33:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-08 02:33:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-08 02:39:00 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:39:00 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:39:00 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:39:00 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:39:00 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:39:00 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:39:00 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-08 02:39:00 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-08 02:39:00 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-08 02:39:00 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-08 02:39:00 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:39:00 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:39:00 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-08 02:39:00 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-08 02:39:00 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-08 02:39:00 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-08 02:54:08 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:54:08 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:54:08 | obtenerDatos.php | Obteniendo datos de tipo: falta
+2025-11-08 02:54:08 | obtenerDatos.php | Buscando falta con ID: undefined
+2025-11-08 02:54:08 | obtenerDatos.php | No se encontró la falta con ID: undefined
+2025-11-08 02:54:18 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:54:18 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:54:18 | obtenerDatos.php | Obteniendo datos de tipo: falta
+2025-11-08 02:54:18 | obtenerDatos.php | Buscando falta con ID: undefined
+2025-11-08 02:54:18 | obtenerDatos.php | No se encontró la falta con ID: undefined
+2025-11-08 02:56:17 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 02:56:17 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 02:56:17 | obtenerDatos.php | Obteniendo datos de tipo: falta
+2025-11-08 02:56:17 | obtenerDatos.php | Buscando falta con ID: undefined
+2025-11-08 02:56:17 | obtenerDatos.php | No se encontró la falta con ID: undefined
+2025-11-08 03:00:20 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:00:20 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:00:20 | obtenerDatos.php | Obteniendo datos de tipo: falta
+2025-11-08 03:00:20 | obtenerDatos.php | Buscando falta con ID: undefined
+2025-11-08 03:00:20 | obtenerDatos.php | No se encontró la falta con ID: undefined
+2025-11-08 03:32:48 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:32:48 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:32:48 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 03:33:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:33:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:33:02 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 03:35:03 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-08 03:35:03 | eliminarFalta.php | Intentando eliminar falta con ID: 21
+2025-11-08 03:35:03 | eliminarFalta.php | Falta eliminada correctamente: ID 21
+2025-11-08 03:35:07 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:35:07 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:35:07 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 03:35:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:35:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:35:25 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 03:37:59 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:37:59 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:37:59 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 03:40:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:40:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:40:26 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 03:42:00 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:42:00 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:42:00 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 03:52:04 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:52:04 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:52:04 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 03:54:51 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 03:54:51 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 03:54:51 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:06:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:06:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:06:39 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:09:03 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:09:03 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:09:03 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:19:37 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:19:37 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:19:37 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:21:19 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:21:19 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:21:19 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:21:20 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:21:20 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:21:20 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:21:24 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:21:24 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:21:24 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:23:40 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:23:40 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:23:40 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:23:40 | obtenerDatos.php | Ejecutando consulta con alumnoId: 8 y fecha: 2025-11-08
+2025-11-08 04:23:43 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:23:43 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:23:43 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:23:43 | obtenerDatos.php | Ejecutando consulta con alumnoId: 23 y fecha: 2025-11-08
+2025-11-08 04:25:55 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:25:55 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:25:55 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:25:55 | obtenerDatos.php | Preparando consulta para alumnoId: 23 y fecha: 2025-11-08
+2025-11-08 04:25:55 | obtenerDatos.php | Ejecutando consulta con alumnoId: 23 y fecha: 2025-11-08
+2025-11-08 04:25:55 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"23",":fecha_presente":"2025-11-08",":alumno_id_presente":"23",":alumno_id_main":"23"}
+2025-11-08 04:27:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:27:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:27:35 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:27:35 | obtenerDatos.php | Preparando consulta para alumnoId: 8 y fecha: 2025-11-08
+2025-11-08 04:27:35 | obtenerDatos.php | Ejecutando consulta con alumnoId: 8 y fecha: 2025-11-08
+2025-11-08 04:27:35 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"8",":fecha_presente":"2025-11-08",":alumno_id_presente":"8",":alumno_id_main":"8"}
+2025-11-08 04:30:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-08 04:30:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-08 04:30:39 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-08 04:30:39 | obtenerDatos.php | Preparando consulta para alumnoId: 8 y fecha: 2025-11-08
+2025-11-08 04:30:39 | obtenerDatos.php | Ejecutando consulta con alumnoId: 8 y fecha: 2025-11-08
+2025-11-08 04:30:39 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"8",":fecha_presente":"2025-11-08",":alumno_id_presente":"8",":alumno_id_main":"8"}
+2025-11-08 04:30:54 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-08 04:30:54 | eliminarFalta.php | Intentando eliminar falta con ID: 16
+2025-11-08 04:30:54 | eliminarFalta.php | Falta eliminada correctamente: ID 16
+2025-11-11 04:18:01 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:18:01 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:18:01 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:18:01 | obtenerDatos.php | Preparando consulta para alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:18:01 | obtenerDatos.php | Ejecutando consulta con alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:18:01 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"6",":fecha_presente":"2025-11-08",":alumno_id_presente":"6",":alumno_id_main":"6"}
+2025-11-11 04:22:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:22:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:22:46 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:22:46 | obtenerDatos.php | Preparando consulta para alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:22:46 | obtenerDatos.php | Ejecutando consulta con alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:22:46 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"8",":fecha_presente":"2025-11-08",":alumno_id_presente":"8",":alumno_id_main":"8"}
+2025-11-11 04:23:04 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:23:04 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:23:04 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:23:04 | obtenerDatos.php | Preparando consulta para alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:23:04 | obtenerDatos.php | Ejecutando consulta con alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:23:04 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"8",":fecha_presente":"2025-11-08",":alumno_id_presente":"8",":alumno_id_main":"8"}
+2025-11-11 04:25:05 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:25:05 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:25:05 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:25:05 | obtenerDatos.php | Preparando consulta para alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:25:05 | obtenerDatos.php | Ejecutando consulta con alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:25:05 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"8",":fecha_presente":"2025-11-08",":alumno_id_presente":"8",":alumno_id_main":"8"}
+2025-11-11 04:27:16 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:27:16 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:27:16 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:27:16 | obtenerDatos.php | Preparando consulta para alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:27:16 | obtenerDatos.php | Ejecutando consulta con alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:27:16 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"8",":fecha_presente":"2025-11-08",":alumno_id_presente":"8",":alumno_id_main":"8"}
+2025-11-11 04:27:24 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:27:24 | modificarFalta.php | Faltan datos requeridos en la solicitud
+2025-11-11 04:29:14 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:29:14 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:29:14 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:29:14 | obtenerDatos.php | Preparando consulta para alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:29:14 | obtenerDatos.php | Ejecutando consulta con alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:29:14 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"8",":fecha_presente":"2025-11-08",":alumno_id_presente":"8",":alumno_id_main":"8"}
+2025-11-11 04:29:19 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:29:19 | modificarFalta.php | Insertando nueva falta para alumno: 8, fecha: 2025-11-08
+2025-11-11 04:30:32 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:30:32 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:30:32 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:30:32 | obtenerDatos.php | Preparando consulta para alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:30:32 | obtenerDatos.php | Ejecutando consulta con alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:30:32 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"6",":fecha_presente":"2025-11-08",":alumno_id_presente":"6",":alumno_id_main":"6"}
+2025-11-11 04:30:36 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:30:36 | modificarFalta.php | Insertando nueva falta para alumno: 6, fecha: 2025-11-08
+2025-11-11 04:31:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:31:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:31:46 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:31:46 | obtenerDatos.php | Preparando consulta para alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:31:46 | obtenerDatos.php | Ejecutando consulta con alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:31:46 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"6",":fecha_presente":"2025-11-08",":alumno_id_presente":"6",":alumno_id_main":"6"}
+2025-11-11 04:31:49 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:31:49 | modificarFalta.php | Insertando nueva falta para alumno: 6, fecha: 2025-11-08
+2025-11-11 04:33:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:33:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:33:54 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:33:54 | obtenerDatos.php | Preparando consulta para alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:33:54 | obtenerDatos.php | Ejecutando consulta con alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:33:54 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"6",":fecha_presente":"2025-11-08",":alumno_id_presente":"6",":alumno_id_main":"6"}
+2025-11-11 04:33:58 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:33:58 | modificarFalta.php | Insertando nueva falta para alumno: 6, fecha: 2025-11-08
+2025-11-11 04:35:16 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:35:16 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:35:16 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:35:16 | obtenerDatos.php | Preparando consulta para alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:35:16 | obtenerDatos.php | Ejecutando consulta con alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:35:16 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"6",":fecha_presente":"2025-11-08",":alumno_id_presente":"6",":alumno_id_main":"6"}
+2025-11-11 04:35:20 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:35:20 | modificarFalta.php | Insertando nueva falta para alumno: 6, fecha: 2025-11-08
+2025-11-11 04:35:24 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:35:24 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:35:24 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:35:24 | obtenerDatos.php | Preparando consulta para alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:35:24 | obtenerDatos.php | Ejecutando consulta con alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:35:24 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"6",":fecha_presente":"2025-11-08",":alumno_id_presente":"6",":alumno_id_main":"6"}
+2025-11-11 04:35:32 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:35:32 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:35:32 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:35:32 | obtenerDatos.php | Preparando consulta para alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:35:32 | obtenerDatos.php | Ejecutando consulta con alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:35:32 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"6",":fecha_presente":"2025-11-08",":alumno_id_presente":"6",":alumno_id_main":"6"}
+2025-11-11 04:35:37 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:35:37 | modificarFalta.php | Insertando nueva falta para alumno: 6, fecha: 2025-11-08
+2025-11-11 04:35:50 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:35:50 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:35:50 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:35:50 | obtenerDatos.php | Preparando consulta para alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:35:50 | obtenerDatos.php | Ejecutando consulta con alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:35:50 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"6",":fecha_presente":"2025-11-08",":alumno_id_presente":"6",":alumno_id_main":"6"}
+2025-11-11 04:35:55 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:35:55 | modificarFalta.php | Insertando nueva falta para alumno: 6, fecha: 2025-11-08
+2025-11-11 04:36:22 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:36:22 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:36:22 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:36:22 | obtenerDatos.php | Preparando consulta para alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:36:22 | obtenerDatos.php | Ejecutando consulta con alumnoId: 6 y fecha: 2025-11-08
+2025-11-11 04:36:22 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"6",":fecha_presente":"2025-11-08",":alumno_id_presente":"6",":alumno_id_main":"6"}
+2025-11-11 04:36:25 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:36:25 | modificarFalta.php | Insertando nueva falta para alumno: 6, fecha: 2025-11-08
+2025-11-11 04:36:31 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:36:31 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:36:31 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:36:31 | obtenerDatos.php | Preparando consulta para alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:36:31 | obtenerDatos.php | Ejecutando consulta con alumnoId: 8 y fecha: 2025-11-08
+2025-11-11 04:36:31 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"8",":fecha_presente":"2025-11-08",":alumno_id_presente":"8",":alumno_id_main":"8"}
+2025-11-11 04:36:36 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:36:36 | modificarFalta.php | Insertando nueva falta para alumno: 8, fecha: 2025-11-08
+2025-11-11 04:36:46 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:36:46 | eliminarFalta.php | Intentando eliminar falta con ID: 26
+2025-11-11 04:36:46 | eliminarFalta.php | Falta eliminada correctamente
+2025-11-11 04:36:50 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:36:50 | eliminarFalta.php | Intentando eliminar falta con ID: 27
+2025-11-11 04:36:50 | eliminarFalta.php | Falta eliminada correctamente
+2025-11-11 04:36:53 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:36:53 | eliminarFalta.php | Intentando eliminar falta con ID: 28
+2025-11-11 04:36:53 | eliminarFalta.php | Falta eliminada correctamente
+2025-11-11 04:36:56 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:36:56 | eliminarFalta.php | Intentando eliminar falta con ID: 29
+2025-11-11 04:36:56 | eliminarFalta.php | Falta eliminada correctamente
+2025-11-11 04:36:57 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:36:58 | eliminarFalta.php | Intentando eliminar falta con ID: 25
+2025-11-11 04:36:58 | eliminarFalta.php | Falta eliminada correctamente
+2025-11-11 04:37:01 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:37:01 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:37:01 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:37:01 | obtenerDatos.php | Preparando consulta para alumnoId: 21 y fecha: 2025-11-08
+2025-11-11 04:37:01 | obtenerDatos.php | Ejecutando consulta con alumnoId: 21 y fecha: 2025-11-08
+2025-11-11 04:37:01 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-08",":alumno_id_falta":"21",":fecha_presente":"2025-11-08",":alumno_id_presente":"21",":alumno_id_main":"21"}
+2025-11-11 04:37:04 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:37:04 | modificarFalta.php | Insertando nueva falta para alumno: 21, fecha: 2025-11-08
+2025-11-11 04:39:52 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:39:52 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:39:52 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:39:52 | obtenerDatos.php | Preparando consulta para alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 04:39:52 | obtenerDatos.php | Ejecutando consulta con alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 04:39:52 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"16",":fecha_presente":"2025-11-11",":alumno_id_presente":"16",":alumno_id_main":"16"}
+2025-11-11 04:39:57 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:39:57 | modificarFalta.php | Insertando nueva falta para alumno: 16, fecha: 2025-11-11
+2025-11-11 04:40:11 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:40:11 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 16, fecha: 2025-11-11
+2025-11-11 04:40:12 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:40:12 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 16, fecha: 2025-11-11
+2025-11-11 04:40:13 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:40:13 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 16, fecha: 2025-11-11
+2025-11-11 04:40:14 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:40:14 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 16, fecha: 2025-11-11
+2025-11-11 04:40:15 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:40:15 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 16, fecha: 2025-11-11
+2025-11-11 04:40:20 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:40:20 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 16, fecha: 2025-11-11
+2025-11-11 04:40:24 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:40:24 | eliminarFalta.php | Intentando eliminar falta con ID: 32
+2025-11-11 04:40:24 | eliminarFalta.php | Falta eliminada correctamente
+2025-11-11 04:40:25 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:40:25 | eliminarFalta.php | Intentando eliminar falta con ID: 32
+2025-11-11 04:40:25 | eliminarFalta.php | No se encontró la falta para los parámetros provistos
+2025-11-11 04:43:11 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:43:11 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 16, fecha: 2025-11-11
+2025-11-11 04:43:41 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:43:41 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:43:41 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:43:41 | obtenerDatos.php | Preparando consulta para alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 04:43:41 | obtenerDatos.php | Ejecutando consulta con alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 04:43:41 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"16",":fecha_presente":"2025-11-11",":alumno_id_presente":"16",":alumno_id_main":"16"}
+2025-11-11 04:43:45 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:43:45 | modificarFalta.php | Insertando nueva falta para alumno: 16, fecha: 2025-11-11
+2025-11-11 04:44:02 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:44:02 | eliminarFalta.php | Intentando eliminar falta con ID: 33
+2025-11-11 04:44:02 | eliminarFalta.php | Falta eliminada correctamente
+2025-11-11 04:44:06 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:44:06 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:44:06 | eliminarFalta.php | No se encontró la falta para los parámetros provistos
+2025-11-11 04:44:08 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:44:08 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:44:08 | eliminarFalta.php | No se encontró la falta para los parámetros provistos
+2025-11-11 04:44:11 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:44:11 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:44:11 | eliminarFalta.php | No se encontró la falta para los parámetros provistos
+2025-11-11 04:44:16 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:44:16 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:44:16 | eliminarFalta.php | No se encontró la falta para los parámetros provistos
+2025-11-11 04:45:34 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:34 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:34 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:39 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:39 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:39 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:42 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:42 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:42 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:46 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:46 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:46 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:47 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:47 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:47 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:48 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:48 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:48 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:49 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:49 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:49 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:50 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:50 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:50 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:50 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:50 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:50 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:50 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:50 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:50 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:51 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:51 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:51 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:45:52 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:45:52 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:45:52 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:46:00 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:46:00 | eliminarFalta.php | Intentando eliminar falta para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:46:00 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:47:04 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:04 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 19, fecha: 2025-11-11
+2025-11-11 04:47:04 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:07 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:07 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 20, fecha: 2025-11-11
+2025-11-11 04:47:07 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:11 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:11 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 7, fecha: 2025-11-11
+2025-11-11 04:47:11 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:12 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:12 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 23, fecha: 2025-11-08
+2025-11-11 04:47:12 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:13 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:13 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 24, fecha: 2025-11-08
+2025-11-11 04:47:13 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:13 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:13 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 24, fecha: 2025-11-08
+2025-11-11 04:47:13 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 0
+2025-11-11 04:47:15 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:15 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 9, fecha: 2025-11-08
+2025-11-11 04:47:15 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:16 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:16 | eliminarFalta.php | Intentando eliminar falta con ID: 31
+2025-11-11 04:47:16 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:16 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:16 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 21, fecha: 2025-11-08
+2025-11-11 04:47:16 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:17 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:17 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 18, fecha: 2025-11-08
+2025-11-11 04:47:17 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:18 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:18 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 17, fecha: 2025-11-08
+2025-11-11 04:47:18 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:18 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:18 | eliminarFalta.php | Intentando eliminar falta con ID: 30
+2025-11-11 04:47:18 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:19 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:19 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 8, fecha: 2025-11-08
+2025-11-11 04:47:19 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:20 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:20 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 22, fecha: 2025-11-08
+2025-11-11 04:47:20 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:21 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:21 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 6, fecha: 2025-11-08
+2025-11-11 04:47:21 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 04:47:21 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:21 | eliminarFalta.php | Intentando eliminar falta con ID: 20
+2025-11-11 04:47:21 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:22 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:22 | eliminarFalta.php | Intentando eliminar falta con ID: 22
+2025-11-11 04:47:22 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:23 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:23 | eliminarFalta.php | Intentando eliminar falta con ID: 23
+2025-11-11 04:47:23 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:23 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:23 | eliminarFalta.php | Intentando eliminar falta con ID: 19
+2025-11-11 04:47:23 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:24 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:24 | eliminarFalta.php | Intentando eliminar falta con ID: 18
+2025-11-11 04:47:24 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:24 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:24 | eliminarFalta.php | Intentando eliminar falta con ID: 18
+2025-11-11 04:47:24 | eliminarFalta.php | No se encontró la falta para los parámetros provistos. Filas afectadas: 0
+2025-11-11 04:47:26 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:26 | eliminarFalta.php | Intentando eliminar falta con ID: 12
+2025-11-11 04:47:26 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:27 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:27 | eliminarFalta.php | Intentando eliminar falta con ID: 13
+2025-11-11 04:47:27 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:27 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:27 | eliminarFalta.php | Intentando eliminar falta con ID: 8
+2025-11-11 04:47:27 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:28 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:28 | eliminarFalta.php | Intentando eliminar falta con ID: 14
+2025-11-11 04:47:28 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:29 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:29 | eliminarFalta.php | Intentando eliminar falta con ID: 10
+2025-11-11 04:47:29 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:30 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:30 | eliminarFalta.php | Intentando eliminar falta con ID: 15
+2025-11-11 04:47:30 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:31 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:31 | eliminarFalta.php | Intentando eliminar falta con ID: 9
+2025-11-11 04:47:31 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:31 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:31 | eliminarFalta.php | Intentando eliminar falta con ID: 17
+2025-11-11 04:47:31 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:32 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:32 | eliminarFalta.php | Intentando eliminar falta con ID: 11
+2025-11-11 04:47:32 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:33 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:33 | eliminarFalta.php | Intentando eliminar falta con ID: 7
+2025-11-11 04:47:33 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:33 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:33 | eliminarFalta.php | Intentando eliminar falta con ID: 6
+2025-11-11 04:47:33 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:34 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:34 | eliminarFalta.php | Intentando eliminar falta con ID: 5
+2025-11-11 04:47:34 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:37 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 04:47:37 | eliminarFalta.php | Intentando eliminar falta con ID: 4
+2025-11-11 04:47:37 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 04:47:38 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:47:38 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:47:38 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:47:38 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:47:38 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:47:38 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 04:47:43 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:47:43 | modificarFalta.php | Insertando nueva falta para alumno: 18, fecha: 2025-10-17
+2025-11-11 04:47:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:47:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:47:46 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:47:46 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:47:46 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:47:46 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 04:47:49 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:47:52 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:47:52 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:47:52 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:47:52 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:47:52 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:47:52 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 04:47:55 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:47:55 | modificarFalta.php | Insertando nueva falta para alumno: 18, fecha: 2025-10-17
+2025-11-11 04:47:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:47:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:47:57 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:47:57 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:47:57 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:47:57 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 04:48:04 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:48:04 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:48:04 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 04:48:04 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:48:04 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 04:48:04 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 04:48:06 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 04:48:06 | modificarFalta.php | Insertando nueva falta para alumno: 18, fecha: 2025-10-17
+2025-11-11 04:48:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:48:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:48:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 04:48:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:48:26 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 04:48:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:48:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 04:48:26 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 04:48:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 04:48:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 04:48:26 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 04:48:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 05:05:03 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 05:05:03 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 05:05:03 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 05:05:03 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:05:03 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:05:03 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 05:05:56 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 05:05:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 05:05:57 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 05:05:57 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:05:57 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:05:57 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 05:07:16 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 05:07:16 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 05:07:16 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 05:07:16 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:07:16 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:07:16 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 05:07:20 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 05:07:25 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 05:07:25 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 05:07:25 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 05:07:25 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:07:25 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:07:25 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 05:07:28 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 05:07:28 | modificarFalta.php | Insertando nueva falta para alumno: 18, fecha: 2025-10-17
+2025-11-11 05:09:13 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 05:09:13 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 05:09:13 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 05:09:13 | obtenerDatos.php | Preparando consulta para alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:09:13 | obtenerDatos.php | Ejecutando consulta con alumnoId: 18 y fecha: 2025-10-17
+2025-11-11 05:09:13 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-10-17",":alumno_id_falta":"18",":fecha_presente":"2025-10-17",":alumno_id_presente":"18",":alumno_id_main":"18"}
+2025-11-11 05:15:58 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:15:58 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 23, fecha: 2025-11-11
+2025-11-11 05:15:58 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:16:00 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:16:00 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 24, fecha: 2025-11-11
+2025-11-11 05:16:00 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:16:01 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:16:01 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 21, fecha: 2025-11-11
+2025-11-11 05:16:01 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:16:02 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:16:02 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 17, fecha: 2025-11-11
+2025-11-11 05:16:02 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:16:02 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:16:02 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 22, fecha: 2025-11-11
+2025-11-11 05:16:02 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:16:03 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:16:03 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 6, fecha: 2025-11-11
+2025-11-11 05:16:03 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:24:25 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:24:25 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 23, fecha: 2025-11-11
+2025-11-11 05:24:25 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:24:27 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:24:27 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 24, fecha: 2025-11-11
+2025-11-11 05:24:27 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:24:27 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:24:27 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 21, fecha: 2025-11-11
+2025-11-11 05:24:27 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:24:29 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:24:29 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 17, fecha: 2025-11-11
+2025-11-11 05:24:29 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:24:29 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:24:29 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 22, fecha: 2025-11-11
+2025-11-11 05:24:29 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:24:30 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:24:30 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 6, fecha: 2025-11-11
+2025-11-11 05:24:30 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:37:36 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:37:36 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 23, fecha: 2025-11-11
+2025-11-11 05:37:36 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:37:37 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:37:37 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 24, fecha: 2025-11-11
+2025-11-11 05:37:37 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:37:38 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:37:38 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 21, fecha: 2025-11-11
+2025-11-11 05:37:38 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:37:38 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:37:39 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 17, fecha: 2025-11-11
+2025-11-11 05:37:39 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:37:39 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:37:39 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 22, fecha: 2025-11-11
+2025-11-11 05:37:39 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:37:40 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:37:40 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 6, fecha: 2025-11-11
+2025-11-11 05:37:40 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:44:04 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:44:04 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 23, fecha: 2025-11-11
+2025-11-11 05:44:04 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:44:05 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:44:05 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 24, fecha: 2025-11-11
+2025-11-11 05:44:05 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:44:06 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:44:06 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 21, fecha: 2025-11-11
+2025-11-11 05:44:06 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:44:06 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:44:06 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 17, fecha: 2025-11-11
+2025-11-11 05:44:06 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:44:07 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:44:07 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 22, fecha: 2025-11-11
+2025-11-11 05:44:07 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:44:08 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 05:44:08 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 6, fecha: 2025-11-11
+2025-11-11 05:44:08 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 05:58:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 05:58:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 05:58:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 05:58:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 05:58:35 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 05:58:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 05:58:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 05:58:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 05:58:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 05:58:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 05:58:35 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-11 05:58:35 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 05:58:35 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 05:58:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-11 05:58:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 05:58:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 06:12:55 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 06:12:55 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 06:12:55 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 06:12:55 | obtenerDatos.php | Preparando consulta para alumnoId: 23 y fecha: 2025-11-11
+2025-11-11 06:12:55 | obtenerDatos.php | Ejecutando consulta con alumnoId: 23 y fecha: 2025-11-11
+2025-11-11 06:12:55 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"23",":fecha_presente":"2025-11-11",":alumno_id_presente":"23",":alumno_id_main":"23"}
+2025-11-11 06:12:59 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:12:59 | eliminarFalta.php | Intentando eliminar falta con ID: 36
+2025-11-11 06:12:59 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 06:13:00 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:13:00 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 23, fecha: 2025-11-11
+2025-11-11 06:13:00 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 06:13:01 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:13:01 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 24, fecha: 2025-11-11
+2025-11-11 06:13:01 | eliminarFalta.php | Filas eliminadas - falta: 1, presente: 1
+2025-11-11 06:13:01 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:13:01 | eliminarFalta.php | Intentando eliminar falta con ID: 38
+2025-11-11 06:13:01 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 06:13:02 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:13:02 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 21, fecha: 2025-11-11
+2025-11-11 06:13:02 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 06:13:02 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:13:02 | eliminarFalta.php | Intentando eliminar falta con ID: 39
+2025-11-11 06:13:02 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 06:13:03 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:13:03 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 17, fecha: 2025-11-11
+2025-11-11 06:13:03 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 06:13:03 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:13:03 | eliminarFalta.php | Intentando eliminar falta con ID: 41
+2025-11-11 06:13:03 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 06:13:04 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:13:04 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 6, fecha: 2025-11-11
+2025-11-11 06:13:04 | eliminarFalta.php | Filas eliminadas - falta: 1, presente: 1
+2025-11-11 06:13:05 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:13:05 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 22, fecha: 2025-11-11
+2025-11-11 06:13:05 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 06:24:07 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 06:24:07 | eliminarFalta.php | Intentando eliminar falta con ID: 35
+2025-11-11 06:24:08 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 06:24:23 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 06:24:23 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 06:24:23 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 06:24:23 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 06:24:23 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 06:24:23 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 06:24:23 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 06:24:23 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 06:24:23 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 06:24:23 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 06:24:23 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-11 06:24:23 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 06:24:23 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 06:24:23 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-11 06:24:23 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 06:24:23 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:09:29 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:09:29 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:09:29 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:09:29 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:09:29 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:09:29 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:09:29 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:09:29 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:09:29 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:09:29 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:09:29 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:09:29 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:09:36 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:09:36 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:09:36 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:09:36 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:09:36 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:09:36 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:09:36 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:09:36 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:09:36 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:09:36 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:09:36 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:09:36 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:20:10 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:20:10 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:20:10 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:20:10 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:20:10 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:20:10 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:20:10 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:20:10 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:20:10 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:20:10 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:20:10 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:20:10 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:21:06 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:21:06 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:21:06 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:21:06 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:21:06 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:21:06 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:21:06 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:21:06 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:21:06 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:21:06 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:21:06 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:21:06 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:24:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:24:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:24:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:24:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:24:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:24:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:24:54 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:24:54 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:24:54 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:24:54 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:24:54 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:24:54 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:25:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:26 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:26 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:25:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:25:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:26 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:26 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:25:26 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:25:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:25:26 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:25:29 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:29 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:29 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:29 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:29 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:29 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:25:29 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:25:29 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:25:29 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:25:29 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:29 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:25:29 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:25:31 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:31 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:31 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:31 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:31 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:31 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:31 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:31 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:31 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-11 20:25:31 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:25:31 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:25:31 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:25:31 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-11 20:25:31 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:25:31 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:25:31 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:25:32 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:32 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:32 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:32 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:32 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:32 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:25:32 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:25:32 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:25:32 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:25:32 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:32 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:25:32 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:25:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:34 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:34 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:34 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:25:34 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:25:34 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:25:34 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:25:34 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:25:34 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:25:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:35 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:25:35 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:25:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:25:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:25:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:35 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:25:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:25:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:35 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:35 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:35 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:25:35 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:25:35 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:25:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 20:25:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:25:35 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:25:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 20:25:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 20:25:46 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-11 20:25:46 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-11 20:25:46 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-11 20:25:46 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-11 20:25:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-11 20:25:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-11 20:25:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-11 20:25:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-11 21:28:00 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 21:28:00 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 21:28:00 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 21:28:00 | obtenerDatos.php | Preparando consulta para alumnoId: 23 y fecha: 2025-11-11
+2025-11-11 21:28:00 | obtenerDatos.php | Ejecutando consulta con alumnoId: 23 y fecha: 2025-11-11
+2025-11-11 21:28:00 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"23",":fecha_presente":"2025-11-11",":alumno_id_presente":"23",":alumno_id_main":"23"}
+2025-11-11 21:28:27 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 21:28:27 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 21:28:27 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 21:28:27 | obtenerDatos.php | Preparando consulta para alumnoId: 23 y fecha: 2025-11-11
+2025-11-11 21:28:27 | obtenerDatos.php | Ejecutando consulta con alumnoId: 23 y fecha: 2025-11-11
+2025-11-11 21:28:27 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"23",":fecha_presente":"2025-11-11",":alumno_id_presente":"23",":alumno_id_main":"23"}
+2025-11-11 21:28:39 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:28:39 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 23, fecha: 2025-11-11
+2025-11-11 21:28:39 | eliminarFalta.php | Filas eliminadas - falta: 1, presente: 1
+2025-11-11 21:28:43 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:28:43 | eliminarFalta.php | Intentando eliminar falta con ID: 43
+2025-11-11 21:28:43 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 21:28:46 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:28:46 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 24, fecha: 2025-11-11
+2025-11-11 21:28:46 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-11 21:28:58 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:28:58 | eliminarFalta.php | Intentando eliminar falta con ID: 48
+2025-11-11 21:28:58 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 21:29:00 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:29:00 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 21, fecha: 2025-11-11
+2025-11-11 21:29:00 | eliminarFalta.php | Filas eliminadas - falta: 1, presente: 1
+2025-11-11 21:29:01 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:29:01 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 17, fecha: 2025-11-11
+2025-11-11 21:29:01 | eliminarFalta.php | Filas eliminadas - falta: 1, presente: 1
+2025-11-11 21:29:03 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:29:03 | eliminarFalta.php | Intentando eliminar falta con ID: 49
+2025-11-11 21:29:03 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 21:29:05 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:29:05 | eliminarFalta.php | Intentando eliminar falta con ID: 50
+2025-11-11 21:29:05 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 21:29:07 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:29:07 | eliminarFalta.php | Intentando eliminar falta con ID: 51
+2025-11-11 21:29:07 | eliminarFalta.php | Falta eliminada correctamente. Filas afectadas: 1
+2025-11-11 21:29:09 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:29:09 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 6, fecha: 2025-11-11
+2025-11-11 21:29:09 | eliminarFalta.php | Filas eliminadas - falta: 1, presente: 1
+2025-11-11 21:29:10 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 21:29:10 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 22, fecha: 2025-11-11
+2025-11-11 21:29:10 | eliminarFalta.php | Filas eliminadas - falta: 1, presente: 1
+2025-11-11 21:29:21 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 21:29:21 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 21:29:21 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 21:29:21 | obtenerDatos.php | Preparando consulta para alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 21:29:21 | obtenerDatos.php | Ejecutando consulta con alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 21:29:21 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"16",":fecha_presente":"2025-11-11",":alumno_id_presente":"16",":alumno_id_main":"16"}
+2025-11-11 21:33:12 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 21:33:12 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 21:33:12 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 21:33:12 | obtenerDatos.php | Preparando consulta para alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 21:33:12 | obtenerDatos.php | Ejecutando consulta con alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 21:33:12 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"16",":fecha_presente":"2025-11-11",":alumno_id_presente":"16",":alumno_id_main":"16"}
+2025-11-11 21:37:36 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 21:37:36 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 21:37:36 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 21:37:36 | obtenerDatos.php | Preparando consulta para alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 21:37:36 | obtenerDatos.php | Ejecutando consulta con alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 21:37:36 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"16",":fecha_presente":"2025-11-11",":alumno_id_presente":"16",":alumno_id_main":"16"}
+2025-11-11 21:37:41 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 21:40:28 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 21:40:28 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 21:40:28 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 21:40:28 | obtenerDatos.php | Preparando consulta para alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 21:40:28 | obtenerDatos.php | Ejecutando consulta con alumnoId: 16 y fecha: 2025-11-11
+2025-11-11 21:40:28 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"16",":fecha_presente":"2025-11-11",":alumno_id_presente":"16",":alumno_id_main":"16"}
+2025-11-11 21:40:54 | modificarFalta.php | Iniciando proceso de modificación
+2025-11-11 21:40:54 | modificarFalta.php | Registro de presente eliminado para alumno 16 en fecha 2025-11-11
+2025-11-11 22:15:24 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-11 22:15:24 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-11 22:15:24 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-11 22:15:24 | obtenerDatos.php | Preparando consulta para alumnoId: 23 y fecha: 2025-11-11
+2025-11-11 22:15:24 | obtenerDatos.php | Ejecutando consulta con alumnoId: 23 y fecha: 2025-11-11
+2025-11-11 22:15:24 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-11",":alumno_id_falta":"23",":fecha_presente":"2025-11-11",":alumno_id_presente":"23",":alumno_id_main":"23"}
+2025-11-11 22:21:08 | eliminarFalta.php | Iniciando proceso de eliminación
+2025-11-11 22:21:08 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 23, fecha: 2025-11-11
+2025-11-11 22:21:08 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
