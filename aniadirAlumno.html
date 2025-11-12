@@ -14,122 +14,76 @@
 
 <body>
 
-  <header>
-    <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
-      <div class="container-fluid position-relative">
+    <header>
+    <nav class="navbar navbar-expand-lg bg-color" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="index.html">Seguimiento</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- IZQUIERDA: Logo -->
-        <a class="navbar-brand m-0" href="index.html">Seguimiento</a>
+            <div class="collapse navbar-collapse" id="navbarText">
+            <!-- Menú centrado -->
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-2">
+                <!-- Alumnos -->
+                <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Alumnos</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="aniadirAlumno.html">Añadir</a>
+                    <a class="dropdown-item" href="modificarAlumno.html">Modificar</a>
+                </div>
+                </li>
 
-        <!-- BOTÓN TOGGLER -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-          aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                <!-- Tutor -->
+                <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Tutor</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="aniadirTutor.html">Añadir</a>
+                    <a class="dropdown-item" href="modificarTutor.html">Modificar</a>
+                </div>
+                </li>
 
-        <!-- CENTRO: Dropdowns (solo en pantallas grandes) -->
-        <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
-          <ul class="navbar-nav flex-row gap-2">
-            <!-- Alumnos -->
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
-                aria-haspopup="true" aria-expanded="false">Alumnos</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="aniadirAlumno.html">Añadir</a>
-                <a class="dropdown-item" href="modificarAlumno.html">Modificar</a>
+                <!-- Docentes -->
+                <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Docentes</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="aniadirDocente.html">Añadir</a>
+                    <a class="dropdown-item" href="modificarDocente.html">Modificar</a>
+                </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Seguimiento</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="aniadirAsistencia.html">Añadir</a>
+                    <a class="dropdown-item" href="modificarAsistencia.html">Modificar</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="listaAsistencia.html">Ver Listas</a>
+                </div>
+                </li>
+
+                <!-- Estadisticas -->
+                <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Estadisticas</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="aniadirAsistencia.html">Salas</a>
+                    <a class="dropdown-item" href="modificarAsistencia.html">Faltas</a>
+                </div>
+                </li>
+            </ul>
+
+            <div class="nav-item dropdown ">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Asistencia</a>
+                <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="aniadirAsistencia.html">Añadir</a>
+                <a class="dropdown-item" href="modificarAsistencia.html">Modificar</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="listaAlumno.html">Ver Listas</a>
-              </div>
-            </li>
-
-            <!-- Tutor -->
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
-                aria-haspopup="true" aria-expanded="false">Tutor</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="aniadirTutor.html">Añadir</a>
-                <a class="dropdown-item" href="modificarTutor.html">Modificar</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="listaTutor.html">Ver Listas</a>
-              </div>
-            </li>
-
-            <!-- Docentes -->
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
-                aria-haspopup="true" aria-expanded="false">Docentes</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="aniadirDocente.html">Añadir</a>
-                <a class="dropdown-item" href="modificarDocente.html">Modificar</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="listaDocente.html">Ver Listas</a>
-              </div>
-            </li>
-
-            <!-- Registro -->
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
-                aria-haspopup="true" aria-expanded="false">Registro</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="aniadirRegistro.html">Añadir</a>
-                <a class="dropdown-item" href="modificarRegistro.html">Modificar</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="listaRegistro.html">Ver Listas</a>
-              </div>
-            </li>
-          </ul>
+                <a class="dropdown-item" href="listaAsistencia.html">Ver Listas</a>
+                </div>
+            </div>
+            </div>
         </div>
-
-        <!-- MENÚ RESPONSIVE: con los mismos botones oscuros -->
-        <div class="collapse navbar-collapse" id="navbarContent">
-          <ul class="navbar-nav d-lg-none gap-2 mt-3">
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
-                aria-haspopup="true" aria-expanded="false">Alumnos</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="aniadirAlumno.html">Añadir</a>
-                <a class="dropdown-item" href="modificarAlumno.html">Modificar</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="listaAlumno.html">Ver Listas</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
-                aria-haspopup="true" aria-expanded="false">Tutor</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="aniadirTutor.html">Añadir</a>
-                <a class="dropdown-item" href="modificarTutor.html">Modificar</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="listaTutor.html">Ver Listas</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
-                aria-haspopup="true" aria-expanded="false">Docentes</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="aniadirDocente.html">Añadir</a>
-                <a class="dropdown-item" href="modificarDocente.html">Modificar</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="listaDocente.html">Ver Listas</a>
-              </div>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
-                aria-haspopup="true" aria-expanded="false">Registro</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="aniadirRegistro.html">Añadir</a>
-                <a class="dropdown-item" href="modificarRegistro.html">Modificar</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="listaRegistro.html">Ver Listas</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-      </div>
     </nav>
   </header>
 
