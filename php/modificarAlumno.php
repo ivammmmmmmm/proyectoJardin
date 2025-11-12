@@ -61,8 +61,8 @@ if ($num_rows > 0) {
         $html .= '      <div><h5 class="mb-0 text-light text-break">' . $row['nombre_alumno'] . ' ' . $row['apellido'] . '</h5></div>';
         $html .= '    </div>';
         $html .= '    <div class="d-flex flex-wrap gap-2 w-100 w-sm-auto justify-content-end">';
-        $html .= '      <button class="btn btn-danger btn-sm">Eliminar</button>';
-        $html .= '      <button class="btn btn-secondary btn-sm">Modificar</button>';
+        $html .= '      <button class="btn btn-danger btn-sm" onclick="abrirModalEliminar('.$row['id'].');">Eliminar</button>';
+        $html .= '      <button class="btn btn-secondary btn-sm" onclick="abrirModalModificar('.$row['id'].');">Modificar</button>';
         $html .= '      <button class="btn btn-info btn-sm text-white toggle-info" data-bs-toggle="collapse" data-bs-target="#info'.$row['id'].'">Ver Info.</button>';
         $html .= '    </div>';
         $html .= '  </div>';

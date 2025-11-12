@@ -18,3 +18,11 @@ function getData() {
       content.innerHTML = data;
     }).catch(err => console.log(err));
 }
+
+function abrirModalModificar(id) {
+  $('#modalModificarAlumno').modal('show');
+}
+
+function abrirModalEliminar(id) {
+  $('#modalEliminarAlumno').modal('show');
+}
