@@ -11,38 +11,10 @@ function getData() {
 
   fetch(url, {
     method: "POST",
-    body: formData,
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    }
+    body: formData
   })
-    .then((response) => response.json())
-    .then((data) => {
+    .then(response => response.text())
+    .then(data => {
       content.innerHTML = data;
-      // Después de cargar el contenido, inicializar los paneles
-      setupInfoPanels();
-    }).catch(err => console.log(err))
+    }).catch(err => console.log(err));
 }
-
-// Función para manejar los paneles de información
-function setupInfoPanels() {
-  const toggleButtons = document.querySelectorAll('.toggle-info');
-  toggleButtons.forEach(button => {
-    button.addEventListener('click', function(e) {
-      e.preventDefault();
-      // Cerrar todos los paneles excepto el actual
-      document.querySelectorAll('.info-content').forEach(content => {
-        if (content !== this.closest('.list-group-item').querySelector('.info-content')) {
-          content.classList.remove('show');
-        }
-      });
-      // Toggle el panel actual
-      const infoContent = this.closest('.list-group-item').querySelector('.info-content');
-      infoContent.classList.toggle('show');
-    });
-  });
-}
-
-// Inicializar paneles de información cuando se carga la página
-document.addEventListener('DOMContentLoaded', setupInfoPanels);

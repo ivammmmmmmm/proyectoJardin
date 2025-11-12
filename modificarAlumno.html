@@ -11,9 +11,8 @@
   <link rel="stylesheet" href="css/estructura.css">
   <link rel="stylesheet" href="bootstrap-icons-1.13.1/bootstrap-icons.css">
 
-  
-</head>
 
+</head>
 <body>
 
   <header>
@@ -137,7 +136,7 @@
 
 
 
-    <main class="d-flex flex-column flex-lg-row min-vh-100">
+  <main class="d-flex flex-column flex-lg-row min-vh-100">
     <!-- Menú lateral -->
     <aside class="bg-dark py-3 px-3 d-flex flex-column align-items-center" id="sidebarFilter" style="min-width: 250px;">
       <div class="d-flex justify-content-between align-items-center w-100 mb-3">
@@ -155,6 +154,7 @@
           <option>Mañana</option>
         </select>
       </div>
+      <div class="text-light mb-2" id="contadorResultados"></div>
     </aside>
 
     <!-- Contenido principal -->
@@ -168,48 +168,19 @@
               <div class="d-flex align-items-center w-100">
                 <i class="bi bi-search fs-3 me-3 text-light"></i>
                 <div class="flex-grow-1">
-                  <input class="form-control w-100" placeholder="Buscar por nombre y/o apellido" name="campo" id="campo">
+                  <input class="form-control w-100" placeholder="Buscar por nombre y/o apellido" name="campo"
+                    id="campo">
                 </div>
               </div>
             </div>
           </div>
         </form>
 
-        
+
         <!-- Usuario 1 -->
         <div id="alumnosLista"></div>
 
-
-        <!-- Usuario 2
-        <div class="list-group-item bg-dark text-light">
-          <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-person fs-3 me-3 text-light"></i>
-              <div>
-                <h5 class="mb-0 text-light text-break">María García</h5>
-              </div>
-            </div>
-            <div class="d-flex flex-wrap gap-2 w-100 w-sm-auto justify-content-end">
-              <button class="btn btn-danger btn-sm">Eliminar</button>
-              <button class="btn btn-secondary btn-sm">Modificar</button>
-              <button class="btn btn-info btn-sm text-white toggle-info">
-                Ver Info.
-              </button>
-            </div>
-          </div>
-
-           Info oculta
-          <div class="info-content collapse mt-3">
-            <div class="p-3 bg-info rounded">
-              <p><strong>Email:</strong> maria.garcia@ejemplo.com</p>
-              <p><strong>Teléfono:</strong> +54 11 8765-4321</p>
-              <p><strong>Fecha de registro:</strong> 15/01/2025</p>
-            </div>
-          </div>
-        </div>
-
-      -->
-        
+        <!-- Alumnos -->
 
       </div>
     </section>
@@ -267,6 +238,70 @@
         </div>
       </div>
   </footer>
+
+  <!-- Modal para modificar alumno -->
+  <div class="modal fade" id="modalModificarAlumno" tabindex="-1" aria-labelledby="modalModificarAlumnoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalModificarAlumnoLabel">Modificar Alumno</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formModificarAlumno">
+            <input type="hidden" id="alumnoId" name="id">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido" name="apellido" required>
+            </div>
+            <div class="mb-3">
+              <label for="dni" class="form-label">DNI</label>
+              <input type="text" class="form-control" id="dni" name="dni" required>
+            </div>
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <label class="form-label mb-0"><i class="bi bi-people-fill"></i> Tutores del alumno</label>
+                <button type="button" class="btn btn-sm btn-primary" onclick="window.location.href='aniadirTutor.html'">
+                  <i class="bi bi-plus-circle"></i> Nuevo Tutor
+                </button>
+              </div>
+              <div id="tutoresSelect" class="border rounded" style="background-color: rgba(255, 255, 255, 0.1);">
+                <div class="alert alert-info m-3"
+                  style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); color: white;">
+                  <i class="bi bi-hourglass-split me-2"></i>Cargando tutores disponibles...
+                </div>
+              </div>
+              <div class="d-flex align-items-center mt-2 text-white opacity-75">
+                <i class="bi bi-info-circle me-2"></i>
+                <small>Seleccione uno o más tutores para el alumno</small>
+              </div>
+              <div id="error-tutores" class="alert alert-danger mt-2 bg-danger bg-opacity-75 text-white border-danger"
+                style="display: none;">
+                <i class="bi bi-exclamation-triangle-fill"></i> Debe seleccionar al menos un tutor
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="direccion" name="direccion" required>
+            </div>
+            <div class="mb-3">
+              <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="guardarModificacion()">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/jquery-3.4.1.min.js"></script>
