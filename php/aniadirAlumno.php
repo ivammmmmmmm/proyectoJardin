@@ -20,6 +20,7 @@
     $direccion = trim($_POST['direccion'] ?? '');
     $nacimiento = trim($_POST['nacimiento'] ?? '');
     $localidad = isset($_POST['localidad']) && $_POST['localidad'] !== '' ? intval($_POST['localidad']) : 0;
+    $sala = isset($_POST['sala']) && $_POST['sala'] !== '' ? intval($_POST['sala']) : null;
 
     // Obtener tutores seleccionados (array de ids)
     $tutoresSeleccionados = [];
@@ -46,14 +47,14 @@
         $pdo->beginTransaction();
 
         if ($hasLocalidad) {
-            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad) VALUES (?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad, idSala) VALUES (?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $localidad]);
+            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $localidad, $sala]);
         } else {
             // Si no existe idLocalidad en la tabla, omitirla
-            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento) VALUES (?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idSala) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento]);
+            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $sala]);
         }
 
         $alumnoId = $pdo->lastInsertId();

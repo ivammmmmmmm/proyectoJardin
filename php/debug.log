@@ -4434,3 +4434,19 @@ Stack trace:
 [11-Nov-2025 18:15:14 America/Santiago] conexion.php: Intentando conectar a proyecto_jardin en localhost
 [11-Nov-2025 18:15:14 America/Santiago] conexion.php: Conexión PDO creada exitosamente
 [2025-11-11 18:15:14] Presentes insertados: 0, Conflictos: 6
+[2025-11-13 19:39:39] aniadirFalta.php - Iniciando procesamiento
+[13-Nov-2025 19:39:39 America/Santiago] conexion.php: Intentando conectar a proyecto_jardin en localhost
+[13-Nov-2025 19:39:39 America/Santiago] conexion.php: Conexión PDO creada exitosamente
+[2025-11-13 19:39:39] Faltas insertadas: 1, Conflictos: 0
+[2025-11-13 19:39:39] aniadirPresente.php - Iniciando procesamiento
+[13-Nov-2025 19:39:39 America/Santiago] conexion.php: Intentando conectar a proyecto_jardin en localhost
+[13-Nov-2025 19:39:39 America/Santiago] conexion.php: Conexión PDO creada exitosamente
+[2025-11-13 19:39:39] Presentes insertados: 0, Conflictos: 3
+[2025-11-13 19:40:59] aniadirFalta.php - Iniciando procesamiento
+[13-Nov-2025 19:40:59 America/Santiago] conexion.php: Intentando conectar a proyecto_jardin en localhost
+[13-Nov-2025 19:40:59 America/Santiago] conexion.php: Conexión PDO creada exitosamente
+[2025-11-13 19:40:59] Faltas insertadas: 0, Conflictos: 1
+[2025-11-13 19:40:59] aniadirPresente.php - Iniciando procesamiento
+[13-Nov-2025 19:40:59 America/Santiago] conexion.php: Intentando conectar a proyecto_jardin en localhost
+[13-Nov-2025 19:40:59 America/Santiago] conexion.php: Conexión PDO creada exitosamente
+[2025-11-13 19:40:59] Presentes insertados: 0, Conflictos: 3

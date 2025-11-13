@@ -1,7 +1,6 @@
-// Copiado desde /js/aniadirFaltas.js (sin modificaciones de endpoints)
+var API_PREFIX = (typeof API_PREFIX !== 'undefined') ? API_PREFIX : ((typeof API_BASE !== 'undefined') ? API_BASE : '../php/');
+
 document.addEventListener('DOMContentLoaded', function() {
-    // API prefix: if API_BASE is provided (from config.js) use it, otherwise fall back to relative PHP folder
-    const API_PREFIX = (typeof API_BASE !== 'undefined') ? API_BASE : '../php/';
     const form = document.getElementById('formAgregarFalta');
     const salaSelect = document.getElementById('salaSelect');
     const alumnosContainer = document.getElementById('alumnosContainer');
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function cargarAlumnosPorSala(idSala) {
         try {
-            const data = await fetchWithErrorHandling(`${API_PREFIX}verAlumno.php?idSala=${idSala}&simple=1`);
+            const data = await fetchWithErrorHandling(API_PREFIX + `verAlumno.php?idSala=${idSala}&simple=1`);
             if (!data.success || !Array.isArray(data.alumnos)) {
                 throw new Error(data.error || 'Error al cargar alumnos');
             }
@@ -267,6 +266,7 @@ try {
             if (Array.isArray(resultFaltas.conflicts)) combinedConflicts.push(...resultFaltas.conflicts);
             if (Array.isArray(resultPresentes.conflicts)) combinedConflicts.push(...resultPresentes.conflicts);
 
+            // ALSO: search raw text for duplicate-like keywords (fallback)
             const rawCombinedText = JSON.stringify({ faltas: resultFaltas, presentes: resultPresentes }).toLowerCase();
 
             const duplicateKeywords = ['duplic', 'repet', 'ya registrado', 'ya existe', 'already', 'exist', 'duplicate', 'repetido'];
@@ -274,10 +274,12 @@ try {
             let hasDuplicate = false;
             const posibleDuplicados = [];
 
+            // 1) revisar array de conflicts
             if (combinedConflicts.length) {
                 combinedConflicts.forEach(c => {
                     const msg = (c.message || '').toString().toLowerCase();
                     if (duplicateKeywords.some(k => msg.includes(k)) || c.duplicate || c.type === 'duplicate') {
+                        // intentar sacar nombre por id o campo nombre
                         let nombre = null;
                         if (c.alumno_id) {
                             const checkbox = document.getElementById(`alumno_${c.alumno_id}`);
@@ -290,21 +292,28 @@ try {
                         }
                         if (!nombre && (c.nombre || c.name)) nombre = c.nombre || c.name;
                         if (!nombre) {
+                            // intentar extraer por regex del mensaje (ej: "El alumno Perez, Juan ya fue registrado")
                             const match = (c.message || '').toString().match(/([A-Za-zÁÉÍÓÚáéíóúñÑ ,]{3,})/);
                             if (match) nombre = match[1].trim();
                         }
                         if (!nombre) nombre = c.message || `ID ${c.alumno_id || '??'}`;
                         posibleDuplicados.push(nombre);
                         hasDuplicate = true;
+                    } else {
+                        // no es duplicado concreto: puede guardarse en "otros"
                     }
                 });
             }
 
+            // 2) si no hubo 'conflicts' pero el texto crudo contiene keywords -> fallback
             if (!hasDuplicate && duplicateKeywords.some(k => rawCombinedText.includes(k))) {
+                // intentar extraer nombres de cualquiera de los campos message
                 hasDuplicate = true;
+                // intentar extraer nombres desde resultFaltas.messages o similar
                 const posibles = [];
                 (resultFaltas.conflicts || []).forEach(c => posibles.push(c.message || c.nombre || c.name || ''));
                 (resultPresentes.conflicts || []).forEach(c => posibles.push(c.message || c.nombre || c.name || ''));
+                // añadir texto crudo por si acaso
                 posibles.push(resultFaltas.message || '');
                 posibles.push(resultPresentes.message || '');
                 posibles.forEach(txt => {
@@ -313,8 +322,10 @@ try {
                 });
             }
 
+            // 3) dedupe nombres y limpiar
             const duplicadosUnicos = Array.from(new Set(posibleDuplicados.map(s => (s || '').trim()).filter(Boolean)));
 
+            // Mostrar conflictos (toasts) y evitar el mensaje global si hay duplicados
             if (duplicadosUnicos.length) {
                 const fecha = new Date().toLocaleDateString('es-ES');
                 duplicadosUnicos.forEach(nombre => {
@@ -322,6 +333,7 @@ try {
                 });
             }
 
+            // Mostrar otros conflictos no duplicados (si existen)
             const otros = [];
             combinedConflicts.forEach(c => {
                 const msg = (c.message || '').toString();
@@ -335,10 +347,12 @@ try {
                 _createToast(html, { type: 'danger', delay: 10000 });
             }
 
+            // Si NO detectamos duplicados, mostramos el mensaje de éxito general
             if (!hasDuplicate && !duplicadosUnicos.length) {
                 mostrarMensajeExito(`${resultFaltas.message || 'Faltas procesadas.'}\n${resultPresentes.message || 'Presentes registrados.'}`, form);
             }
 
+            // Limpiar y recargar si todo terminó
             form.reset();
             listaAlumnos.innerHTML = '';
             alumnosContainer.classList.add('d-none');

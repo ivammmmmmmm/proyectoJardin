@@ -1951,3 +1951,19 @@
 2025-11-11 22:21:08 | eliminarFalta.php | Iniciando proceso de eliminación
 2025-11-11 22:21:08 | eliminarFalta.php | Intentando eliminar falta/presente para alumno_id: 23, fecha: 2025-11-11
 2025-11-11 22:21:08 | eliminarFalta.php | Filas eliminadas - falta: 0, presente: 1
+2025-11-13 21:05:19 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-13 21:05:19 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-13 21:05:19 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-13 21:05:19 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-13 21:05:19 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-13 21:05:19 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-13 21:05:19 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-13 21:05:19 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-13 21:05:19 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-13 21:05:19 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-13 21:05:19 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-13 21:05:19 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-13 21:05:19 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-13 21:05:19 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-13 21:05:19 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-13 21:05:19 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]

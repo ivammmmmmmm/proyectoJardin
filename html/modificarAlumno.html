@@ -215,6 +215,25 @@
       <!-- Menú lateral -->
       <aside class="bg-dark d-flex flex-column align-items-center py-3" style="width: 25%;">
         <input class="form-control mb-3" id="buscador" placeholder="Buscar alumno..." name="nombre" style="margin-left: 5%;margin-right: 5%;">
+        
+        <!-- Filtros -->
+        <div style="margin-left: 5%;margin-right: 5%; width: 90%;">
+          <select class="form-select form-select-sm mb-2" id="filtroNombre">
+            <option value="">Buscar por: Nombre</option>
+            <option value="nombre">Nombre</option>
+            <option value="apellido">Apellido</option>
+          </select>
+          <select class="form-select form-select-sm mb-2" id="filtroSala">
+            <option value="">Sala: Todas</option>
+          </select>
+          <select class="form-select form-select-sm mb-2" id="filtroEstado">
+            <option value="">Estado: Todos</option>
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+          </select>
+          <button class="btn btn-secondary btn-sm w-100 mb-2" onclick="limpiarFiltros()">Limpiar Filtros</button>
+        </div>
+
         <div class="text-light mb-2" id="contadorResultados"></div>
         <button class="btn btn-link text-info mb-3" id="btnGrid">
           <i class="bi bi-grid fs-4"></i>

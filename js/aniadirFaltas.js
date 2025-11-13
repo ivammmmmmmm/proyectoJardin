@@ -350,6 +350,13 @@ try {
             // Si NO detectamos duplicados, mostramos el mensaje de éxito general
             if (!hasDuplicate && !duplicadosUnicos.length) {
                 mostrarMensajeExito(`${resultFaltas.message || 'Faltas procesadas.'}\n${resultPresentes.message || 'Presentes registrados.'}`, form);
+                
+                // Verificar faltas consecutivas para cada alumno con falta
+                if (faltas && faltas.length > 0) {
+                    for (const falta of faltas) {
+                        await mostrarAlertaFaltasConsecutivas(falta.alumno_id);
+                    }
+                }
             }
 
             // Limpiar y recargar si todo terminó

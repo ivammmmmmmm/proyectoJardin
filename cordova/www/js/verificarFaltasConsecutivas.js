@@ -1,67 +1,41 @@
-/**
- * verificarFaltasConsecutivas.js — Helper para verificar faltas consecutivas en Cordova
- * 
- * Uso:
- *   verificarFaltasConsecutivas(idAlumno).then(resultado => {
- *       if (resultado.esCritico) {
- *           console.log(resultado.mensaje); // "⚠️ 5 faltas seguidas"
- *       }
- *   });
- */
-
+// Función para verificar faltas consecutivas
 async function verificarFaltasConsecutivas(idAlumno) {
     try {
-        const apiUrl = getApiUrl('verificarFaltasConsecutivas.php');
-        
-        const response = await fetch(`${apiUrl}?idAlumno=${idAlumno}`);
-        
-        if (!response.ok) {
-            throw new Error(`Error HTTP: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        
-        if (!data.success) {
-            throw new Error(data.error || 'Error desconocido');
-        }
-        
-        return data;
+        const response = await fetch('./php/verificarFaltasConsecutivas.php?idAlumno=' + idAlumno);
+        const result = await response.json();
+        return result;
     } catch (error) {
         console.error('Error al verificar faltas consecutivas:', error);
-        return {
-            success: false,
-            esCritico: false,
-            faltasConsecutivas: 0,
-            mensaje: '',
-            error: error.message
-        };
+        return null;
     }
 }
 
-/**
- * Mostrar alerta si hay faltas consecutivas críticas
- */
+// Función para mostrar alerta de faltas consecutivas al lado del nombre
 async function mostrarAlertaFaltasConsecutivas(idAlumno) {
-    const resultado = await verificarFaltasConsecutivas(idAlumno);
-    
-    if (resultado.esCritico) {
-        // Crear alerta visual
-        const alertDiv = document.createElement('div');
-        alertDiv.className = 'alert alert-warning alert-dismissible fade show';
-        alertDiv.role = 'alert';
-        alertDiv.innerHTML = `
-            <strong>⚠️ Advertencia:</strong> ${resultado.mensaje}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        `;
+    try {
+        const result = await verificarFaltasConsecutivas(idAlumno);
         
-        // Insertar en el formulario si existe
-        const form = document.getElementById('formAgregarFalta');
-        if (form) {
-            form.insertAdjacentElement('afterbegin', alertDiv);
+        if (result && result.esCritico) {
+            // Buscar el elemento que contiene el nombre del alumno
+            const alumnoCheckbox = document.getElementById(`alumno_${idAlumno}`);
+            if (alumnoCheckbox) {
+                const alumnoDiv = alumnoCheckbox.closest('.d-flex');
+                if (alumnoDiv) {
+                    // Crear el badge de alerta
+                    const alertBadge = document.createElement('span');
+                    alertBadge.className = 'badge bg-danger ms-2';
+                    alertBadge.innerHTML = `<i class="bi bi-exclamation-triangle-fill"></i> ${result.faltasConsecutivas} faltas`;
+                    alertBadge.title = `Este alumno tiene ${result.faltasConsecutivas} faltas consecutivas sin justificar`;
+                    
+                    // Insertar el badge después del nombre
+                    const nombreSpan = alumnoDiv.querySelector('span');
+                    if (nombreSpan) {
+                        nombreSpan.appendChild(alertBadge);
+                    }
+                }
+            }
         }
-        
-        return true;
+    } catch (error) {
+        console.error('Error al mostrar alerta:', error);
     }
-    
-    return false;
 }

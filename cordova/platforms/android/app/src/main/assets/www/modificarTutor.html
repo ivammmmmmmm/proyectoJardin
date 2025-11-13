@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Tutor</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/estructura.css">
+    <link rel="stylesheet" href="./bootstrap-icons-1.13.1/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-color position-relative z-3" data-bs-theme="dark">
+        <div class="container-fluid position-relative">
+          <a class="navbar-brand m-0" href="./index.html">Seguimiento</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="d-none d-lg-flex position-absolute start-50 top-50 translate-middle">
+            <ul class="navbar-nav flex-row gap-2">
+              <!-- Alumnos -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Alumnos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirAlumno.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarAlumno.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verAlumno.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Tutor -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Tutor</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirTutor.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarTutor.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verTutores.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Faltas -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Faltas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirFaltas.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarFaltas.html">Modificar</a>
+                </div>
+              </li>
+
+              <!-- Docentes -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Docentes</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirDocente.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarDocente.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verDocentes.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Registro -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Registro</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirRegistro.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarRegistros.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verRegistros.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Estadísticas -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Estadísticas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./estadisticasFaltas.html">Faltas</a>
+                  <a class="dropdown-item" href="./estadisticasSalas.html">Salas</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- MENÚ RESPONSIVE: con los mismos botones oscuros -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav d-lg-none gap-2 mt-3">
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Alumnos</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirAlumno.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarAlumno.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verAlumno.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Tutor</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirTutor.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarTutor.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verTutores.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Docentes</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirDocente.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarDocente.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verDocentes.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Registro</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./aniadirRegistro.html">Añadir</a>
+                  <a class="dropdown-item" href="./modificarRegistros.html">Modificar</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="./verRegistros.html">Ver Listas</a>
+                </div>
+              </li>
+
+              <!-- Estadísticas - Menú responsive -->
+              <li class="nav-item dropdown">
+                <a class="dropdown-toggle btn btn-dark w-100 text-start" data-bs-toggle="dropdown" href="#" role="button"
+                  aria-haspopup="true" aria-expanded="false">Estadísticas</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="./estadisticasFaltas.html">Faltas</a>
+                  <a class="dropdown-item" href="./estadisticasSalas.html">Salas</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Modal para modificar tutor -->
+    <div class="modal fade" id="modalModificarTutor" tabindex="-1" aria-labelledby="modalModificarTutorLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-light">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalModificarTutorLabel">Modificar Tutor</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formModificarTutor">
+              <input type="hidden" id="tutorId" name="id">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido" required>
+              </div>
+              <div class="mb-3">
+                <label for="dni" class="form-label">DNI</label>
+                <input type="text" class="form-control" id="dni" name="dni" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+              </div>
+              <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" name="direccion" required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="guardarModificacion()">Guardar Cambios</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+          <!-- Modal de confirmación para eliminar tutor (cuando tiene enlaces) -->
+          <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmar eliminación</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p id="confirmDeleteMessage">El tutor está asociado a X alumno(s). ¿Desea eliminarlo y quitar esos vínculos?</p>
+                  <div id="confirmDeleteDetails" class="small text-muted mb-2"></div>
+                  <div id="confirmDeleteList" class="small"></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" id="btnConfirmDelete" class="btn btn-danger">Eliminar definitivamente</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal para asignar nuevo tutor -->
+          <div class="modal fade" id="asignarTutorModal" tabindex="-1" aria-labelledby="asignarTutorModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+              <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="asignarTutorModalLabel">Asignar Nuevo Tutor</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="alert alert-warning" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                    Los siguientes alumnos necesitan un nuevo tutor:
+                  </div>
+                  <div id="alumnosSinTutorList" class="mb-4"></div>
+                  
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h6 class="mb-0">Seleccione un nuevo tutor:</h6>
+                    <a href="aniadirTutor.html" class="btn btn-success btn-sm" target="_blank">
+                      <i class="bi bi-plus-circle me-1"></i>Añadir Nuevo Tutor
+                    </a>
+                  </div>
+                  <div id="tutoresDisponibles" class="border rounded"></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" id="btnAsignarTutor" class="btn btn-primary">Asignar tutor</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <main class="d-flex min-vh-100">
+      <!-- Menú lateral -->
+      <aside class="bg-dark d-flex flex-column align-items-center py-3" style="width: 25%;">
+        <input class="form-control mb-3" id="buscador" placeholder="Buscar tutor..." name="nombre" style="margin-left: 5%;margin-right: 5%;">
+        <div class="text-light mb-2" id="contadorResultados"></div>
+        <button class="btn btn-link text-info mb-3" id="btnGrid">
+          <i class="bi bi-grid fs-4"></i>
+        </button>
+        <button class="btn btn-link text-info mb-3" id="btnPeople">
+          <i class="bi bi-people fs-4"></i>
+        </button>
+      </aside>
+
+      <!-- Contenido principal -->
+      <section class="flex-grow-1 p-3">
+        <h1 class="mb-4">Modificar Tutores</h1>
+        <div class="list-group" id="tutoresLista">
+          <!-- Los tutores se cargarán dinámicamente aquí -->
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-color text-light pt-5 pb-3 mt-auto">
+        <div class="container">
+          <div class="row">
+            <!-- Enlaces -->
+            <div class="col-md mb-4 text-center">
+              <h5>Creditos</h5>
+              <ul class="list-unstyled">
+                <li class="text-light">Iván Bertolotti</li>
+                <li class="text-light">Alejo Godoy</li>
+                <li class="text-light">Maximo Segundo</li>
+                <li class="text-light">Bruno Biscardi</li>
+                <li class="text-light">Matias Casela</li>
+                <li class="text-light">Morena Herrera</li>
+              </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="col-md mb-4 text-center">
+              <h5>Contacto</h5>
+              <address class="text-light">
+                Soporte: segundomaximo55@gmail.com<br>
+                Tel: +54 9 11 7361-3030
+              </address>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="col-md mb-4 text-center">
+              <h5>Síguenos</h5>
+              <a href="https://www.facebook.com/tecnica1grandbourg/?locale=es_LA" class="text-light me-3"><i class="bi bi-facebook me-1"></i>Facebook</a><br>
+              <a href="https://www.instagram.com/tecnica1malvinasarg/" class="text-light me-3"><i class="bi bi-instagram me-1"></i>Instagram</a><br>
+              <a href="#" class="text-light"><i class="fab fa-github fa-lg"></i></a>
+            </div>
+          </div>
+
+          <hr class="bg-light">
+
+          <div class="d-flex flex-column flex-md-row justify-content-between text-center">
+            <p class="mb-2 mb-md-0">&copy; 2025 Escuela Técnica N°1 Gral. San Martín Inc. Todos los derechos reservados.</p>
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item"><a href="/privacy" class="text-light">Privacidad</a></li>
+              <li class="list-inline-item"><a href="/terms" class="text-light">Términos</a></li>
+            </ul>
+          </div>
+        </div>
+    </footer>
+    
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/modificarTutor.js"></script>
+</body>
+</html>

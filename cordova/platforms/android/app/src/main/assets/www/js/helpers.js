@@ -22,3 +22,23 @@ async function fetchWithErrorHandling(url, options = {}) {
         throw error;
     }
 }
+
+// ✅ Función auxiliar para mostrar mensajes de error (corregida)
+function mostrarError(mensaje, contenedor = null) {
+    console.error(mensaje);
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'alert alert-danger mt-2';
+    errorDiv.textContent = mensaje;
+
+    if (contenedor) {
+        // 👇 Agregamos el mensaje al inicio sin borrar el contenido existente
+        contenedor.prepend(errorDiv);
+    } else {
+        document.body.prepend(errorDiv);
+    }
+
+    // Auto-ocultar después de 5 segundos
+    setTimeout(() => {
+        errorDiv.remove();
+    }, 5000);
+}

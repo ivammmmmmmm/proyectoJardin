@@ -78,6 +78,8 @@
                 <p><strong>Dirección:</strong> ${alumno.direccion}</p>
                 <p><strong>Fecha de Nacimiento:</strong> ${alumno.fecha_nacimiento}</p>
                 <p><strong>Edad:</strong> ${alumno.edad} años</p>
+                <p><strong>Sala:</strong> ${alumno.idSala}</p>
+                <p><strong>Estado:</strong> ${alumno.estado || 'No definido'}</p>
 
                 </div>
             </div>
@@ -106,6 +108,14 @@
           console.debug('modificarAlumno.js: #buscador no presente en esta página');
         }
 
+        // Configurar filtros
+        document.getElementById('filtroNombre').addEventListener('change', aplicarFiltros);
+        document.getElementById('filtroSala').addEventListener('change', aplicarFiltros);
+        document.getElementById('filtroEstado').addEventListener('change', aplicarFiltros);
+
+        // Cargar salas
+        cargarSalas();
+
         // Cargar alumnos desde el servidor y mostrarlos
         fetch('/proyectoJardin-main/php/verAlumno.php?ajax=1')
           .then(response => response.json())
@@ -119,6 +129,63 @@
             console.error('Error:', error);
           });
       });
+
+      // Cargar salas en el select
+      async function cargarSalas() {
+        try {
+          const response = await fetch('/proyectoJardin-main/php/obtenerSalas.php');
+          const data = await response.json();
+          
+          const filtroSala = document.getElementById('filtroSala');
+          
+          if (data.status === 'success') {
+            data.salas.forEach(sala => {
+              const option = document.createElement('option');
+              option.value = sala.id;
+              option.textContent = `Sala: ${sala.nombre}`;
+              filtroSala.appendChild(option);
+            });
+          }
+        } catch (error) {
+          console.error('Error al cargar salas:', error);
+        }
+      }
+
+      // Aplicar filtros
+      function aplicarFiltros() {
+        const termino = document.getElementById('buscador').value;
+        const filtroNombre = document.getElementById('filtroNombre').value;
+        const filtroSala = document.getElementById('filtroSala').value;
+        const filtroEstado = document.getElementById('filtroEstado').value;
+
+        let resultados = todosLosAlumnos.filter(alumno => {
+          const coincideTexto = 
+            alumno.nombre.toLowerCase().includes(termino.toLowerCase()) ||
+            alumno.apellido.toLowerCase().includes(termino.toLowerCase()) ||
+            alumno.dni.toString().includes(termino);
+
+          const coincideFiltro = 
+            (filtroNombre === '' || 
+             (filtroNombre === 'nombre' && alumno.nombre.toLowerCase().includes(termino.toLowerCase())) ||
+             (filtroNombre === 'apellido' && alumno.apellido.toLowerCase().includes(termino.toLowerCase())));
+
+          const coincideSala = 
+            (filtroSala === '' || alumno.idSala == filtroSala);
+
+          return coincideTexto && coincideFiltro && coincideSala;
+        });
+
+        mostrarAlumnos(resultados);
+      }
+
+      // Limpiar filtros
+      function limpiarFiltros() {
+        document.getElementById('buscador').value = '';
+        document.getElementById('filtroNombre').value = '';
+        document.getElementById('filtroSala').value = '';
+        document.getElementById('filtroEstado').value = '';
+        mostrarAlumnos(todosLosAlumnos);
+      }
 
       /**
        * Elimina un alumno del sistema.

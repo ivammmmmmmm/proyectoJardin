@@ -50,6 +50,28 @@
             </div>`;
         }
 
+        // Cargar salas
+        try {
+          const response = await fetch('/proyectoJardin-main/php/obtenerSalas.php');
+          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+          
+          const data = await response.json();
+          const salaSelect = document.getElementById('sala');
+          
+          if (data.status === 'success') {
+            data.salas.forEach(sala => {
+              const option = document.createElement('option');
+              option.value = sala.id;
+              option.textContent = sala.nombre;
+              salaSelect.appendChild(option);
+            });
+          } else {
+            throw new Error(data.message || 'Error al cargar salas');
+          }
+        } catch (error) {
+          console.error('Error al cargar salas:', error);
+        }
+
         // Validar formulario antes de enviar
         document.querySelector('form').addEventListener('submit', function(e) {
           const tutoresSeleccionados = document.querySelectorAll('.tutor-checkbox:checked');
