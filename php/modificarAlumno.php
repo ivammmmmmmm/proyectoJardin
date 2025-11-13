@@ -54,7 +54,7 @@ if ($num_rows > 0) {
     while ($row = $resultado->fetch_assoc()) {
         $edad = date_diff(date_create($row['fechanacimiento']), date_create('today'))->y;
 
-        $html .= '<div class="list-group-item bg-dark text-light">';
+        $html .= '<div class="list-group-item bg-dark text-light rounded mt-1">';
         $html .= '  <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3">';
         $html .= '    <div class="d-flex align-items-center">';
         $html .= '      <i class="bi bi-person fs-3 me-3 text-light"></i>';
