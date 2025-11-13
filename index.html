@@ -36,7 +36,7 @@
 
                 <!-- Tutor -->
                 <li class="nav-item dropdown">
-                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Tutor</a>
+                <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Tutores</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="aniadirTutor.html">Añadir</a>
                     <a class="dropdown-item" href="modificarTutor.html">Modificar</a>
@@ -56,10 +56,10 @@
                 <li class="nav-item dropdown">
                 <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Seguimiento</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="aniadirAsistencia.html">Añadir</a>
-                    <a class="dropdown-item" href="modificarAsistencia.html">Modificar</a>
+                    <a class="dropdown-item" href="aniadirSeguimiento.html">Añadir</a>
+                    <a class="dropdown-item" href="modificarSeguimiento.html">Modificar</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="listaAsistencia.html">Ver Listas</a>
+                    <a class="dropdown-item" href="listaSeguimiento.html">Ver Listas</a>
                 </div>
                 </li>
 
@@ -67,8 +67,8 @@
                 <li class="nav-item dropdown">
                 <a class="dropdown-toggle btn btn-dark" data-bs-toggle="dropdown" href="#">Estadisticas</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="aniadirAsistencia.html">Salas</a>
-                    <a class="dropdown-item" href="modificarAsistencia.html">Faltas</a>
+                    <a class="dropdown-item" href="estadisticasComunicados.html">Comunicados</a>
+                    <a class="dropdown-item" href="estadisticasAusentes.html">Ausentes</a>
                 </div>
                 </li>
             </ul>
@@ -103,9 +103,9 @@
             <div class="card-body d-flex flex-column">
               <p class="card-text">
                 En la parte superior de la página encontrará una opción llamada <strong>Alumnos</strong> que desplegará
-                una lista de opciones: <em>Añadir, Modificar, Eliminar y Ver Listas</em>.
+                una lista de opciones: <em>Añadir y Modificar</em>.
               </p>
-              <ul class="list-unstyled mt-auto">
+              <ul class="list-unstyled">
                 <li class="mb-3">
                   <h6 class="mb-1">Añadir</h6>
                   <p class="mb-0">Esta es la pestaña para agregar un nuevo alumno al jardín.</p>
@@ -114,13 +114,30 @@
                   <h6 class="mb-1">Modificar</h6>
                   <p class="mb-0">Permite editar la información de un alumno ya registrado.</p>
                 </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Tutores -->
+        <div class="col-md-4 d-flex">
+          <div class="card text-white bg-cardcolor w-100 h-100">
+            <div class="card-header bg-color">
+              <h5 class="mb-0">Tutores</h5>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <p class="card-text">
+                En la parte superior de la página encontrará una opción llamada <strong>Tutores</strong> que desplegará
+                una lista de opciones: <em>Añadir y Modificar</em>.
+              </p>
+              <ul class="list-unstyled">
                 <li class="mb-3">
-                  <h6 class="mb-1">Eliminar</h6>
-                  <p class="mb-0">Opción para remover alumnos del sistema.</p>
+                  <h6 class="mb-1">Añadir</h6>
+                  <p class="mb-0">Está es la pestaña para agregar un nuevo tutor al jardín.</p>
                 </li>
-                <li>
-                  <h6 class="mb-1">Ver Listas</h6>
-                  <p class="mb-0">Muestra un listado completo de los alumnos registrados.</p>
+                <li class="mb-3">
+                  <h6 class="mb-1">Modificar</h6>
+                  <p class="mb-0">Permite editar la información de un tutor ya registrado.</p>
                 </li>
               </ul>
             </div>
@@ -131,15 +148,14 @@
         <div class="col-md-4 d-flex">
           <div class="card text-white bg-cardcolor w-100 h-100">
             <div class="card-header bg-color">
-              <h5 class="mb-0">Responsables</h5>
+              <h5 class="mb-0">Docentes</h5>
             </div>
             <div class="card-body d-flex flex-column">
               <p class="card-text">
-                En la parte superior de la página encontrará una opción llamada <strong>Responsables</strong> (maestras,
-                preceptoras, etc.) que desplegará una lista de opciones: <em>Añadir, Modificar, Eliminar y Ver
-                  Listas</em>.
+                En la parte superior de la página encontrará una opción llamada <strong>Docentes</strong> (maestras,
+                preceptoras, etc.) que desplegará una lista de opciones: <em>Añadir y Modificar</em>.
               </p>
-              <ul class="list-unstyled mt-auto">
+              <ul class="list-unstyled">
                 <li class="mb-3">
                   <h6 class="mb-1">Añadir</h6>
                   <p class="mb-0">Esta es la pestaña para agregar una nueva persona responsable al jardín.</p>
@@ -148,13 +164,30 @@
                   <h6 class="mb-1">Modificar</h6>
                   <p class="mb-0">Permite editar la información de un responsable ya registrado.</p>
                 </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card: Estadisticas -->
+        <div class="col-md-4 d-flex">
+          <div class="card text-white bg-cardcolor w-100 h-100">
+            <div class="card-header bg-color">
+              <h5 class="mb-0">Estadisticas</h5>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <p class="card-text">
+                En la parte superior de la página encontrará una opción llamada <strong>Estadisticas</strong> que desplegará
+                una lista de opciones: <em>Comunicados y Faltas</em>.
+              </p>
+              <ul class="list-unstyled">
                 <li class="mb-3">
-                  <h6 class="mb-1">Eliminar</h6>
-                  <p class="mb-0">Opción para remover responsables del sistema.</p>
+                  <h6 class="mb-1">Comunicados</h6>
+                  <p class="mb-0">Está es la pestaña para ver las estadisticas de comunicados por sala.</p>
                 </li>
-                <li>
-                  <h6 class="mb-1">Ver Listas</h6>
-                  <p class="mb-0">Muestra un listado completo de los responsables registrados.</p>
+                <li class="mb-3">
+                  <h6 class="mb-1">Ausentes</h6>
+                  <p class="mb-0">Está es la pestaña para ver las estadisticas de ausentes por sala.</p>
                 </li>
               </ul>
             </div>
@@ -165,14 +198,14 @@
         <div class="col-md-4 d-flex">
           <div class="card text-white bg-cardcolor w-100 h-100">
             <div class="card-header bg-color">
-              <h5 class="mb-0">Registro</h5>
+              <h5 class="mb-0">Asistencia</h5>
             </div>
             <div class="card-body d-flex flex-column">
               <p class="card-text">
-                En la parte superior de la página encontrará una opción llamada <strong>Registro</strong> que desplegará
-                una lista de opciones: <em>Añadir, Modificar, Eliminar y Ver Listas</em>.
+                En la parte superior de la página encontrará una opción llamada <strong>Asistencia</strong> que desplegará
+                una lista de opciones: <em>Añadir, Modificar y Ver Lista</em>.
               </p>
-              <ul class="list-unstyled mt-auto">
+              <ul class="list-unstyled">
                 <li class="mb-3">
                   <h6 class="mb-1">Añadir</h6>
                   <p class="mb-0">Esta es la pestaña para agregar un nuevo registro de asistencia.</p>
@@ -180,10 +213,6 @@
                 <li class="mb-3">
                   <h6 class="mb-1">Modificar</h6>
                   <p class="mb-0">Permite editar registros existentes en el sistema.</p>
-                </li>
-                <li class="mb-3">
-                  <h6 class="mb-1">Eliminar</h6>
-                  <p class="mb-0">Opción para remover un registro si fue creado por error.</p>
                 </li>
                 <li>
                   <h6 class="mb-1">Ver Listas</h6>
