@@ -109,9 +109,13 @@
         }
 
         // Configurar filtros
-        document.getElementById('filtroNombre').addEventListener('change', aplicarFiltros);
-        document.getElementById('filtroSala').addEventListener('change', aplicarFiltros);
-        document.getElementById('filtroEstado').addEventListener('change', aplicarFiltros);
+        const filtroNombre = document.getElementById('filtroNombre');
+        const filtroSala = document.getElementById('filtroSala');
+        const filtroEstado = document.getElementById('filtroEstado');
+        
+        if (filtroNombre) filtroNombre.addEventListener('change', aplicarFiltros);
+        if (filtroSala) filtroSala.addEventListener('change', aplicarFiltros);
+        if (filtroEstado) filtroEstado.addEventListener('change', aplicarFiltros);
 
         // Cargar salas
         cargarSalas();
@@ -134,11 +138,20 @@
       async function cargarSalas() {
         try {
           const response = await fetch('/proyectoJardin/php/obtenerSalas.php');
-          const data = await response.json();
+          if (!response.ok) {
+            console.error('Error HTTP:', response.status);
+            return;
+          }
           
+          const data = await response.json();
           const filtroSala = document.getElementById('filtroSala');
           
-          if (data.status === 'success') {
+          if (!filtroSala) {
+            console.warn('Elemento filtroSala no encontrado');
+            return;
+          }
+          
+          if (data.status === 'success' && data.salas) {
             data.salas.forEach(sala => {
               const option = document.createElement('option');
               option.value = sala.id;
@@ -153,10 +166,15 @@
 
       // Aplicar filtros
       function aplicarFiltros() {
-        const termino = document.getElementById('buscador').value;
-        const filtroNombre = document.getElementById('filtroNombre').value;
-        const filtroSala = document.getElementById('filtroSala').value;
-        const filtroEstado = document.getElementById('filtroEstado').value;
+        const buscador = document.getElementById('buscador');
+        const filtroNombreEl = document.getElementById('filtroNombre');
+        const filtroSalaEl = document.getElementById('filtroSala');
+        const filtroEstadoEl = document.getElementById('filtroEstado');
+        
+        const termino = buscador ? buscador.value : '';
+        const filtroNombre = filtroNombreEl ? filtroNombreEl.value : '';
+        const filtroSala = filtroSalaEl ? filtroSalaEl.value : '';
+        const filtroEstado = filtroEstadoEl ? filtroEstadoEl.value : '';
 
         let resultados = todosLosAlumnos.filter(alumno => {
           const coincideTexto = 

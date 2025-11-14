@@ -88,13 +88,19 @@
         <h5 class="text-light mb-0">Filtros de Búsqueda para Alumnos</h5>
       </div>
       <div class="w-100">
+        <p class="text-light mb-2">Filtro por nombre:</p>
+        <select class="form-select mb-3" id="filtroNombre">
+          <option value="">Todos</option>
+          <option value="nombre">Por Nombre</option>
+          <option value="apellido">Por Apellido</option>
+        </select>
         <p class="text-light mb-2">Salas:</p>
-        <select class="form-select mb-3"> <!--SALAS-->
+        <select class="form-select mb-3" id="filtroSala"> <!--SALAS-->
           <option>Ninguno</option>
           <option>Verde</option>
         </select>
         <p class="text-light mb-2">Turnos:</p>
-        <select class="form-select mb-3"> <!--TURNOS-->
+        <select class="form-select mb-3" id="filtroEstado"> <!--TURNOS-->
           <option>Ninguno</option>
           <option>Mañana</option>
         </select>
@@ -114,7 +120,7 @@
                 <i class="bi bi-search fs-3 me-3 text-light"></i>
                 <div class="flex-grow-1">
                   <input class="form-control w-100" placeholder="Buscar por nombre y/o apellido" name="campo"
-                    id="campo">
+                    id="buscador">
                 </div>
               </div>
             </div>
