@@ -67,40 +67,43 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log('Iniciando carga de datos...');
             
-            // Configurar el botón de prueba de conexión
-            document.getElementById('testConnection').addEventListener('click', async function() {
-                try {
-                    this.disabled = true;
-                    this.textContent = 'Probando conexión...';
-                    
-                    const response = await fetch('../php/test_connection.php');
-                    const data = await response.json();
-                    
-                    if (data.success) {
-                        let message = 'Conexión exitosa!\n\nRegistros en las tablas:\n';
-                        for (const [table, info] of Object.entries(data.tables)) {
-                            message += `\n${table}: ${info.status === 'ok' ? info.registros : 'Error - ' + info.mensaje}`;
-                        }
-                        alert(message);
+            // Configurar el botón de prueba de conexión (si existe)
+            const testBtn = document.getElementById('testConnection');
+            if (testBtn) {
+                testBtn.addEventListener('click', async function() {
+                    try {
+                        this.disabled = true;
+                        this.textContent = 'Probando conexión...';
                         
-                        // Si la conexión es exitosa, intentar cargar los datos nuevamente
-                        console.log('Reintentando cargar los datos...');
-                        await Promise.all([
-                            cargarSelect('alumnos', 'selectAlumno', true),
-                            cargarSelect('docentes', 'selectDocente', true),
-                            cargarSelect('salas', 'selectSala')
-                        ]);
-                    } else {
-                        alert('Error al probar conexión: ' + data.message);
+                        const response = await fetch('../php/test_connection.php');
+                        const data = await response.json();
+                        
+                        if (data.success) {
+                            let message = 'Conexión exitosa!\n\nRegistros en las tablas:\n';
+                            for (const [table, info] of Object.entries(data.tables)) {
+                                message += `\n${table}: ${info.status === 'ok' ? info.registros : 'Error - ' + info.mensaje}`;
+                            }
+                            alert(message);
+                            
+                            // Si la conexión es exitosa, intentar cargar los datos nuevamente
+                            console.log('Reintentando cargar los datos...');
+                            await Promise.all([
+                                cargarSelect('alumnos', 'selectAlumno', true),
+                                cargarSelect('docentes', 'selectDocente', true),
+                                cargarSelect('salas', 'selectSala')
+                            ]);
+                        } else {
+                            alert('Error al probar conexión: ' + data.message);
+                        }
+                    } catch (error) {
+                        console.error('Error al probar conexión:', error);
+                        alert('Error al probar la conexión: ' + error.message);
+                    } finally {
+                        this.disabled = false;
+                        this.textContent = 'Probar Conexión';
                     }
-                } catch (error) {
-                    console.error('Error al probar conexión:', error);
-                    alert('Error al probar la conexión: ' + error.message);
-                } finally {
-                    this.disabled = false;
-                    this.textContent = 'Probar Conexión';
-                }
-            });
+                });
+            }
             
             // Cargar datos iniciales para los selects
             Promise.all([
