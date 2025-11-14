@@ -70,7 +70,7 @@
         if ($hasLocalidad && $hasEstado) {
             $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad, idEstado) VALUES (?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $localidad, $sala]);
+            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $localidad, 1]);
         } elseif ($hasLocalidad && !$hasEstado) {
             $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
@@ -78,7 +78,7 @@
         } elseif (!$hasLocalidad && $hasEstado) {
             $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idEstado) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $sala]);
+            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, 1]);
         } else {
             // Si no existe ninguna de las dos
             $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento) VALUES (?, ?, ?, ?, ?)";

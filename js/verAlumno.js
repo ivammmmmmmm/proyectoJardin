@@ -1,5 +1,5 @@
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('/proyectoJardin/php/verAlumno.php?ajax=1')
+            fetch('/proyectoJardin-main/php/verAlumno.php?ajax=1')
                 .then(response => response.json())
                 .then(data => {
                     const accordion = document.getElementById('accordionAlumnos');

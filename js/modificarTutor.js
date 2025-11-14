@@ -120,7 +120,7 @@
         // Cargar tutores
         (async () => {
           try {
-            const resp = await fetch('/proyectoJardin/php/verTutores.php?ajax=1');
+            const resp = await fetch('/proyectoJardin-main/php/verTutores.php?ajax=1');
             const data = await parseJSONSafe(resp);
             todosLosTutores = Array.isArray(data) ? data : (data.tutores || []);
             mostrarTutores(todosLosTutores);
@@ -135,8 +135,7 @@
       async function eliminarTutor(id) {
         try {
           // Primero verificar si el tutor es el único para algún alumno
-          const verificacionResp = await fetch(`/proyectoJardin/php/verificarTutorUnico.php?tutorId=${encodeURIComponent(id)}`);
-          
+          const verificacionResp = await fetch(`/proyectoJardin-main/php/verificarTutorUnico.php?tutorId=${encodeURIComponent(id)}`);
           
           let verificacionData;
           const contentType = verificacionResp.headers.get("content-type");
@@ -179,7 +178,7 @@
               ).join('') + '</ul>';
             
             // Cargar tutores disponibles
-            const tutoresResp = await fetch('/proyectoJardin/php/obtenerTutores.php');
+            const tutoresResp = await fetch('/proyectoJardin-main/php/obtenerTutores.php');
             const tutoresData = await parseJSONSafe(tutoresResp);
             const tutores = Array.isArray(tutoresData) ? tutoresData : tutoresData.tutores;
             
@@ -237,7 +236,7 @@
                   formData.append('alumnoId', alumno.id);
                   formData.append('tutorId', tutorSeleccionado.value);
                   
-                  await fetch('/proyectoJardin/php/asignarTutor.php', {
+                  await fetch('/proyectoJardin-main/php/asignarTutor.php', {
                     method: 'POST',
                     body: formData
                   });
@@ -247,7 +246,7 @@
                 const fd = new FormData();
                 fd.append('id', id);
                 fd.append('force', '1');
-                const eliminarResp = await fetch('/proyectoJardin/php/eliminarTutor.php', {
+                const eliminarResp = await fetch('/proyectoJardin-main/php/eliminarTutor.php', {
                   method: 'POST',
                   body: fd
                 });
@@ -257,7 +256,7 @@
                   asignarModal.hide();
                   
                   // Actualizar la lista de tutores sin recargar la página
-                  const response = await fetch('/proyectoJardin/php/verTutores.php?ajax=1');
+                  const response = await fetch('/proyectoJardin-main/php/verTutores.php?ajax=1');
                   const data = await parseJSONSafe(response);
                   todosLosTutores = data;
                   mostrarTutores(todosLosTutores);
@@ -279,14 +278,14 @@
             if (confirm('¿Estás seguro de que deseas eliminar este tutor?')) {
               const fd = new FormData();
               fd.append('id', id);
-              const response = await fetch('/proyectoJardin/php/eliminarTutor.php', {
+              const response = await fetch('/proyectoJardin-main/php/eliminarTutor.php', {
                 method: 'POST',
                 body: fd
               });
               const data = await parseJSONSafe(response);
               if (data.success) {
                 // Actualizar la lista de tutores sin recargar la página
-                const tutoresResp = await fetch('/proyectoJardin/php/verTutores.php?ajax=1');
+                const tutoresResp = await fetch('/proyectoJardin-main/php/verTutores.php?ajax=1');
                 const tutoresData = await parseJSONSafe(tutoresResp);
                 todosLosTutores = Array.isArray(tutoresData) ? tutoresData : (tutoresData.tutores || []);
                 mostrarTutores(todosLosTutores);
@@ -324,7 +323,7 @@
         const btn = form.querySelector('button.btn-primary') || document.querySelector('#modalModificarTutor .btn-primary');
         if (btn) btn.disabled = true;
 
-        fetch('/proyectoJardin/php/modificarTutor.php', {
+        fetch('/proyectoJardin-main/php/modificarTutor.php', {
           method: 'POST',
           body: formData
         })
@@ -351,7 +350,7 @@
             // Actualizar la lista de tutores
             (async () => {
               try {
-                const resp = await fetch('/proyectoJardin/php/verTutores.php?ajax=1');
+                const resp = await fetch('/proyectoJardin-main/php/verTutores.php?ajax=1');
                 const refreshed = await parseJSONSafe(resp);
                 todosLosTutores = Array.isArray(refreshed) ? refreshed : (refreshed.tutores || []);
                 mostrarTutores(todosLosTutores);

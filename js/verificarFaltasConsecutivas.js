@@ -1,7 +1,7 @@
 // Función para verificar faltas consecutivas
 async function verificarFaltasConsecutivas(idAlumno) {
     try {
-        const response = await fetch('/proyectoJardin/php/verificarFaltasConsecutivas.php?idAlumno=' + idAlumno);
+        const response = await fetch('/proyectoJardin-main/php/verificarFaltasConsecutivas.php?idAlumno=' + idAlumno);
         const result = await response.json();
         return result;
     } catch (error) {

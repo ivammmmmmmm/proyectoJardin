@@ -117,48 +117,61 @@
                 alert('Error al cargar los datos necesarios. Por favor, recargue la página.');
             });
 
-            // Cuando se selecciona un alumno, cargar automáticamente sus tutores
-            document.getElementById('selectAlumno').addEventListener('change', function() {
-                const alumnoId = this.value;
-                const tutorSelect = document.getElementById('selectTutor');
-                
-                console.log('Alumno seleccionado:', alumnoId);
-                tutorSelect.innerHTML = '<option value="">Seleccione un tutor</option>';
-                
-                if (!alumnoId) {
-                    return;
-                }
+            // Cuando se selecciona un alumno, cargar automáticamente sus tutores (si existen los elementos)
+            const selectAlumnoEl = document.getElementById('selectAlumno');
+            if (selectAlumnoEl) {
+                selectAlumnoEl.addEventListener('change', function() {
+                    const alumnoId = this.value;
+                    const tutorSelect = document.getElementById('selectTutor');
 
-                console.log('Cargando tutores para alumno:', alumnoId);
-                fetch(`../php/getTutoresAlumno.php?alumnoId=${alumnoId}`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`Error HTTP: ${response.status}`);
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        console.log('Respuesta de tutores:', data);
-                        if (data.tutores && Array.isArray(data.tutores)) {
-                            data.tutores.forEach(tutor => {
-                                const option = document.createElement('option');
-                                option.value = tutor.id;
-                                option.textContent = `${tutor.apellido}, ${tutor.nombre}`;
-                                tutorSelect.appendChild(option);
-                            });
-                        } else {
-                            console.error('Formato de respuesta inválido:', data);
-                        }
-                    })
-                    .catch(err => {
-                        console.error('Error cargando tutores del alumno:', err);
-                        alert('Error al cargar los tutores: ' + err.message);
-                    });
-            });
+                    console.log('Alumno seleccionado:', alumnoId);
 
-            // Manejar el envío del formulario
-            document.querySelector('form').addEventListener('submit', function(e) {
-                e.preventDefault();
+                    if (!tutorSelect) {
+                        console.warn('Elemento selectTutor no encontrado en la página. No se cargarán tutores.');
+                        return;
+                    }
+
+                    tutorSelect.innerHTML = '<option value="">Seleccione un tutor</option>';
+
+                    if (!alumnoId) {
+                        return;
+                    }
+
+                    console.log('Cargando tutores para alumno:', alumnoId);
+                    fetch(`../php/getTutoresAlumno.php?alumnoId=${alumnoId}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`Error HTTP: ${response.status}`);
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log('Respuesta de tutores:', data);
+                            if (data.tutores && Array.isArray(data.tutores)) {
+                                data.tutores.forEach(tutor => {
+                                    const option = document.createElement('option');
+                                    option.value = tutor.id;
+                                    option.textContent = `${tutor.apellido}, ${tutor.nombre}`;
+                                    tutorSelect.appendChild(option);
+                                });
+                            } else {
+                                console.error('Formato de respuesta inválido:', data);
+                            }
+                        })
+                        .catch(err => {
+                            console.error('Error cargando tutores del alumno:', err);
+                            alert('Error al cargar los tutores: ' + err.message);
+                        });
+                });
+            } else {
+                console.warn('Elemento selectAlumno no encontrado en la página. No se adjuntará listener de cambio.');
+            }
+
+            // Manejar el envío del formulario (si existe)
+            const formEl = document.querySelector('form');
+            if (formEl) {
+                formEl.addEventListener('submit', function(e) {
+                    e.preventDefault();
                 
                 const formData = new FormData(this);
                 fetch('../php/aniadirRegistro.php', {
@@ -186,5 +199,8 @@
                     }
                     alert('Error: ' + error.message);
                 });
-            });
+                });
+            } else {
+                console.warn('No se encontró el formulario en la página. No se manejará el submit.');
+            }
         });

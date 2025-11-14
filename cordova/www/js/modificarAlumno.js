@@ -78,8 +78,8 @@
                 <p><strong>Dirección:</strong> ${alumno.direccion}</p>
                 <p><strong>Fecha de Nacimiento:</strong> ${alumno.fecha_nacimiento}</p>
                 <p><strong>Edad:</strong> ${alumno.edad} años</p>
-                <p><strong>Estado:</strong> ${alumno.idEstado}</p>
-                <!-- Sala: ${alumno.idSala} -->
+                <p><strong>Sala:</strong> ${alumno.idSala}</p>
+                <p><strong>Estado:</strong> ${alumno.estado || 'No definido'}</p>
 
                 </div>
             </div>
@@ -109,13 +109,9 @@
         }
 
         // Configurar filtros
-        const filtroNombre = document.getElementById('filtroNombre');
-        const filtroSala = document.getElementById('filtroSala');
-        const filtroEstado = document.getElementById('filtroEstado');
-        
-        if (filtroNombre) filtroNombre.addEventListener('change', aplicarFiltros);
-        if (filtroSala) filtroSala.addEventListener('change', aplicarFiltros);
-        if (filtroEstado) filtroEstado.addEventListener('change', aplicarFiltros);
+        document.getElementById('filtroNombre').addEventListener('change', aplicarFiltros);
+        document.getElementById('filtroSala').addEventListener('change', aplicarFiltros);
+        document.getElementById('filtroEstado').addEventListener('change', aplicarFiltros);
 
         // Cargar salas
         cargarSalas();
@@ -137,21 +133,12 @@
       // Cargar salas en el select
       async function cargarSalas() {
         try {
-          const response = await fetch('/proyectoJardin/php/obtenerSalas.php');
-          if (!response.ok) {
-            console.error('Error HTTP:', response.status);
-            return;
-          }
-          
+          const response = await fetch('./php/obtenerSalas.php');
           const data = await response.json();
+          
           const filtroSala = document.getElementById('filtroSala');
           
-          if (!filtroSala) {
-            console.warn('Elemento filtroSala no encontrado');
-            return;
-          }
-          
-          if (data.status === 'success' && data.salas) {
+          if (data.status === 'success') {
             data.salas.forEach(sala => {
               const option = document.createElement('option');
               option.value = sala.id;
@@ -166,15 +153,10 @@
 
       // Aplicar filtros
       function aplicarFiltros() {
-        const buscador = document.getElementById('buscador');
-        const filtroNombreEl = document.getElementById('filtroNombre');
-        const filtroSalaEl = document.getElementById('filtroSala');
-        const filtroEstadoEl = document.getElementById('filtroEstado');
-        
-        const termino = buscador ? buscador.value : '';
-        const filtroNombre = filtroNombreEl ? filtroNombreEl.value : '';
-        const filtroSala = filtroSalaEl ? filtroSalaEl.value : '';
-        const filtroEstado = filtroEstadoEl ? filtroEstadoEl.value : '';
+        const termino = document.getElementById('buscador').value;
+        const filtroNombre = document.getElementById('filtroNombre').value;
+        const filtroSala = document.getElementById('filtroSala').value;
+        const filtroEstado = document.getElementById('filtroEstado').value;
 
         let resultados = todosLosAlumnos.filter(alumno => {
           const coincideTexto = 
@@ -188,7 +170,7 @@
              (filtroNombre === 'apellido' && alumno.apellido.toLowerCase().includes(termino.toLowerCase())));
 
           const coincideSala = 
-            (filtroSala === '' || alumno.idEstado == filtroSala);
+            (filtroSala === '' || alumno.idSala == filtroSala);
 
           return coincideTexto && coincideFiltro && coincideSala;
         });
