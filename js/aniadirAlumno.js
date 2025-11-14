@@ -1,6 +1,6 @@
       document.addEventListener('DOMContentLoaded', async function() {
         try {
-          const response = await fetch('/proyectoJardin-main/php/obtenerTutores.php');
+          const response = await fetch('/proyectoJardin/php/obtenerTutores.php');
           if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
           
           const data = await response.json();
@@ -52,7 +52,7 @@
 
         // Cargar salas
         try {
-          const response = await fetch('/proyectoJardin-main/php/obtenerSalas.php');
+          const response = await fetch('/proyectoJardin/php/obtenerSalas.php');
           if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
           
           const data = await response.json();

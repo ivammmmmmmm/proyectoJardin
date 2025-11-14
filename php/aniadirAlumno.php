@@ -50,33 +50,33 @@
     try {
         // Detectar si la columna idLocalidad existe en la tabla alumno
         $hasLocalidad = false;
-        $hasSala = false;
+        $hasEstado = false;
         
         $stmtCheck = $pdo->query("SHOW COLUMNS FROM alumno LIKE 'idLocalidad'");
         if ($stmtCheck && $stmtCheck->fetch()) {
             $hasLocalidad = true;
         }
         
-        $stmtCheck = $pdo->query("SHOW COLUMNS FROM alumno LIKE 'idSala'");
+        $stmtCheck = $pdo->query("SHOW COLUMNS FROM alumno LIKE 'idEstado'");
         if ($stmtCheck && $stmtCheck->fetch()) {
-            $hasSala = true;
+            $hasEstado = true;
         }
         
-        error_log("aniadirAlumno.php - hasLocalidad: $hasLocalidad, hasSala: $hasSala", 3, $logDir . '/debug.log');
+        error_log("aniadirAlumno.php - hasLocalidad: $hasLocalidad, hasEstado: $hasEstado", 3, $logDir . '/debug.log');
 
         // Iniciar transacción
         $pdo->beginTransaction();
 
-        if ($hasLocalidad && $hasSala) {
-            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad, idSala) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        if ($hasLocalidad && $hasEstado) {
+            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad, idEstado) VALUES (?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $localidad, $sala]);
-        } elseif ($hasLocalidad && !$hasSala) {
+        } elseif ($hasLocalidad && !$hasEstado) {
             $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $localidad]);
-        } elseif (!$hasLocalidad && $hasSala) {
-            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idSala) VALUES (?, ?, ?, ?, ?, ?)";
+        } elseif (!$hasLocalidad && $hasEstado) {
+            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idEstado) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $sala]);
         } else {

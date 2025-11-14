@@ -12,7 +12,7 @@ function createWindow() {
   });
 
   // Always load via HTTP server since we need PHP
-  const localUrl = 'http://localhost/proyectoJardin-main/html/index.html';
+  const localUrl = 'http://localhost/proyectoJardin/html/index.html';
   console.log('Loading app via HTTP:', localUrl);
   
   win.loadURL(localUrl, { extraHeaders: 'Cache-Control: no-cache' }).catch(err => {
@@ -22,8 +22,8 @@ function createWindow() {
       <p>No se pudo cargar la aplicación. Por favor:</p>
       <ol>
         <li>Verifica que XAMPP está corriendo (Apache y MySQL)</li>
-        <li>Comprueba que la carpeta del proyecto está en <code>C:\\xampp\\htdocs\\proyectoJardin-main</code></li>
-        <li>Abre <a href="http://localhost/proyectoJardin-main/html/index.html">http://localhost/proyectoJardin-main/html/index.html</a> en el navegador para probar si el servidor funciona</li>
+        <li>Comprueba que la carpeta del proyecto está en <code>C:\xampp\htdocs\proyectoJardin</code></li>
+        <li>Abre <a href="http://localhost/proyectoJardin/html/index.html">http://localhost/proyectoJardin/html/index.html</a> en el navegador para probar si el servidor funciona</li>
       </ol>
     `);
   });

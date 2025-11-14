@@ -65,6 +65,7 @@ try {
                 a.dni, 
                 a.direccion, 
                 a.fecha_nacimiento,
+                a.idEstado,
                 GROUP_CONCAT(
                     CONCAT(pt.nombre, ' ', pt.apellido, ' (Tel: ', COALESCE(pt.telefono, 'No disponible'), ')')
                     SEPARATOR ', '
@@ -75,9 +76,9 @@ try {
                 alumnotutor at ON a.id = at.idAlumno
             LEFT JOIN 
                 padretutor pt ON at.idPadreTutor = pt.id
-            " . ($idSala ? "WHERE a.idSala = ?" : "") . "
+            " . ($idSala ? "WHERE a.idEstado = ?" : "") . "
             GROUP BY 
-                a.id, a.nombre, a.apellido, a.dni, a.direccion, a.fecha_nacimiento
+                a.id, a.nombre, a.apellido, a.dni, a.direccion, a.fecha_nacimiento, a.idEstado
         ";
     }
 

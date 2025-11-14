@@ -11,7 +11,7 @@
             input = prefix + input.slice('../php/'.length);
           }
           // Also rewrite absolute localhost php paths
-          if (input.indexOf('http://localhost/proyectoJardin-main/php/') === 0 || input.indexOf('https://localhost/proyectoJardin-main/php/') === 0){
+          if (input.indexOf('http://localhost/proyectoJardin/php/') === 0 || input.indexOf('https://localhost/proyectoJardin/php/') === 0){
             const prefix = (typeof API_BASE !== 'undefined') ? API_BASE : input.substring(0, input.indexOf('/php/')+1);
             const tail = input.substring(input.indexOf('/php/')+5);
             input = prefix + tail;

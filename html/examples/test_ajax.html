@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Test AJAX</title>
-  <link rel="stylesheet" href="/proyectoJardin-main/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/proyectoJardin/css/bootstrap.min.css">
 </head>
 <body class="bg-dark text-light p-4">
   <div class="container">
@@ -44,7 +44,7 @@
   async function cargar() {
     listaEl.innerHTML = 'Cargando...';
     try {
-      const res = await fetch('/proyectoJardin-main/php/examples/verAlumnos_test.php');
+      const res = await fetch('/proyectoJardin/php/examples/verAlumnos_test.php');
       const data = await res.json();
       renderList(data);
       debug.textContent = JSON.stringify(data, null, 2);
@@ -87,7 +87,7 @@
     fd.append('apellido', document.getElementById('m_apellido').value);
     fd.append('dni', document.getElementById('m_dni').value);
     try {
-      const res = await fetch('/proyectoJardin-main/php/examples/modificarAlumno_test.php', { method: 'POST', body: fd });
+      const res = await fetch('/proyectoJardin/php/examples/modificarAlumno_test.php', { method: 'POST', body: fd });
       const json = await res.json();
       debug.textContent = JSON.stringify(json, null, 2);
       if (json.success) cargar();
@@ -101,7 +101,7 @@
     if (!id) return alert('Ingresá un id');
     if (!confirm('Confirmar eliminar id=' + id)) return;
     try {
-      const res = await fetch('/proyectoJardin-main/php/examples/eliminarAlumno_test.php?id=' + encodeURIComponent(id), { method: 'DELETE' });
+      const res = await fetch('/proyectoJardin/php/examples/eliminarAlumno_test.php?id=' + encodeURIComponent(id), { method: 'DELETE' });
       const json = await res.json();
       debug.textContent = JSON.stringify(json, null, 2);
       if (json.success) cargar();
@@ -113,6 +113,6 @@
   // carga inicial
   cargar();
 </script>
-<script src="/proyectoJardin-main/js/bootstrap.bundle.min.js"></script>
+<script src="/proyectoJardin/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

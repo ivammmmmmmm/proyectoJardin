@@ -78,8 +78,8 @@
                 <p><strong>Dirección:</strong> ${alumno.direccion}</p>
                 <p><strong>Fecha de Nacimiento:</strong> ${alumno.fecha_nacimiento}</p>
                 <p><strong>Edad:</strong> ${alumno.edad} años</p>
-                <p><strong>Sala:</strong> ${alumno.idSala}</p>
-                <p><strong>Estado:</strong> ${alumno.estado || 'No definido'}</p>
+                <p><strong>Estado:</strong> ${alumno.idEstado}</p>
+                <!-- Sala: ${alumno.idSala} -->
 
                 </div>
             </div>
@@ -117,7 +117,7 @@
         cargarSalas();
 
         // Cargar alumnos desde el servidor y mostrarlos
-        fetch('/proyectoJardin-main/php/verAlumno.php?ajax=1')
+        fetch('/proyectoJardin/php/verAlumno.php?ajax=1')
           .then(response => response.json())
           .then(data => {
             todosLosAlumnos = data; // Guardar todos los alumnos
@@ -133,7 +133,7 @@
       // Cargar salas en el select
       async function cargarSalas() {
         try {
-          const response = await fetch('/proyectoJardin-main/php/obtenerSalas.php');
+          const response = await fetch('/proyectoJardin/php/obtenerSalas.php');
           const data = await response.json();
           
           const filtroSala = document.getElementById('filtroSala');
@@ -170,7 +170,7 @@
              (filtroNombre === 'apellido' && alumno.apellido.toLowerCase().includes(termino.toLowerCase())));
 
           const coincideSala = 
-            (filtroSala === '' || alumno.idSala == filtroSala);
+            (filtroSala === '' || alumno.idEstado == filtroSala);
 
           return coincideTexto && coincideFiltro && coincideSala;
         });
@@ -199,7 +199,7 @@
           // Enviar id tanto en query string como en body (POST) para compatibilidad
           const fd = new FormData();
           fd.append('id', id);
-          fetch(`/proyectoJardin-main/php/eliminar.php?id=${encodeURIComponent(id)}`, {
+          fetch(`/proyectoJardin/php/eliminar.php?id=${encodeURIComponent(id)}`, {
             method: 'POST',
             body: fd
           })
@@ -277,8 +277,8 @@
           console.log('Cargando tutores para alumno:', alumnoId);
           
           const [allResp, assignedResp] = await Promise.all([
-            fetch('/proyectoJardin-main/php/obtenerTutores.php'),
-            fetch(`/proyectoJardin-main/php/getTutoresAlumno.php?alumnoId=${alumnoId}`)
+            fetch('/proyectoJardin/php/obtenerTutores.php'),
+            fetch(`/proyectoJardin/php/getTutoresAlumno.php?alumnoId=${alumnoId}`)
           ]);
 
           console.log('Respuesta obtenerTutores:', allResp);
@@ -422,7 +422,7 @@
         const tutoresIds = Array.from(tutoresSeleccionados).map(checkbox => checkbox.value);
         tutoresIds.forEach(tid => formData.append('tutores[]', tid));
 
-        fetch('/proyectoJardin-main/php/modificarAlumno.php', {
+        fetch('/proyectoJardin/php/modificarAlumno.php', {
           method: 'POST',
           body: formData
         })
@@ -444,7 +444,7 @@
             modal.hide();
 
             // Actualizar la lista de alumnos
-            fetch('/proyectoJardin-main/php/verAlumno.php?ajax=1')
+            fetch('/proyectoJardin/php/verAlumno.php?ajax=1')
               .then(response => response.json())
               .then(data => {
                 todosLosAlumnos = data;

@@ -1,5 +1,5 @@
 // URL base para las peticiones API
-const API_BASE = 'http://localhost/proyectoJardin-main';
+const API_BASE = 'http://localhost/proyectoJardin';
 
 // Esperar a que el DOM esté completamente cargado
 window.addEventListener('load', function() {

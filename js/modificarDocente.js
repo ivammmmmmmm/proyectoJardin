@@ -4,11 +4,11 @@
       async function cargarDocentes() {
         try {
           // Primero verificamos la conexión
-          const testConn = await fetchWithErrorHandling('/proyectoJardin-main/php/test_connection.php');
+          const testConn = await fetchWithErrorHandling('/proyectoJardin/php/test_connection.php');
           console.log('Test de conexión:', testConn);
 
           // Si la conexión está bien, cargamos los docentes
-          const data = await fetchWithErrorHandling('/proyectoJardin-main/php/verDocentes.php');
+          const data = await fetchWithErrorHandling('/proyectoJardin/php/verDocentes.php');
           console.log('Docentes cargados:', data);
           
           todosLosDocentes = data.docentes || data;
@@ -120,7 +120,7 @@
         }
 
         // Cargar docentes
-        fetch('/proyectoJardin-main/php/verDocentes.php?ajax=1')
+        fetch('/proyectoJardin/php/verDocentes.php?ajax=1')
           .then(async response => {
             if (!response.ok) {
               throw new Error('Error en la respuesta del servidor: ' + response.status);
@@ -152,7 +152,7 @@
         if (confirm('¿Estás seguro de que deseas eliminar este docente?')) {
           const fd = new FormData();
           fd.append('id', id);
-          fetch(`/proyectoJardin-main/php/eliminarDocente.php?id=${encodeURIComponent(id)}`, {
+          fetch(`/proyectoJardin/php/eliminarDocente.php?id=${encodeURIComponent(id)}`, {
             method: 'POST',
             body: fd
           })
@@ -219,7 +219,7 @@
         
         try {
           // Obtener todas las salas con información de docentes asignados
-          const response = await fetch(`/proyectoJardin-main/php/obtenerSalas.php?tipo=con_docentes`);
+          const response = await fetch(`/proyectoJardin/php/obtenerSalas.php?tipo=con_docentes`);
           if (!response.ok) {
             throw new Error('Error en la respuesta del servidor: ' + response.status);
           }
@@ -308,7 +308,7 @@
             salas: salasSeleccionadas
           });
           
-          const response = await fetch('/proyectoJardin-main/php/modificarDocente.php', {
+          const response = await fetch('/proyectoJardin/php/modificarDocente.php', {
             method: 'POST',
             body: formData
           });

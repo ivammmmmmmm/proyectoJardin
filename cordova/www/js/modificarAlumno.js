@@ -78,8 +78,8 @@
                 <p><strong>Dirección:</strong> ${alumno.direccion}</p>
                 <p><strong>Fecha de Nacimiento:</strong> ${alumno.fecha_nacimiento}</p>
                 <p><strong>Edad:</strong> ${alumno.edad} años</p>
-                <p><strong>Sala:</strong> ${alumno.idSala}</p>
-                <p><strong>Estado:</strong> ${alumno.estado || 'No definido'}</p>
+                <p><strong>Estado:</strong> ${alumno.idEstado}</p>
+                <!-- Sala: ${alumno.idSala} -->
 
                 </div>
             </div>
@@ -170,7 +170,7 @@
              (filtroNombre === 'apellido' && alumno.apellido.toLowerCase().includes(termino.toLowerCase())));
 
           const coincideSala = 
-            (filtroSala === '' || alumno.idSala == filtroSala);
+            (filtroSala === '' || alumno.idEstado == filtroSala);
 
           return coincideTexto && coincideFiltro && coincideSala;
         });

@@ -22,7 +22,7 @@ function createWindow() {
       <p>No se pudo cargar la aplicación. Por favor:</p>
       <ol>
         <li>Verifica que XAMPP está corriendo (Apache y MySQL)</li>
-        <li>Comprueba que la carpeta del proyecto está en <code>C:\\xampp\\htdocs\\proyectoJardin-main</code></li>
+        <li>Comprueba que la carpeta del proyecto está en <code>C:\\xampp\\htdocs\\proyectoJardin</code></li>
         <li>Abre <a href="http://localhost./html/index.html">http://localhost./html/index.html</a> en el navegador para probar si el servidor funciona</li>
       </ol>
     `);
