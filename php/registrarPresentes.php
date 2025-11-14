@@ -6,6 +6,9 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 require_once 'conexion.php';
 
+// Obtener la conexión PDO
+$pdo = Conexion::conectar();
+
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;

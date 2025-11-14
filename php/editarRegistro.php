@@ -5,6 +5,9 @@ ini_set('display_errors', 0);
 
 require_once 'conexion.php';
 
+// Obtener la conexión PDO
+$pdo = Conexion::conectar();
+
 try {
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
         http_response_code(405);

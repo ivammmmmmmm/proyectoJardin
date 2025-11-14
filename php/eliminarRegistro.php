@@ -2,6 +2,9 @@
 header('Content-Type: application/json; charset=utf-8');
 require_once __DIR__ . '/conexion.php';
 
+// Obtener la conexión PDO
+$pdo = Conexion::conectar();
+
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT) ?? 
       filter_input(INPUT_POST, 'id', FILTER_VALIDATE_INT);
 

@@ -9,6 +9,9 @@
     <?php
     require_once __DIR__ . '/conexion.php';
 
+    // Obtener la conexión PDO
+    $pdo = Conexion::conectar();
+
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
         header('Location: ../html/aniadirTutor.html');
         exit;

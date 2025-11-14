@@ -2,6 +2,9 @@
 header('Content-Type: application/json; charset=utf-8');
 require_once __DIR__ . '/conexion.php';
 
+// Obtener la conexión PDO
+$pdo = Conexion::conectar();
+
 // Aceptar id por POST o GET
 $idRaw = $_POST['id'] ?? $_GET['id'] ?? null;
 $forceRaw = $_POST['force'] ?? $_GET['force'] ?? null; // '1' o 'true' para forzar

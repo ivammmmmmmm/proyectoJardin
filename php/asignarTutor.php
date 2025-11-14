@@ -2,6 +2,9 @@
 header('Content-Type: application/json');
 require_once 'conexion.php';
 
+// Obtener la conexión PDO
+$pdo = Conexion::conectar();
+
 if (!isset($_POST['alumnoId']) || !isset($_POST['tutorId'])) {
     echo json_encode(['error' => 'Faltan datos requeridos']);
     exit;

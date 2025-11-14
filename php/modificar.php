@@ -1,6 +1,9 @@
 <?php
 require_once __DIR__ . '/conexion.php';
 
+// Obtener la conexión PDO
+$pdo = Conexion::conectar();
+
 try {
     if (!isset($_GET['id'])) {
         throw new Exception('ID de alumno no especificado.');

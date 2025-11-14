@@ -9,6 +9,9 @@ header('Content-Type: application/json; charset=utf-8');
 try {
     // Incluir conexión a la base
     require_once 'conexion.php';
+    
+    // Obtener la conexión PDO
+    $pdo = Conexion::conectar();
 
     // Verificar método
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

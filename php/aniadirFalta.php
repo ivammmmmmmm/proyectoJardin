@@ -11,6 +11,9 @@ function debug_log($message) {
 
 require_once __DIR__ . '/conexion.php';
 
+// Obtener la conexión PDO
+$pdo = Conexion::conectar();
+
 try {
     debug_log('aniadirFalta.php - Iniciando procesamiento');
 

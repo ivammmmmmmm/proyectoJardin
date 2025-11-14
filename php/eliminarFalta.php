@@ -2,6 +2,9 @@
 require_once 'conexion.php';
 require_once 'db_logger.php';
 
+// Obtener la conexión PDO
+$pdo = Conexion::conectar();
+
 header('Content-Type: application/json; charset=utf-8');
 logError('eliminarFalta.php', 'Iniciando proceso de eliminación');
 

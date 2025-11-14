@@ -8,6 +8,16 @@
 <body>
     <?php
     require_once __DIR__ . '/conexion.php';
+    
+    // Obtener la conexión PDO
+    $pdo = Conexion::conectar();
+
+    // Log de debug
+    $logDir = __DIR__ . '/logs';
+    if (!is_dir($logDir)) mkdir($logDir, 0755, true);
+    
+    error_log("aniadirAlumno.php - REQUEST_METHOD: " . $_SERVER['REQUEST_METHOD'], 3, $logDir . '/debug.log');
+    error_log("aniadirAlumno.php - POST data: " . print_r($_POST, true), 3, $logDir . '/debug.log');
 
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
         header('Location: ../html/aniadirAlumno.html');
@@ -29,6 +39,8 @@
             if (ctype_digit((string)$t)) $tutoresSeleccionados[] = (int)$t;
         }
     }
+    
+    error_log("aniadirAlumno.php - Tutores seleccionados: " . count($tutoresSeleccionados), 3, $logDir . '/debug.log');
 
     if ($nombre === '' || $apellido === '') {
         header('Location: ../html/aniadirAlumno.html?error=missing');
@@ -38,23 +50,40 @@
     try {
         // Detectar si la columna idLocalidad existe en la tabla alumno
         $hasLocalidad = false;
+        $hasSala = false;
+        
         $stmtCheck = $pdo->query("SHOW COLUMNS FROM alumno LIKE 'idLocalidad'");
         if ($stmtCheck && $stmtCheck->fetch()) {
             $hasLocalidad = true;
         }
+        
+        $stmtCheck = $pdo->query("SHOW COLUMNS FROM alumno LIKE 'idSala'");
+        if ($stmtCheck && $stmtCheck->fetch()) {
+            $hasSala = true;
+        }
+        
+        error_log("aniadirAlumno.php - hasLocalidad: $hasLocalidad, hasSala: $hasSala", 3, $logDir . '/debug.log');
 
         // Iniciar transacción
         $pdo->beginTransaction();
 
-        if ($hasLocalidad) {
+        if ($hasLocalidad && $hasSala) {
             $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad, idSala) VALUES (?, ?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $localidad, $sala]);
-        } else {
-            // Si no existe idLocalidad en la tabla, omitirla
+        } elseif ($hasLocalidad && !$hasSala) {
+            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idLocalidad) VALUES (?, ?, ?, ?, ?, ?)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $localidad]);
+        } elseif (!$hasLocalidad && $hasSala) {
             $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento, idSala) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento, $sala]);
+        } else {
+            // Si no existe ninguna de las dos
+            $sql = "INSERT INTO alumno (nombre, apellido, dni, direccion, fecha_nacimiento) VALUES (?, ?, ?, ?, ?)";
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute([$nombre, $apellido, $dni, $direccion, $nacimiento]);
         }
 
         $alumnoId = $pdo->lastInsertId();
@@ -71,7 +100,20 @@
 
         $pdo->commit();
 
-        header('Location: ../html/aniadirAlumno.html?ok=1');
+        // Mostrar alert y redirigir a index.html
+        echo "<!DOCTYPE html>
+        <html lang='es'>
+        <head>
+            <meta charset='UTF-8'>
+            <title>Alumno Registrado</title>
+        </head>
+        <body>
+            <script>
+                alert('¡Alumno registrado correctamente!');
+                window.location.href = '../html/index.html';
+            </script>
+        </body>
+        </html>";
         exit;
     } catch (Exception $e) {
         $pdo->rollBack();

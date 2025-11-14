@@ -8,6 +8,9 @@
 <body>
     <?php
         require_once __DIR__ . '/conexion.php';
+        
+        // Obtener la conexión PDO
+        $pdo = Conexion::conectar();
 
         // Esperamos POST
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {

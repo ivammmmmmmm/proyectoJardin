@@ -26,7 +26,7 @@
               tutorDiv.className = 'list-group-item border-0 py-2';
               tutorDiv.innerHTML = `
                 <div class="form-check d-flex align-items-center">
-                  <input class="form-check-input me-3" type="checkbox" 
+                  <input class="form-check-input tutor-checkbox me-3" type="checkbox" 
                          name="tutores[]" value="${tutor.id}" id="tutor${tutor.id}">
                   <label class="form-check-label flex-grow-1" for="tutor${tutor.id}">
                     <div class="d-flex justify-content-between align-items-center">
@@ -73,12 +73,23 @@
         }
 
         // Validar formulario antes de enviar
-        document.querySelector('form').addEventListener('submit', function(e) {
-          const tutoresSeleccionados = document.querySelectorAll('.tutor-checkbox:checked');
-          if (tutoresSeleccionados.length === 0) {
+        const form = document.querySelector('form');
+        if (form) {
+          form.addEventListener('submit', function(e) {
             e.preventDefault();
-            document.getElementById('error-tutores').style.display = 'block';
-            document.getElementById('tutores-container').scrollIntoView({ behavior: 'smooth' });
-          }
-        });
+            
+            const tutoresSeleccionados = document.querySelectorAll('input[name="tutores[]"]:checked');
+            console.log('Tutores seleccionados:', tutoresSeleccionados.length);
+            
+            if (tutoresSeleccionados.length === 0) {
+              document.getElementById('error-tutores').style.display = 'block';
+              document.getElementById('tutores-container').scrollIntoView({ behavior: 'smooth' });
+              return;
+            }
+            
+            // Si hay tutores, enviar el formulario de forma tradicional
+            console.log('Enviando formulario con', tutoresSeleccionados.length, 'tutores');
+            form.submit();
+          });
+        }
       });
