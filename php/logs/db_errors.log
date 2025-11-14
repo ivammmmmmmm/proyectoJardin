@@ -2042,3 +2042,15 @@
 2025-11-14 08:09:22 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":5,"nombre":"Silvina","apellido":"Torres"}]
 2025-11-14 08:09:22 | obtenerDatos.php | Obteniendo datos de tipo: salas
 2025-11-14 08:09:22 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"Amarilla"},{"id":2,"nombre":"Lila"},{"id":1,"nombre":"Rosa"}]
+2025-11-14 08:22:15 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-14 08:22:15 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-14 08:22:15 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-14 08:22:15 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-14 08:22:15 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-14 08:22:15 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-14 08:22:15 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"Amarilla"},{"id":2,"nombre":"Lila"},{"id":1,"nombre":"Rosa"}]
+2025-11-14 08:22:15 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":26,"nombre":"mamade","apellido":"biscardi"},{"id":25,"nombre":"tiziana","apellido":"delacruz"},{"id":27,"nombre":"tizianashe","apellido":"flores"}]
+2025-11-14 08:22:15 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-14 08:22:15 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-14 08:22:15 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-14 08:22:15 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":7,"nombre":"Gabriela","apellido":"Garc\u00eda"},{"id":6,"nombre":"Luc\u00eda","apellido":"Diaz"},{"id":5,"nombre":"Silvina","apellido":"Torres"}]
