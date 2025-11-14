@@ -81,154 +81,192 @@
       </header>
 
 
-    <!-- Modal para modificar alumno -->
-    <div class="modal fade" id="modalModificarAlumno" tabindex="-1" aria-labelledby="modalModificarAlumnoLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content bg-dark text-light">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalModificarAlumnoLabel">Modificar Alumno</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    <main class="d-flex flex-column flex-lg-row min-vh-100">
+    <!-- Menú lateral -->
+    <aside class="bg-dark py-3 px-3 d-flex flex-column align-items-center" id="sidebarFilter" style="min-width: 250px;">
+      <div class="d-flex justify-content-between align-items-center w-100 mb-3">
+        <h5 class="text-light mb-0">Filtros de Búsqueda para Alumnos</h5>
+      </div>
+      <div class="w-100">
+        <p class="text-light mb-2">Salas:</p>
+        <select class="form-select mb-3"> <!--SALAS-->
+          <option>Ninguno</option>
+          <option>Verde</option>
+        </select>
+        <p class="text-light mb-2">Turnos:</p>
+        <select class="form-select mb-3"> <!--TURNOS-->
+          <option>Ninguno</option>
+          <option>Mañana</option>
+        </select>
+      </div>
+      <div class="text-light mb-2" id="contadorResultados"></div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <section class="flex-grow-1 p-3">
+      <div class="list-group" id="usuariosLista">
+
+        <!-- Buscador -->
+        <form action="" method="post">
+          <div class="list-group-item bg-dark text-light rounded">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div class="d-flex align-items-center w-100">
+                <i class="bi bi-search fs-3 me-3 text-light"></i>
+                <div class="flex-grow-1">
+                  <input class="form-control w-100" placeholder="Buscar por nombre y/o apellido" name="campo"
+                    id="campo">
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="modal-body">
-            <form id="formModificarAlumno">
-              <input type="hidden" id="alumnoId" name="id">
-              <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </form>
+
+
+        <!-- Usuario 1 -->
+        <div id="alumnosLista"></div>
+
+        <!-- Alumnos -->
+
+      </div>
+    </section>
+  </main>
+
+
+
+  <footer class="bg-color text-light pt-5 pb-3 mt-auto">
+    <div class="container">
+      <div class="row">
+
+        <!-- Enlaces -->
+        <div class="col-md mb-4 text-center">
+          <h5>Creditos</h5>
+          <ul class="list-unstyled">
+            <li class="text-light">Iván Bertolotti</li>
+            <li class="text-light">Alejo Godoy</li>
+            <li class="text-light">Maximo Segundo</li>
+            <li class="text-light">Bruno Biscardi</li>
+            <li class="text-light">Matias Casela</li>
+            <li class="text-light">Morena Herrera</li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="col-md mb-4 text-center">
+          <h5>Contacto</h5>
+          <address class="text-light">
+            Soporte: segundomaximo55@gmail.com<br>
+            Tel: +54 9 11 7361-3030
+          </address>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="col-md mb-4 text-center">
+          <h5>Síguenos</h5>
+          <a href="https://www.facebook.com/tecnica1grandbourg/?locale=es_LA" class="text-light me-3"><i
+              class="bi bi-facebook me-1"></i>Facebook</a><br>
+          <a href="https://www.instagram.com/tecnica1malvinasarg/" class="text-light me-3"><i
+              class="bi bi-instagram me-1"></i>Instagram</a><br>
+          <a href="#" class="text-light"><i class="fab fa-github fa-lg"></i></a>
+        </div>
+
+
+
+        <hr class="bg-light">
+
+        <div class="d-flex flex-column flex-md-row justify-content-between text-center">
+          <p class="mb-2 mb-md-0">&copy; 2025 Escuela Técnica N°1 Gral. San Martín Inc. Todos los derechos reservados.
+          </p>
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item"><a href="/privacy" class="text-light">Privacidad</a></li>
+            <li class="list-inline-item"><a href="/terms" class="text-light">Términos</a></li>
+          </ul>
+        </div>
+      </div>
+  </footer>
+
+  <!-- Modal para modificar alumno -->
+  <div class="modal fade" id="modalModificarAlumno" tabindex="-1" aria-labelledby="modalModificarAlumnoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalModificarAlumnoLabel">Modificar Alumno</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formModificarAlumno">
+            <input type="hidden" id="alumnoId" name="id">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="apellido" class="form-label">Apellido</label>
+              <input type="text" class="form-control" id="apellido" name="apellido" required>
+            </div>
+            <div class="mb-3">
+              <label for="dni" class="form-label">DNI</label>
+              <input type="text" class="form-control" id="dni" name="dni" required>
+            </div>
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <label class="form-label mb-0"><i class="bi bi-people-fill"></i> Tutores del alumno</label>
+                <button type="button" class="btn btn-sm btn-primary" onclick="window.location.href='aniadirTutor.html'">
+                  <i class="bi bi-plus-circle"></i> Nuevo Tutor
+                </button>
               </div>
-              <div class="mb-3">
-                <label for="apellido" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellido" name="apellido" required>
-              </div>
-              <div class="mb-3">
-                <label for="dni" class="form-label">DNI</label>
-                <input type="text" class="form-control" id="dni" name="dni" required>
-              </div>
-              <div class="mb-3">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                  <label class="form-label mb-0"><i class="bi bi-people-fill"></i> Tutores del alumno</label>
-                  <button type="button" class="btn btn-sm btn-primary" onclick="window.location.href='aniadirTutor.html'">
-                    <i class="bi bi-plus-circle"></i> Nuevo Tutor
-                  </button>
+              <div id="tutoresSelect" class="border rounded" style="background-color: rgba(255, 255, 255, 0.1);">
+                <div class="alert alert-info m-3"
+                  style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); color: white;">
+                  <i class="bi bi-hourglass-split me-2"></i>Cargando tutores disponibles...
                 </div>
-                <div id="tutoresSelect" class="border rounded" style="background-color: rgba(255, 255, 255, 0.1);">
-                  <div class="alert alert-info m-3" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); color: white;">
-                    <i class="bi bi-hourglass-split me-2"></i>Cargando tutores disponibles...
-                  </div>
-                </div>
-                <div class="d-flex align-items-center mt-2 text-white opacity-75">
-                  <i class="bi bi-info-circle me-2"></i>
-                  <small>Seleccione uno o más tutores para el alumno</small>
-                </div>
-                <div id="error-tutores" class="alert alert-danger mt-2 bg-danger bg-opacity-75 text-white border-danger" style="display: none;">
-                  <i class="bi bi-exclamation-triangle-fill"></i> Debe seleccionar al menos un tutor
-                </div>
               </div>
-              <div class="mb-3">
-                <label for="direccion" class="form-label">Dirección</label>
-                <input type="text" class="form-control" id="direccion" name="direccion" required>
+              <div class="d-flex align-items-center mt-2 text-white opacity-75">
+                <i class="bi bi-info-circle me-2"></i>
+                <small>Seleccione uno o más tutores para el alumno</small>
               </div>
-              <div class="mb-3">
-                <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
-                <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+              <div id="error-tutores" class="alert alert-danger mt-2 bg-danger bg-opacity-75 text-white border-danger"
+                style="display: none;">
+                <i class="bi bi-exclamation-triangle-fill"></i> Debe seleccionar al menos un tutor
               </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary" onclick="guardarModificacion()">Guardar Cambios</button>
-          </div>
+            </div>
+            <div class="mb-3">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input type="text" class="form-control" id="direccion" name="direccion" required>
+            </div>
+            <div class="mb-3">
+              <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" onclick="guardarModificacion()">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para eliminar alumno-->
+   <div class="modal fade" id="modalEliminarAlumno" tabindex="-1" aria-labelledby="modalEliminarAlumnoLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEliminarAlumnoLabel">Eliminar Alumno</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>¿Estás seguro de que deseas eliminar este alumno?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" onclick="confirmarEliminacion()">Eliminar</button>
         </div>
       </div>
     </div>
 
-    <main class="d-flex min-vh-100">
-      <!-- Menú lateral -->
-      <aside class="bg-dark d-flex flex-column align-items-center py-3" style="width: 25%;">
-        <input class="form-control mb-3" id="buscador" placeholder="Buscar alumno..." name="nombre" style="margin-left: 5%;margin-right: 5%;">
-        
-        <!-- Filtros -->
-        <div style="margin-left: 5%;margin-right: 5%; width: 90%;">
-          <select class="form-select form-select-sm mb-2" id="filtroNombre">
-            <option value="">Buscar por: Nombre</option>
-            <option value="nombre">Nombre</option>
-            <option value="apellido">Apellido</option>
-          </select>
-          <select class="form-select form-select-sm mb-2" id="filtroSala">
-            <option value="">Sala: Todas</option>
-          </select>
-          <select class="form-select form-select-sm mb-2" id="filtroEstado">
-            <option value="">Estado: Todos</option>
-            <option value="activo">Activo</option>
-            <option value="inactivo">Inactivo</option>
-          </select>
-          <button class="btn btn-secondary btn-sm w-100 mb-2" onclick="limpiarFiltros()">Limpiar Filtros</button>
-        </div>
-
-        <div class="text-light mb-2" id="contadorResultados"></div>
-        <button class="btn btn-link text-info mb-3" id="btnGrid">
-          <i class="bi bi-grid fs-4"></i>
-        </button>
-        <button class="btn btn-link text-info mb-3" id="btnPeople">
-          <i class="bi bi-people fs-4"></i>
-        </button>
-      </aside>
-
-      <!-- Contenido principal -->
-      <section class="flex-grow-1 p-3">
-        <h1 class="mb-4">Modificar Alumnos</h1>
-        <div class="list-group" id="alumnosLista">
-          <!-- Los alumnos se cargarán dinámicamente aquí -->
-        </div>
-      </section>
-    </main>
-
-    
-    <footer class="bg-color text-light pt-5 pb-3 mt-auto">
-        <div class="container">
-          <div class="row">
-            <!-- Enlaces -->
-            <div class="col-md mb-4 text-center">
-              <h5>Creditos</h5>
-              <ul class="list-unstyled">
-                <li class="text-light">Iván Bertolotti</li>
-                <li class="text-light">Alejo Godoy</li>
-                <li class="text-light">Maximo Segundo</li>
-                <li class="text-light">Bruno Biscardi</li>
-                <li class="text-light">Matias Casela</li>
-                <li class="text-light">Morena Herrera</li>
-              </ul>
-            </div>
-
-            <!-- Contacto -->
-            <div class="col-md mb-4 text-center">
-              <h5>Contacto</h5>
-              <address class="text-light">
-                Soporte: segundomaximo55@gmail.com<br>
-                Tel: +54 9 11 7361-3030
-              </address>
-            </div>
-
-            <!-- Redes Sociales -->
-            <div class="col-md mb-4 text-center">
-              <h5>Síguenos</h5>
-              <a href="https://www.facebook.com/tecnica1grandbourg/?locale=es_LA" class="text-light me-3"><i class="bi bi-facebook me-1"></i>Facebook</a><br>
-              <a href="https://www.instagram.com/tecnica1malvinasarg/" class="text-light me-3"><i class="bi bi-instagram me-1"></i>Instagram</a><br>
-              <a href="#" class="text-light"><i class="fab fa-github fa-lg"></i></a>
-            </div>
-          </div>
-
-          <hr class="bg-light">
-
-          <div class="d-flex flex-column flex-md-row justify-content-between text-center">
-            <p class="mb-2 mb-md-0">&copy; 2025 Escuela Técnica N°1 Gral. San Martín Inc. Todos los derechos reservados.</p>
-            <ul class="list-inline mb-0">
-              <li class="list-inline-item"><a href="/privacy" class="text-light">Privacidad</a></li>
-              <li class="list-inline-item"><a href="/terms" class="text-light">Términos</a></li>
-            </ul>
-          </div>
-        </div>
-    </footer>
   <script src="../js/bootstrap.bundle.min.js"></script>
   <script src="../js/modificarAlumno.js"></script>
 </body>
