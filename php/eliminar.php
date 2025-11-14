@@ -4,6 +4,15 @@ require_once __DIR__ . '/conexion.php';
 
 // Aceptar id por POST o GET
 $idRaw = $_POST['id'] ?? $_GET['id'] ?? null;
+
+// Inicializar conexión PDO
+try {
+    $pdo = Conexion::conectar();
+} catch (Exception $e) {
+    http_response_code(500);
+    echo json_encode(['success' => false, 'message' => 'Error de conexión a la base de datos.', 'error' => $e->getMessage()]);
+    exit;
+}
 if ($idRaw === null || !ctype_digit((string)$idRaw)) {
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'ID de alumno inválido.']);
