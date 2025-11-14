@@ -1,4 +1,4 @@
-  // Versión de script para depuración: si sigue apareciendo el error, comprueba este mensaje en la consola
+// Versión de script para depuración: si sigue apareciendo el error, comprueba este mensaje en la consola
   console.log('modificarAlumno.js cargado - versión segura ' + new Date().toISOString());
 
   /**
@@ -100,9 +100,7 @@
           buscador.addEventListener('input', function (e) {
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(() => {
-              const termino = e.target.value || '';
-              const resultados = filtrarAlumnos(termino);
-              mostrarAlumnos(resultados);
+              aplicarFiltros();
             }, 120);
           });
         } else {
@@ -110,15 +108,20 @@
         }
 
         // Configurar filtros
-        document.getElementById('filtroNombre').addEventListener('change', aplicarFiltros);
-        document.getElementById('filtroSala').addEventListener('change', aplicarFiltros);
-        document.getElementById('filtroEstado').addEventListener('change', aplicarFiltros);
+        const filtroNombre = document.getElementById('filtroNombre');
+        const filtroSala = document.getElementById('filtroSala');
+        const filtroEstado = document.getElementById('filtroEstado');
+        
+        if (filtroNombre) filtroNombre.addEventListener('change', aplicarFiltros);
+        if (filtroSala) filtroSala.addEventListener('change', aplicarFiltros);
+        if (filtroEstado) filtroEstado.addEventListener('change', aplicarFiltros);
 
-        // Cargar salas
+        // Cargar salas y estados
         cargarSalas();
+        cargarEstados();
 
         // Cargar alumnos desde el servidor y mostrarlos
-        fetch('/proyectoJardin-main/php/verAlumno.php?ajax=1')
+        fetch('/proyectoJardin/php/verAlumno.php?ajax=1')
           .then(response => response.json())
           .then(data => {
             todosLosAlumnos = data; // Guardar todos los alumnos
@@ -134,12 +137,12 @@
       // Cargar salas en el select
       async function cargarSalas() {
         try {
-          const response = await fetch('/proyectoJardin-main/php/obtenerSalas.php');
+          const response = await fetch('/proyectoJardin/php/obtenerSalas.php');
           const data = await response.json();
           
           const filtroSala = document.getElementById('filtroSala');
           
-          if (data.status === 'success') {
+          if (data.status === 'success' && filtroSala) {
             data.salas.forEach(sala => {
               const option = document.createElement('option');
               option.value = sala.id;
@@ -152,28 +155,58 @@
         }
       }
 
+      // Cargar estados en el select
+      async function cargarEstados() {
+        try {
+          const response = await fetch('/proyectoJardin/php/obtenerEstados.php');
+          const data = await response.json();
+          
+          const filtroEstado = document.getElementById('filtroEstado');
+          
+          // El endpoint devuelve { success, message, data: [...] }
+          const estadosArray = Array.isArray(data.data) ? data.data : [];
+
+          if (estadosArray.length > 0 && filtroEstado) {
+            estadosArray.forEach(estado => {
+              const option = document.createElement('option');
+              option.value = estado.id;
+              option.textContent = estado.nombre;
+              filtroEstado.appendChild(option);
+            });
+          }
+        } catch (error) {
+          console.error('Error al cargar estados:', error);
+        }
+      }
+
       // Aplicar filtros
       function aplicarFiltros() {
-        const termino = document.getElementById('buscador').value;
-        const filtroNombre = document.getElementById('filtroNombre').value;
-        const filtroSala = document.getElementById('filtroSala').value;
-        const filtroEstado = document.getElementById('filtroEstado').value;
+        const termino = (document.getElementById('buscador')?.value || '').toLowerCase();
+        const filtroNombre = document.getElementById('filtroNombre')?.value || '';
+        const filtroSala = document.getElementById('filtroSala')?.value || '';
+        const filtroEstado = document.getElementById('filtroEstado')?.value || '';
 
         let resultados = todosLosAlumnos.filter(alumno => {
-          const coincideTexto = 
-            alumno.nombre.toLowerCase().includes(termino.toLowerCase()) ||
-            alumno.apellido.toLowerCase().includes(termino.toLowerCase()) ||
-            alumno.dni.toString().includes(termino);
+          // Búsqueda por texto
+          const nombre = `${alumno.nombre || ''} ${alumno.apellido || ''}`.toLowerCase();
+          const dni = (alumno.dni || '').toString().toLowerCase();
+          const coincideTexto = nombre.includes(termino) || dni.includes(termino);
 
-          const coincideFiltro = 
-            (filtroNombre === '' || 
-             (filtroNombre === 'nombre' && alumno.nombre.toLowerCase().includes(termino.toLowerCase())) ||
-             (filtroNombre === 'apellido' && alumno.apellido.toLowerCase().includes(termino.toLowerCase())));
+          // Filtro por nombre/apellido
+          let coincideFiltroNombre = true;
+          if (filtroNombre === 'nombre') {
+            coincideFiltroNombre = (alumno.nombre || '').toLowerCase().includes(termino);
+          } else if (filtroNombre === 'apellido') {
+            coincideFiltroNombre = (alumno.apellido || '').toLowerCase().includes(termino);
+          }
 
-          const coincideSala = 
-            (filtroSala === '' || alumno.idSala == filtroSala);
+          // Filtro por sala
+          const coincideSala = filtroSala === '' || String(alumno.idSala) === filtroSala;
 
-          return coincideTexto && coincideFiltro && coincideSala;
+          // Filtro por estado
+          const coincideEstado = filtroEstado === '' || String(alumno.idEstado) === filtroEstado;
+
+          return coincideTexto && coincideFiltroNombre && coincideSala && coincideEstado;
         });
 
         mostrarAlumnos(resultados);
@@ -200,7 +233,7 @@
           // Enviar id tanto en query string como en body (POST) para compatibilidad
           const fd = new FormData();
           fd.append('id', id);
-          fetch(`/proyectoJardin-main/php/eliminar.php?id=${encodeURIComponent(id)}`, {
+          fetch(`/proyectoJardin/php/eliminar.php?id=${encodeURIComponent(id)}`, {
             method: 'POST',
             body: fd
           })
@@ -278,8 +311,8 @@
           console.log('Cargando tutores para alumno:', alumnoId);
           
           const [allResp, assignedResp] = await Promise.all([
-            fetch('/proyectoJardin-main/php/obtenerTutores.php'),
-            fetch(`/proyectoJardin-main/php/getTutoresAlumno.php?alumnoId=${alumnoId}`)
+            fetch('/proyectoJardin/php/obtenerTutores.php'),
+            fetch(`/proyectoJardin/php/getTutoresAlumno.php?alumnoId=${alumnoId}`)
           ]);
 
           console.log('Respuesta obtenerTutores:', allResp);
@@ -423,7 +456,7 @@
         const tutoresIds = Array.from(tutoresSeleccionados).map(checkbox => checkbox.value);
         tutoresIds.forEach(tid => formData.append('tutores[]', tid));
 
-        fetch('/proyectoJardin-main/php/modificarAlumno.php', {
+        fetch('/proyectoJardin/php/modificarAlumno.php', {
           method: 'POST',
           body: formData
         })
@@ -445,7 +478,7 @@
             modal.hide();
 
             // Actualizar la lista de alumnos
-            fetch('/proyectoJardin-main/php/verAlumno.php?ajax=1')
+            fetch('/proyectoJardin/php/verAlumno.php?ajax=1')
               .then(response => response.json())
               .then(data => {
                 todosLosAlumnos = data;
