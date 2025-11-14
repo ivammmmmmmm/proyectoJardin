@@ -56,7 +56,7 @@ try {
             $sql = "SELECT id, nombre, apellido, dni FROM alumno ORDER BY apellido, nombre";
         }
     } else {
-        // Consulta completa con tutores
+        // Consulta completa con tutores, sala y estado
         $sql = "
             SELECT 
                 a.id, 
@@ -65,7 +65,10 @@ try {
                 a.dni, 
                 a.direccion, 
                 a.fecha_nacimiento,
+                a.idSala,
+                s.nombre AS nombreSala,
                 a.idEstado,
+                e.nombre AS nombreEstado,
                 GROUP_CONCAT(
                     CONCAT(pt.nombre, ' ', pt.apellido, ' (Tel: ', COALESCE(pt.telefono, 'No disponible'), ')')
                     SEPARATOR ', '
@@ -76,9 +79,13 @@ try {
                 alumnotutor at ON a.id = at.idAlumno
             LEFT JOIN 
                 padretutor pt ON at.idPadreTutor = pt.id
-            " . ($idSala ? "WHERE a.idEstado = ?" : "") . "
+            LEFT JOIN 
+                sala s ON a.idSala = s.id
+            LEFT JOIN 
+                estado e ON a.idEstado = e.id
+            " . ($idSala ? "WHERE a.idSala = ?" : "") . "
             GROUP BY 
-                a.id, a.nombre, a.apellido, a.dni, a.direccion, a.fecha_nacimiento, a.idEstado
+                a.id, a.nombre, a.apellido, a.dni, a.direccion, a.fecha_nacimiento, a.idSala, s.nombre, a.idEstado, e.nombre
         ";
     }
 
