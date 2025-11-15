@@ -4,11 +4,11 @@
       async function cargarDocentes() {
         try {
           // Primero verificamos la conexión
-          const testConn = await fetchWithErrorHandling('/proyectoJardin-main/php/test_connection.php');
+          const testConn = await fetchWithErrorHandling('/proyectoJardin/php/test_connection.php');
           console.log('Test de conexión:', testConn);
 
           // Si la conexión está bien, cargamos los docentes
-          const data = await fetchWithErrorHandling('/proyectoJardin-main/php/verDocentes.php');
+          const data = await fetchWithErrorHandling('/proyectoJardin/php/verDocentes.php');
           console.log('Docentes cargados:', data);
           
           todosLosDocentes = data.docentes || data;
@@ -58,6 +58,12 @@
         }
 
         docentes.forEach((docente, idx) => {
+          // Procesar salas asignadas
+          const salasArray = (docente.salasNombres || '').split(',').filter(s => s.trim() !== '');
+          const salasHTML = salasArray.length > 0 
+            ? salasArray.map(sala => `<span class="badge bg-success">${sala.trim()}</span>`).join(' ')
+            : '<span class="badge bg-secondary">Sin salas asignadas</span>';
+
           const item = document.createElement('div');
           item.className = 'list-group-item bg-dark text-light mb-2';
           item.innerHTML = `
@@ -66,7 +72,7 @@
                 <i class="bi bi-person fs-3 me-3 text-light"></i>
                 <div>
                   <h6 class="mb-0 text-light">${docente.nombre} ${docente.apellido}</h6>
-                  <!-- materia removed -->
+                  <small class="text-muted">${salasHTML}</small>
                 </div>
               </div>
               <div class="d-flex gap-2">
@@ -88,12 +94,37 @@
                 <p><strong>DNI:</strong> ${docente.dni}</p>
                 <p><strong>Teléfono:</strong> ${docente.telefono}</p>
                 <p><strong>Dirección:</strong> ${docente.direccion}</p>
-                <!-- materia removed from details -->
+                <p><strong>Email:</strong> ${docente.mail}</p>
+                <p><strong>Salas Asignadas:</strong> ${salasHTML}</p>
               </div>
             </div>
           `;
           listaDocentes.appendChild(item);
         });
+      }
+
+      let todasLasSalas = [];
+
+      // Función para cargar salas en el filtro
+      async function cargarSalas() {
+        try {
+          const response = await fetch('/proyectoJardin/php/obtenerSalas.php');
+          const data = await response.json();
+          
+          const filtroSala = document.getElementById('filtroSala');
+          
+          if (data.status === 'success' && filtroSala) {
+            todasLasSalas = data.salas || [];
+            data.salas.forEach(sala => {
+              const option = document.createElement('option');
+              option.value = sala.id;
+              option.textContent = `Sala: ${sala.nombre}`;
+              filtroSala.appendChild(option);
+            });
+          }
+        } catch (error) {
+          console.error('Error al cargar salas:', error);
+        }
       }
 
       document.addEventListener('DOMContentLoaded', function() {
@@ -103,6 +134,47 @@
           new bootstrap.Modal(modalElement);
         }
 
+        // Función para aplicar filtros
+        function aplicarFiltros() {
+          const termino = (document.getElementById('buscador')?.value || '').toLowerCase();
+          const filtroNombre = document.getElementById('filtroNombre')?.value || '';
+          const filtroSala = document.getElementById('filtroSala')?.value || '';
+
+          let resultados = todosLosDocentes.filter(docente => {
+            if (!docente || typeof docente !== 'object') return false;
+
+            // Filtro por sala (si está seleccionada)
+            // idSalas es un string con IDs separados por comas: "1,2,3"
+            if (filtroSala !== '') {
+              const salasDocente = (docente.idSalas || '').split(',').filter(s => s.trim() !== '');
+              if (!salasDocente.includes(filtroSala)) {
+                return false;
+              }
+            }
+
+            // Si hay búsqueda de texto, aplicar filtro de texto
+            if (termino) {
+              const nombre = (docente.nombre || '').toLowerCase();
+              const apellido = (docente.apellido || '').toLowerCase();
+              const dni = (docente.dni || '').toString().toLowerCase();
+
+              // Filtro por nombre/apellido
+              if (filtroNombre === 'nombre') {
+                return nombre.includes(termino);
+              } else if (filtroNombre === 'apellido') {
+                return apellido.includes(termino);
+              } else {
+                return (nombre + ' ' + apellido).includes(termino) || dni.includes(termino);
+              }
+            }
+
+            // Si no hay búsqueda, mostrar todos los que pasen los filtros de sala
+            return true;
+          });
+
+          mostrarDocentes(resultados);
+        }
+
         // Configurar buscador nativo (debounce)
         const buscador = document.getElementById('buscador');
         if (buscador) {
@@ -110,17 +182,25 @@
           buscador.addEventListener('input', function (e) {
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(() => {
-              const termino = e.target.value || '';
-              const resultados = filtrarDocentes(termino);
-              mostrarDocentes(resultados);
+              aplicarFiltros();
             }, 120);
           });
         } else {
           console.debug('modificarDocente.js: #buscador no presente en esta página');
         }
 
+        // Configurar filtros
+        const filtroNombre = document.getElementById('filtroNombre');
+        const filtroSala = document.getElementById('filtroSala');
+        
+        if (filtroNombre) filtroNombre.addEventListener('change', aplicarFiltros);
+        if (filtroSala) filtroSala.addEventListener('change', aplicarFiltros);
+
+        // Cargar salas
+        cargarSalas();
+
         // Cargar docentes
-        fetch('/proyectoJardin-main/php/verDocentes.php?ajax=1')
+        fetch('/proyectoJardin/php/verDocentes.php?ajax=1')
           .then(async response => {
             if (!response.ok) {
               throw new Error('Error en la respuesta del servidor: ' + response.status);
@@ -152,7 +232,7 @@
         if (confirm('¿Estás seguro de que deseas eliminar este docente?')) {
           const fd = new FormData();
           fd.append('id', id);
-          fetch(`/proyectoJardin-main/php/eliminarDocente.php?id=${encodeURIComponent(id)}`, {
+          fetch(`/proyectoJardin/php/eliminarDocente.php?id=${encodeURIComponent(id)}`, {
             method: 'POST',
             body: fd
           })
@@ -198,7 +278,6 @@
         }
       }
 
-      let todasLasSalas = [];
       let salasSeleccionadas = new Set();
       
       async function cargarSalasParaDocente(docenteId) {
@@ -219,7 +298,7 @@
         
         try {
           // Obtener todas las salas con información de docentes asignados
-          const response = await fetch(`/proyectoJardin-main/php/obtenerSalas.php?tipo=con_docentes`);
+          const response = await fetch(`/proyectoJardin/php/obtenerSalas.php?tipo=con_docentes`);
           if (!response.ok) {
             throw new Error('Error en la respuesta del servidor: ' + response.status);
           }
@@ -308,7 +387,7 @@
             salas: salasSeleccionadas
           });
           
-          const response = await fetch('/proyectoJardin-main/php/modificarDocente.php', {
+          const response = await fetch('/proyectoJardin/php/modificarDocente.php', {
             method: 'POST',
             body: formData
           });

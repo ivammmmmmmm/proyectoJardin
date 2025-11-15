@@ -2054,3 +2054,265 @@
 2025-11-14 08:22:15 | obtenerDatos.php | Conexión PDO establecida correctamente
 2025-11-14 08:22:15 | obtenerDatos.php | Obteniendo datos de tipo: docentes
 2025-11-14 08:22:15 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":7,"nombre":"Gabriela","apellido":"Garc\u00eda"},{"id":6,"nombre":"Luc\u00eda","apellido":"Diaz"},{"id":5,"nombre":"Silvina","apellido":"Torres"}]
+2025-11-15 00:27:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 00:27:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 00:27:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 00:27:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 00:27:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 00:27:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 00:27:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 00:27:57 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 00:27:57 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 00:27:57 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 00:27:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 00:27:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 00:27:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 00:27:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 00:27:57 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 00:27:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:52:36 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:52:36 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:52:36 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:52:36 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:52:36 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:52:36 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:52:36 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:52:36 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:52:36 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:52:36 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:52:36 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:52:36 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:52:36 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:52:36 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:52:36 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:52:36 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:52:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:52:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:52:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:52:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:52:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:52:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:52:46 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:52:46 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:52:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:52:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:52:46 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:52:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:52:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:52:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:52:46 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:52:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:53:56 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:53:56 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:53:56 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:53:56 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:53:56 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:53:56 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:53:56 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:53:56 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:53:56 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:53:56 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:53:56 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:53:56 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:53:56 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:53:56 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:53:56 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:53:56 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:54:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:54:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:54:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:54:02 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:54:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:54:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:54:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:54:02 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:54:02 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:54:02 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:54:02 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:54:02 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:54:02 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:54:02 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:54:02 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:54:02 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:54:38 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:54:38 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:54:38 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:54:38 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:54:38 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:54:38 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:54:38 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:54:38 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:54:38 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:54:38 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:54:38 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:54:38 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:54:38 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:54:38 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:54:38 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:54:38 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:56:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:39 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:39 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:56:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:39 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:56:39 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:56:39 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:56:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:39 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:39 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:56:39 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:56:39 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:56:39 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:56:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:54 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:54 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:56:54 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:56:54 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:56:54 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:56:54 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:56:54 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:56:54 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:54 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:56:54 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:56:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:56:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:57 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:56:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:57 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:56:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:56:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:56:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:57 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:56:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:56:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:56:57 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:56:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:57:14 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:57:14 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:57:14 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:57:14 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:57:14 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:57:14 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:57:14 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:57:14 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:57:14 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:57:14 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:57:14 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:57:14 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:57:14 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:57:14 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:57:14 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:57:14 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:58:18 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:18 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:18 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:18 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:18 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:18 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:18 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:18 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:18 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:58:18 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:58:18 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:58:18 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:58:18 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:58:18 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:58:18 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:58:18 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:58:27 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:27 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:27 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:27 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:27 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:58:27 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:27 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:58:27 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:27 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:27 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:27 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:58:27 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:58:27 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:58:27 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:58:27 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:58:27 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:58:44 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:44 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:44 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:44 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:44 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:44 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:58:44 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:58:45 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:45 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:45 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:45 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:58:45 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:58:45 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:58:45 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:58:45 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:58:45 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:58:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:46 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:58:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:46 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:58:46 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:58:46 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:58:46 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:58:46 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:58:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:58:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:58:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:58:46 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:59:51 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:59:51 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:59:51 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:59:51 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:59:51 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:59:51 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:59:51 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:59:51 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:59:51 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:59:51 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:59:51 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:59:51 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:59:51 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:59:51 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:59:51 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 02:59:51 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:59:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:59:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:59:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:59:57 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 02:59:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:59:57 | obtenerDatos.php | Obteniendo datos de tipo: docentes
+2025-11-15 02:59:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"2","apellido":"2"},{"id":4,"nombre":"3","apellido":"3"},{"id":2,"nombre":"a","apellido":"s"}]
+2025-11-15 02:59:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:59:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:59:57 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 02:59:57 | obtenerDatos.php | Obteniendo datos de tipo: salas
+2025-11-15 02:59:57 | obtenerDatos.php | Obteniendo datos de tipo: tutores
+2025-11-15 02:59:57 | obtenerDatos.php | Obteniendo datos de tipo: alumnos
+2025-11-15 02:59:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":1,"nombre":"1"},{"id":2,"nombre":"2"},{"id":3,"nombre":"3"}]
+2025-11-15 02:59:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":3,"nombre":"a","apellido":"s"},{"id":4,"nombre":"a","apellido":"s"},{"id":5,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":15,"nombre":"Alejo","apellido":"Pintos"},{"id":12,"nombre":"enrique","apellido":"savio"},{"id":10,"nombre":"enrique","apellido":"savio"},{"id":14,"nombre":"Marcelo","apellido":"Rivera"},{"id":11,"nombre":"marta","apellido":"nasko"},{"id":13,"nombre":"marta","apellido":"nasko"},{"id":9,"nombre":"marta","apellido":"nasko"},{"id":16,"nombre":"prueba","apellido":"nose"}]
+2025-11-15 02:59:57 | obtenerDatos.php | Datos obtenidos de la consulta: [{"id":24,"nombre":"a","apellido":"b"},{"id":22,"nombre":"a","apellido":"s"},{"id":6,"nombre":"a","apellido":"s"},{"id":8,"nombre":"a","apellido":"s"},{"id":7,"nombre":"a","apellido":"s"},{"id":9,"nombre":"alejo","apellido":"cangrejo"},{"id":23,"nombre":"asd","apellido":"asd"},{"id":16,"nombre":"geronimo","apellido":"corleta"},{"id":21,"nombre":"Jose","apellido":"Golpe"},{"id":20,"nombre":"juan","apellido":"ponce"},{"id":19,"nombre":"juan","apellido":"ponce"},{"id":17,"nombre":"juan","apellido":"ponce"},{"id":18,"nombre":"juan","apellido":"ponce"}]
+2025-11-15 03:00:12 | obtenerDatos.php | Iniciando obtenerDatos.php
+2025-11-15 03:00:12 | obtenerDatos.php | Conexión PDO establecida correctamente
+2025-11-15 03:00:12 | obtenerDatos.php | Obteniendo datos de tipo: asistencia
+2025-11-15 03:00:12 | obtenerDatos.php | Preparando consulta para alumnoId: 16 y fecha: 2025-11-14
+2025-11-15 03:00:12 | obtenerDatos.php | Ejecutando consulta con alumnoId: 16 y fecha: 2025-11-14
+2025-11-15 03:00:12 | obtenerDatos.php | Parámetros: {":fecha_falta":"2025-11-14",":alumno_id_falta":"16",":fecha_presente":"2025-11-14",":alumno_id_presente":"16",":alumno_id_main":"16"}

@@ -68,7 +68,6 @@ try {
                 a.idSala,
                 s.nombre AS nombreSala,
                 a.idEstado,
-                e.nombre AS nombreEstado,
                 GROUP_CONCAT(
                     CONCAT(pt.nombre, ' ', pt.apellido, ' (Tel: ', COALESCE(pt.telefono, 'No disponible'), ')')
                     SEPARATOR ', '
@@ -81,11 +80,10 @@ try {
                 padretutor pt ON at.idPadreTutor = pt.id
             LEFT JOIN 
                 sala s ON a.idSala = s.id
-            LEFT JOIN 
-                estado e ON a.idEstado = e.id
             " . ($idSala ? "WHERE a.idSala = ?" : "") . "
             GROUP BY 
-                a.id, a.nombre, a.apellido, a.dni, a.direccion, a.fecha_nacimiento, a.idSala, s.nombre, a.idEstado, e.nombre
+                a.id
+            ORDER BY a.apellido, a.nombre
         ";
     }
 
@@ -94,12 +92,18 @@ try {
     error_log('[verAlumno.php] Consulta preparada');
     
     // Ejecutar la consulta con el parámetro de sala si existe
-    if ($idSala) {
-        error_log('[verAlumno.php] Ejecutando consulta con idSala: ' . $idSala);
-        $stmt->execute([$idSala]);
-    } else {
-        error_log('[verAlumno.php] Ejecutando consulta sin parámetros');
-        $stmt->execute();
+    try {
+        if ($idSala) {
+            error_log('[verAlumno.php] Ejecutando consulta con idSala: ' . $idSala);
+            $stmt->execute([$idSala]);
+        } else {
+            error_log('[verAlumno.php] Ejecutando consulta sin parámetros');
+            $stmt->execute();
+        }
+        error_log('[verAlumno.php] Consulta ejecutada exitosamente');
+    } catch (Exception $e) {
+        error_log('[verAlumno.php] Error en execute: ' . $e->getMessage());
+        throw $e;
     }
     
     $alumnos = $stmt->fetchAll(PDO::FETCH_ASSOC);

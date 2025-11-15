@@ -106,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                    name="alumnos[]" 
                                    onchange="toggleRazonSelect('${alumno.id}')">
                             <span class="fs-6">${alumno.apellido}, ${alumno.nombre}</span>
+                            <div class="faltas-badge-container" id="faltas_container_${alumno.id}"></div>
                         </div>
                         <div class="d-flex align-items-center">
                             <small class="badge bg-success presente-badge" title="Presente"><i class="bi bi-check-lg"></i></small>
@@ -140,6 +141,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         ausenteBadge.classList.add('d-none');
                     }
                 });
+
+                // Cargar y mostrar faltas consecutivas
+                cargarFaltasConsecutivas(alumno.id);
             });
 
             alumnosContainer.classList.remove('d-none');
@@ -428,5 +432,37 @@ function mostrarMensajeExito(text, container) {
         _createToast(html, { type: 'success', delay: 6000 });
     } catch (e) {
         alert(text);
+    }
+}
+
+// ========== FUNCIÓN PARA CARGAR Y MOSTRAR FALTAS CONSECUTIVAS ==========
+async function cargarFaltasConsecutivas(idAlumno) {
+    const container = document.getElementById(`faltas_container_${idAlumno}`);
+    if (!container) return;
+
+    try {
+        const response = await fetch(API_PREFIX + `verificarFaltasConsecutivas.php?idAlumno=${idAlumno}`);
+        const data = await response.json();
+
+        if (data.success && data.faltasConsecutivas >= 3) {
+            const badge = document.createElement('span');
+            badge.className = 'faltas-consecutivas-badge';
+            
+            // Asignar clase según el nivel de criticidad
+            if (data.faltasConsecutivas >= 5) {
+                badge.classList.add('nivel-5');
+            } else if (data.faltasConsecutivas >= 4) {
+                badge.classList.add('nivel-4');
+            } else {
+                badge.classList.add('nivel-3');
+            }
+            
+            badge.innerHTML = `<i class="bi bi-exclamation-triangle-fill"></i> ${data.faltasConsecutivas} faltas consecutivas`;
+            badge.title = `Este alumno tiene ${data.faltasConsecutivas} faltas consecutivas sin justificar`;
+            
+            container.appendChild(badge);
+        }
+    } catch (error) {
+        console.error('Error al cargar faltas consecutivas:', error);
     }
 }

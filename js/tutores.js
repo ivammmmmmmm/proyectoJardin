@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function cargarTutores() {
     try {
-        const response = await fetch('/proyectoJardin-main/php/obtenerTutores.php');
+        const response = await fetch('/proyectoJardin/php/obtenerTutores.php');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         
         const data = await response.json();

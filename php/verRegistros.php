@@ -59,11 +59,15 @@ try {
             'fecha' => $registro['fecha'] ?? null,
             'medioUtilizado' => $registro['medioUtilizado'] ?? '',
             'causa' => $registro['causa'] ?? '',
+            'desarrollo' => $registro['desarrollo'] ?? '',
+            'alumno_id' => (int)($registro['alumno_id'] ?? 0),
+            'tutor_id' => (int)($registro['tutor_id'] ?? 0),
+            'docente_id' => (int)($registro['docente_id'] ?? 0),
+            'sala_id' => (int)($registro['sala_id'] ?? 0),
             'alumno_nombre' => $registro['alumno_nombre'] ?? 'N/A',
             'tutor_nombre' => $registro['tutor_nombre'] ?? 'N/A',
             'docente_nombre' => $registro['docente_nombre'] ?? 'N/A',
-            'sala_nombre' => $registro['sala_nombre'] ?? 'N/A',
-            'desarrollo' => $registro['desarrollo'] ?? ''
+            'sala_nombre' => $registro['sala_nombre'] ?? 'N/A'
         ];
     }
     

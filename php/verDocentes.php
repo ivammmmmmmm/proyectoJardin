@@ -10,8 +10,21 @@ try {
     // Log para debugging
     error_log("[verDocentes.php] Iniciando consulta de docentes");
 
-    // Consulta de docentes
-    $sql = "SELECT id, nombre, apellido, dni, direccion, telefono, mail FROM docente ORDER BY apellido, nombre";
+    // Consulta de docentes con sus salas asociadas
+    $sql = "SELECT 
+                d.id, 
+                d.nombre, 
+                d.apellido, 
+                d.dni, 
+                d.direccion, 
+                d.telefono, 
+                d.mail,
+                GROUP_CONCAT(s.id SEPARATOR ',') AS idSalas,
+                GROUP_CONCAT(s.nombre SEPARATOR ',') AS salasNombres
+            FROM docente d
+            LEFT JOIN sala s ON d.id = s.idDocente
+            GROUP BY d.id, d.nombre, d.apellido, d.dni, d.direccion, d.telefono, d.mail
+            ORDER BY d.apellido, d.nombre";
     
     $stmt = $pdo->prepare($sql);
     if (!$stmt) {

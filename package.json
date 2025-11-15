@@ -1,0 +1,21 @@
+{
+  "name": "proyectoJardin",
+  "version": "1.0.0",
+  "description": "Aplicación web para la gestión integral de información de un jardín de infantes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "jardin",
+    "gestion",
+    "alumnos",
+    "docentes"
+  ],
+  "author": "ivammmmmmmm",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

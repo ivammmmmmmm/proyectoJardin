@@ -77,9 +77,8 @@
                 <p><strong>DNI:</strong> ${alumno.dni}</p>
                 <p><strong>Dirección:</strong> ${alumno.direccion}</p>
                 <p><strong>Fecha de Nacimiento:</strong> ${alumno.fecha_nacimiento}</p>
-                <p><strong>Edad:</strong> ${alumno.edad} años</p>
+                <p><strong>Edad:</strong> ${alumno.edad || 'No disponible'} años</p>
                 <p><strong>Sala:</strong> ${alumno.nombreSala || 'No asignada'}</p>
-                <p><strong>Estado:</strong> ${alumno.nombreEstado || 'No definido'}</p>
                 <p><strong>Tutores:</strong> ${alumno.tutores || 'Sin tutores asignados'}</p>
 
                 </div>
@@ -122,15 +121,25 @@
 
         // Cargar alumnos desde el servidor y mostrarlos
         fetch('/proyectoJardin/php/verAlumno.php?ajax=1')
-          .then(response => response.json())
+          .then(response => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+          })
           .then(data => {
+            // Validar que data sea un array
+            if (!Array.isArray(data)) {
+              console.error('Datos recibidos no es un array:', data);
+              data = data && data.alumnos ? data.alumnos : [];
+            }
             todosLosAlumnos = data; // Guardar todos los alumnos
             mostrarAlumnos(todosLosAlumnos); // Mostrar inicialmente todos
           })
           .catch(error => {
             const lista = document.getElementById('alumnosLista');
-            if (lista) lista.innerHTML = '<div class="alert alert-danger">Error al cargar los alumnos.</div>';
-            console.error('Error:', error);
+            if (lista) lista.innerHTML = '<div class="alert alert-danger">Error al cargar los alumnos: ' + error.message + '</div>';
+            console.error('Error al cargar alumnos:', error);
           });
       });
 
@@ -187,26 +196,33 @@
         const filtroEstado = document.getElementById('filtroEstado')?.value || '';
 
         let resultados = todosLosAlumnos.filter(alumno => {
-          // Búsqueda por texto
-          const nombre = `${alumno.nombre || ''} ${alumno.apellido || ''}`.toLowerCase();
-          const dni = (alumno.dni || '').toString().toLowerCase();
-          const coincideTexto = nombre.includes(termino) || dni.includes(termino);
-
-          // Filtro por nombre/apellido
-          let coincideFiltroNombre = true;
-          if (filtroNombre === 'nombre') {
-            coincideFiltroNombre = (alumno.nombre || '').toLowerCase().includes(termino);
-          } else if (filtroNombre === 'apellido') {
-            coincideFiltroNombre = (alumno.apellido || '').toLowerCase().includes(termino);
+          // Filtro por sala (si está seleccionada)
+          if (filtroSala !== '' && String(alumno.idSala) !== filtroSala) {
+            return false;
           }
 
-          // Filtro por sala
-          const coincideSala = filtroSala === '' || String(alumno.idSala) === filtroSala;
+          // Filtro por estado (si está seleccionado)
+          if (filtroEstado !== '' && String(alumno.idEstado) !== filtroEstado) {
+            return false;
+          }
 
-          // Filtro por estado
-          const coincideEstado = filtroEstado === '' || String(alumno.idEstado) === filtroEstado;
+          // Si hay búsqueda de texto, aplicar filtro de texto
+          if (termino) {
+            const nombre = `${alumno.nombre || ''} ${alumno.apellido || ''}`.toLowerCase();
+            const dni = (alumno.dni || '').toString().toLowerCase();
+            
+            // Filtro por nombre/apellido
+            if (filtroNombre === 'nombre') {
+              return (alumno.nombre || '').toLowerCase().includes(termino);
+            } else if (filtroNombre === 'apellido') {
+              return (alumno.apellido || '').toLowerCase().includes(termino);
+            } else {
+              return nombre.includes(termino) || dni.includes(termino);
+            }
+          }
 
-          return coincideTexto && coincideFiltroNombre && coincideSala && coincideEstado;
+          // Si no hay búsqueda, mostrar todos los que pasen los filtros de sala/estado
+          return true;
         });
 
         mostrarAlumnos(resultados);

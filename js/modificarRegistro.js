@@ -9,17 +9,36 @@
       // Filtrado para registros: busca en varios campos relevantes
       function filtrarRegistros(terminoBusqueda) {
         const termino = (terminoBusqueda || '').toString().toLowerCase();
+        const filtroDocente = (document.getElementById('filtroDocente')?.value || '').toString();
+        const filtroSala = (document.getElementById('filtroSala')?.value || '').toString();
+
         return (todosLosRegistros || []).filter(r => {
           if (!r || typeof r !== 'object') return false;
-          const alumno = (typeof r.alumno_nombre !== 'undefined' && r.alumno_nombre !== null) ? String(r.alumno_nombre) : '';
-          const tutor = (typeof r.tutor_nombre !== 'undefined' && r.tutor_nombre !== null) ? String(r.tutor_nombre) : '';
-          const docente = (typeof r.docente_nombre !== 'undefined' && r.docente_nombre !== null) ? String(r.docente_nombre) : '';
-          const fecha = (typeof r.fecha !== 'undefined' && r.fecha !== null) ? String(r.fecha) : '';
 
-          return alumno.toLowerCase().includes(termino) ||
-                 tutor.toLowerCase().includes(termino) ||
-                 docente.toLowerCase().includes(termino) ||
-                 fecha.toLowerCase().includes(termino);
+          // Filtro por docente
+          if (filtroDocente !== '' && String(r.docente_id) !== filtroDocente) {
+            return false;
+          }
+
+          // Filtro por sala
+          if (filtroSala !== '' && String(r.sala_id) !== filtroSala) {
+            return false;
+          }
+
+          // Filtro por búsqueda de texto
+          if (termino) {
+            const alumno = (typeof r.alumno_nombre !== 'undefined' && r.alumno_nombre !== null) ? String(r.alumno_nombre) : '';
+            const tutor = (typeof r.tutor_nombre !== 'undefined' && r.tutor_nombre !== null) ? String(r.tutor_nombre) : '';
+            const docente = (typeof r.docente_nombre !== 'undefined' && r.docente_nombre !== null) ? String(r.docente_nombre) : '';
+            const fecha = (typeof r.fecha !== 'undefined' && r.fecha !== null) ? String(r.fecha) : '';
+
+            return alumno.toLowerCase().includes(termino) ||
+                   tutor.toLowerCase().includes(termino) ||
+                   docente.toLowerCase().includes(termino) ||
+                   fecha.toLowerCase().includes(termino);
+          }
+
+          return true;
         });
       }
 
@@ -86,7 +105,17 @@
           llenarSelect('docente', docentes, 'nombre', 'apellido');
           llenarSelect('sala', salas, 'nombre');
 
+          // Llenar filtros laterales
+          llenarSelectFiltro('filtroDocente', docentes, 'nombre', 'apellido');
+          llenarSelectFiltro('filtroSala', salas, 'nombre');
+
           mostrarRegistros(todosLosRegistros);
+
+          // Configurar listeners de filtros
+          const filtroDocente = document.getElementById('filtroDocente');
+          const filtroSala = document.getElementById('filtroSala');
+          if (filtroDocente) filtroDocente.addEventListener('change', aplicarFiltros);
+          if (filtroSala) filtroSala.addEventListener('change', aplicarFiltros);
         })
         .catch(err => {
           console.error('Error cargando datos:', err);
@@ -99,15 +128,42 @@
             buscador.addEventListener('input', function (e) {
               clearTimeout(debounceTimer);
               debounceTimer = setTimeout(() => {
-                const termino = e.target.value || '';
-                const resultados = filtrarRegistros(termino);
-                mostrarRegistros(resultados);
+                aplicarFiltros();
               }, 120);
             });
           } else {
             console.debug('modificarRegistro.js: #buscador no presente en esta página');
           }
       });
+
+      // Función para aplicar todos los filtros
+      function aplicarFiltros() {
+        const termino = (document.getElementById('buscador')?.value || '').toLowerCase();
+        const resultados = filtrarRegistros(termino);
+        mostrarRegistros(resultados);
+      }
+
+      function llenarSelectFiltro(selectId, datos, nombreProp, apellidoProp = null) {
+        const select = document.getElementById(selectId);
+        const currentValue = select.value;
+        
+        // Limpiar opciones excepto la primera
+        while (select.options.length > 1) {
+          select.remove(1);
+        }
+        
+        datos.forEach(dato => {
+          const option = document.createElement('option');
+          option.value = dato.id;
+          option.textContent = apellidoProp ? 
+            `${dato[nombreProp]} ${dato[apellidoProp]}` : 
+            dato[nombreProp];
+          select.appendChild(option);
+        });
+
+        // Restaurar el valor anterior si existe
+        select.value = currentValue;
+      }
 
       function llenarSelect(selectId, datos, nombreProp, apellidoProp = null) {
         const select = document.getElementById(selectId);

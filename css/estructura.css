@@ -5,3 +5,68 @@
 .bg-cardcolor{
     background-color: rgb(59 70 73);
 }
+
+/* ======== ANIMACIONES DE FALTAS CONSECUTIVAS ======== */
+.faltas-badge-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.faltas-consecutivas-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.7rem;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+}
+
+.faltas-consecutivas-badge.nivel-3 {
+    background-color: #ff9800;
+    color: white;
+    box-shadow: 0 1px 2px rgba(255, 152, 0, 0.2);
+}
+
+.faltas-consecutivas-badge.nivel-3:hover {
+    box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3);
+}
+
+.faltas-consecutivas-badge.nivel-4 {
+    background-color: #ff6b6b;
+    color: white;
+    box-shadow: 0 1px 2px rgba(255, 107, 107, 0.2);
+    animation: subtleGlow 3s ease-in-out infinite;
+}
+
+.faltas-consecutivas-badge.nivel-4:hover {
+    box-shadow: 0 2px 4px rgba(255, 107, 107, 0.3);
+}
+
+.faltas-consecutivas-badge.nivel-5 {
+    background-color: #c41e3a;
+    color: white;
+    box-shadow: 0 1px 3px rgba(196, 30, 58, 0.25);
+    animation: subtleGlow 2.5s ease-in-out infinite;
+}
+
+.faltas-consecutivas-badge.nivel-5:hover {
+    box-shadow: 0 2px 4px rgba(196, 30, 58, 0.35);
+}
+
+.faltas-consecutivas-badge i {
+    font-size: 0.8rem;
+}
+
+/* Animación de glow muy sutil */
+@keyframes subtleGlow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.9;
+    }
+}

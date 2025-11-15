@@ -103,24 +103,66 @@
 
       document.addEventListener('DOMContentLoaded', function() {
         const buscador = document.getElementById('buscador');
+        const filtroNombre = document.getElementById('filtroNombre');
+        
+        // Helper para aplicar filtros
+        function aplicarFiltros() {
+          let termino = (buscador?.value || '').toString().toLowerCase();
+          let tipoFiltro = (filtroNombre?.value || '').toString();
+          
+          let resultados = todosLosTutores.filter(tutor => {
+            if (!tutor || typeof tutor !== 'object') return false;
+            
+            const nombreRaw = (typeof tutor.nombre !== 'undefined' && tutor.nombre !== null) ? String(tutor.nombre) : '';
+            const apellidoRaw = (typeof tutor.apellido !== 'undefined' && tutor.apellido !== null) ? String(tutor.apellido) : '';
+            const dniRaw = (typeof tutor.dni !== 'undefined' && tutor.dni !== null) ? String(tutor.dni) : '';
+            
+            const nombre = nombreRaw.toLowerCase();
+            const apellido = apellidoRaw.toLowerCase();
+            const dni = dniRaw.toLowerCase();
+            
+            // Si hay búsqueda de texto, aplicar filtro de texto
+            if (termino) {
+              // Filtro por nombre/apellido
+              if (tipoFiltro === 'nombre') {
+                return nombre.includes(termino);
+              } else if (tipoFiltro === 'apellido') {
+                return apellido.includes(termino);
+              } else {
+                return (nombre + ' ' + apellido).includes(termino) || dni.includes(termino);
+              }
+            }
+            
+            // Si no hay búsqueda, mostrar todos
+            return true;
+          });
+          
+          mostrarTutores(resultados);
+        }
+        
         if (buscador) {
           let debounceTimer = null;
           buscador.addEventListener('input', function (e) {
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(() => {
-              const termino = e.target.value || '';
-              const resultados = filtrarTutores(termino);
-              mostrarTutores(resultados);
+              aplicarFiltros();
             }, 120);
           });
         } else {
           console.debug('modificarTutor.js: #buscador no presente en esta página');
         }
+        
+        // Agregar event listener al filtro de nombre
+        if (filtroNombre) {
+          filtroNombre.addEventListener('change', function() {
+            aplicarFiltros();
+          });
+        }
 
         // Cargar tutores
         (async () => {
           try {
-            const resp = await fetch('/proyectoJardin-main/php/verTutores.php?ajax=1');
+            const resp = await fetch('/proyectoJardin/php/verTutores.php?ajax=1');
             const data = await parseJSONSafe(resp);
             todosLosTutores = Array.isArray(data) ? data : (data.tutores || []);
             mostrarTutores(todosLosTutores);
@@ -135,7 +177,7 @@
       async function eliminarTutor(id) {
         try {
           // Primero verificar si el tutor es el único para algún alumno
-          const verificacionResp = await fetch(`/proyectoJardin-main/php/verificarTutorUnico.php?tutorId=${encodeURIComponent(id)}`);
+          const verificacionResp = await fetch(`/proyectoJardin/php/verificarTutorUnico.php?tutorId=${encodeURIComponent(id)}`);
           
           let verificacionData;
           const contentType = verificacionResp.headers.get("content-type");
@@ -178,7 +220,7 @@
               ).join('') + '</ul>';
             
             // Cargar tutores disponibles
-            const tutoresResp = await fetch('/proyectoJardin-main/php/obtenerTutores.php');
+            const tutoresResp = await fetch('/proyectoJardin/php/obtenerTutores.php');
             const tutoresData = await parseJSONSafe(tutoresResp);
             const tutores = Array.isArray(tutoresData) ? tutoresData : tutoresData.tutores;
             
@@ -236,7 +278,7 @@
                   formData.append('alumnoId', alumno.id);
                   formData.append('tutorId', tutorSeleccionado.value);
                   
-                  await fetch('/proyectoJardin-main/php/asignarTutor.php', {
+                  await fetch('/proyectoJardin/php/asignarTutor.php', {
                     method: 'POST',
                     body: formData
                   });
@@ -246,7 +288,7 @@
                 const fd = new FormData();
                 fd.append('id', id);
                 fd.append('force', '1');
-                const eliminarResp = await fetch('/proyectoJardin-main/php/eliminarTutor.php', {
+                const eliminarResp = await fetch('/proyectoJardin/php/eliminarTutor.php', {
                   method: 'POST',
                   body: fd
                 });
@@ -256,7 +298,7 @@
                   asignarModal.hide();
                   
                   // Actualizar la lista de tutores sin recargar la página
-                  const response = await fetch('/proyectoJardin-main/php/verTutores.php?ajax=1');
+                  const response = await fetch('/proyectoJardin/php/verTutores.php?ajax=1');
                   const data = await parseJSONSafe(response);
                   todosLosTutores = data;
                   mostrarTutores(todosLosTutores);
@@ -278,14 +320,14 @@
             if (confirm('¿Estás seguro de que deseas eliminar este tutor?')) {
               const fd = new FormData();
               fd.append('id', id);
-              const response = await fetch('/proyectoJardin-main/php/eliminarTutor.php', {
+              const response = await fetch('/proyectoJardin/php/eliminarTutor.php', {
                 method: 'POST',
                 body: fd
               });
               const data = await parseJSONSafe(response);
               if (data.success) {
                 // Actualizar la lista de tutores sin recargar la página
-                const tutoresResp = await fetch('/proyectoJardin-main/php/verTutores.php?ajax=1');
+                const tutoresResp = await fetch('/proyectoJardin/php/verTutores.php?ajax=1');
                 const tutoresData = await parseJSONSafe(tutoresResp);
                 todosLosTutores = Array.isArray(tutoresData) ? tutoresData : (tutoresData.tutores || []);
                 mostrarTutores(todosLosTutores);
@@ -323,7 +365,7 @@
         const btn = form.querySelector('button.btn-primary') || document.querySelector('#modalModificarTutor .btn-primary');
         if (btn) btn.disabled = true;
 
-        fetch('/proyectoJardin-main/php/modificarTutor.php', {
+        fetch('/proyectoJardin/php/modificarTutor.php', {
           method: 'POST',
           body: formData
         })
@@ -350,7 +392,7 @@
             // Actualizar la lista de tutores
             (async () => {
               try {
-                const resp = await fetch('/proyectoJardin-main/php/verTutores.php?ajax=1');
+                const resp = await fetch('/proyectoJardin/php/verTutores.php?ajax=1');
                 const refreshed = await parseJSONSafe(resp);
                 todosLosTutores = Array.isArray(refreshed) ? refreshed : (refreshed.tutores || []);
                 mostrarTutores(todosLosTutores);
